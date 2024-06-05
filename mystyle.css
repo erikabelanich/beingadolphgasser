@@ -663,22 +663,6 @@ margin-top: 15px;
     .years {
         display: none;
     }
-  .timeline {
-    text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-}
-
-    .mobile-nav {
-        display: flex;
-   font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-      color: white;
-    width: 15px;
-    height: 15px;
-    font-size: 20px;
-    }
 
     .content-timeline {
         width: 100%;
