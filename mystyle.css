@@ -216,7 +216,7 @@ body{
 /* Ensure the social media icons are in a row on desktop */
 @media (min-width: 769px) {
     .social-icons {
-        display: flex; /* Display social icons in a row */
+        display: block; /* Display social icons in a row */
         align-items: center; /* Vertically center the icons */
         flex-direction: row; /* Ensure social links display in a row */
     }
