@@ -176,6 +176,11 @@ body{
     border-color: #333!important;
 }
 
+.dropdown-toggle {
+    cursor: pointer; /* Ensure the cursor indicates it's clickable */
+    color: white; /* Match other nav link styles */
+    text-decoration: none; /* Remove underline */
+}
 
 /* Show dropdown menu on hover (desktop only) */
 @media (min-width: 768px) {
