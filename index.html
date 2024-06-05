@@ -39,7 +39,16 @@
     
     
 <style>
-
+@media (max-width: 768px) {
+    .container {
+      display: flex;
+      align-items: center; /* Vertically center content */
+      padding-top: 40px; /* Add padding around the container */
+         padding-bottom: 40px; /* Add padding around the container */
+      margin: 0 auto; /* Center the container horizontally */
+    }
+}
+    @media (min-width: 768px) {
     .container {
       display: flex;
       align-items: center; /* Vertically center content */
@@ -48,6 +57,7 @@
       max-width: 1300px;
       margin: 0 auto; /* Center the container horizontally */
     }
+}
     .text-column {
       flex: 1;
       padding: 25px; /* Add padding around text */
