@@ -209,6 +209,7 @@ body{
     }
     .social-icons {
         display: flex; /* Display social icons in a row */
+      flex-direction: row;
         justify-content: center; /* Center the social icons */
         margin-top: 10px; /* Optional: add some space above the social icons */
     }
