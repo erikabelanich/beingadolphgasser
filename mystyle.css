@@ -651,18 +651,16 @@ margin-top: 15px;
     }
   .timeline {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    padding-top: 40px;
+  padding-top: 40px;
   padding-bottom: 40px;
-  background-color: black;
-   margin-bottom: 40px; 
+
 }
 
     .mobile-nav {
         display: flex;
    font-family: "Montserrat", sans-serif;
     font-weight: 600;
+      color: white;
     width: 15px;
     height: 15px;
     font-size: 20px;
