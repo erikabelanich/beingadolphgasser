@@ -489,9 +489,9 @@ margin-top: 15px;
     padding: 20px;
     margin-top: 50px;
     padding-top: 100px;
-        padding-bottom: 70px;
-        background-color: black;
-                   margin-bottom: 100px; /* Adjust the value to your needs */
+  padding-bottom: 70px;
+  background-color: black;
+   margin-bottom: 100px; 
 }
 
 .years {
@@ -649,9 +649,23 @@ margin-top: 15px;
     .years {
         display: none;
     }
+  .timeline {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: black;
+   margin-bottom: 40px; 
+}
 
     .mobile-nav {
         display: flex;
+   font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    width: 15px;
+    height: 15px;
+    font-size: 20px;
     }
 
     .content-timeline {
