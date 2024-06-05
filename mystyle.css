@@ -805,7 +805,7 @@ margin-top: 15px;
 }
 
 .footer-column a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
@@ -815,7 +815,9 @@ margin-top: 15px;
     height: 24px;
 }
 
-
+.social-icons img:hover {
+color: darkgrey;
+}
 
 
 
