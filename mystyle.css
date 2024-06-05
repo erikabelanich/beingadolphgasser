@@ -2,6 +2,53 @@
 
 /*GLOBAL*/
 
+
+
+
+
+/* Default styles for larger screens */
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.image-column,
+.text-column {
+  flex: 1;
+}
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-column {
+    order: 1;
+    text-align: center; /* Center the image for better appearance */
+  }
+
+  .text-column {
+    order: 2;
+  }
+
+  .text-column h1 {
+    margin-top: 10px; /* Add some spacing between the elements */
+  }
+
+  .text-column p {
+    margin-top: 10px; /* Add some spacing between the elements */
+  }
+}
+
+
+
+
+
+
+
 p{
       font-family: "Montserrat", sans-serif;
     font-size: 13px;
@@ -13,9 +60,7 @@ body{
     background-color: black!important;
 }
 
-.image-column{
-    padding: 0px!important;
-}
+
 
 .containter{
     padding-top: 70px;
