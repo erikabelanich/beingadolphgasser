@@ -138,7 +138,9 @@ body{
     letter-spacing: .2em;
     font-weight: 600;
 }
-
+.nav>li{
+  display: flex;
+}
 .navbar-inverse .navbar-nav .dropdown-menu {
     border: 1px solid darkgrey; 
     border-radius: 0;
@@ -212,7 +214,6 @@ body{
         flex-direction: row; /* Ensure social links display in a row */
     }
 }
-
 
 
  /* PRIMARY BUTTON */
