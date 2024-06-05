@@ -201,17 +201,15 @@ body{
 }
 
 
-
-/* Additional styles for social media icons */
+/* Ensure the social media icons are in a row on mobile */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Ensure the rest of the nav links stack vertically */
+        flex-direction: column; /* Ensure other nav links stack vertically */
     }
     .social-icons {
         display: flex; /* Display social icons in a row */
-      flex-direction: row;
         justify-content: center; /* Center the social icons */
-        margin-top: 10px; /* Optional: add some space above the social icons */
+        flex-direction: row; /* Ensure social links display in a row */
     }
 }
 
