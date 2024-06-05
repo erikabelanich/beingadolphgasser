@@ -202,6 +202,20 @@ body{
 
 
 
+/* Additional styles for social media icons */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Ensure the rest of the nav links stack vertically */
+    }
+    .social-icons {
+        display: flex; /* Display social icons in a row */
+        justify-content: center; /* Center the social icons */
+        margin-top: 10px; /* Optional: add some space above the social icons */
+    }
+}
+
+
+
  /* PRIMARY BUTTON */
 .styled-button {
      font-family: "Montserrat", sans-serif;
