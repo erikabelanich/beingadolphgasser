@@ -808,17 +808,18 @@ margin-top: 15px;
     text-decoration: none;
 }
 
-
-
 .social-icons img {
     width: 24px;
     height: 24px;
 }
 
+.social-icons a:hover{
+  color: darkgrey;
+}
+
 .social-icons img:hover {
 color: darkgrey;
 }
-
 
 
 .social-icons {
