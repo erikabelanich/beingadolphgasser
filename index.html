@@ -133,16 +133,7 @@
          
 
 <script>
-  // Toggle the NEWS dropdown on mobile view
-  document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
-    dropdown.addEventListener('click', function(e) {
-      if (window.innerWidth < 768) {
-        e.preventDefault();
-        const dropdownMenu = this.nextElementSibling;
-        dropdownMenu.classList.toggle('show');
-      }
-    });
-  });
+
 
   // Toggle the sandwich menu on click
   document.querySelector('.navbar-toggle').addEventListener('click', function() {
