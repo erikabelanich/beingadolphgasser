@@ -180,11 +180,7 @@ body{
     .navbar-inverse .navbar-nav .special-items a {
         padding-left: 10px; /* Adjust padding if necessary */
     }
-}
-
-
-@media (min-width: 768px) {
-    .navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-brand {
         font-size: 12px;
     }
 }
