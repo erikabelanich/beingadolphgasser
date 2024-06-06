@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,223 +9,182 @@
     <meta name="author" content="Erika Belanich">
     <title>Being Adolph Gasser</title>
     
+    <!-- ======= FONTS & STYLES ======= -->  
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  
-<!-- ======= FONTS & STYLES ======= -->  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
-<link rel="stylesheet" href="mystyle.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
- <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-</style>     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
-
-<!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
- 
-    
-<!-- Bootstrap and jQuery (for demonstration) -->
+    <!-- Bootstrap and jQuery (for demonstration) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
+    <style>
+        @media (max-width: 768px) {
+            .container-home {
+                display: flex;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                margin: 0 auto;
+            }
+        }
+        @media (min-width: 768px) {
+            .container-home {
+                display: flex;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .text-column {
+            flex: 1;
+            padding: 25px;
+        }
+        .text-column h1 {
+            margin-top: 0;
+        }
+        .text-column p {
+            margin-bottom: 0;
+        }
+        .image-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
     
-<style>
-@media (max-width: 768px) {
-    .container-home {
-      display: flex;
-      padding-top: 40px; /* Add padding around the container */
-         padding-bottom: 40px; /* Add padding around the container */
-      margin: 0 auto; /* Center the container horizontally */
-    }
-}
-    @media (min-width: 768px) {
-    .container-home {
-      display: flex;
-      padding-top: 100px; /* Add padding around the container */
-         padding-bottom: 100px; /* Add padding around the container */
-     max-width: 80%;
-      margin: 0 auto; /* Center the container horizontally */
-    }
-}
-    .text-column {
-      flex: 1;
-      padding: 25px; /* Add padding around text */
-    }
-    .text-column h1 {
-      margin-top: 0;
-    }
-    .text-column p {
-      margin-bottom: 0;
-    }
-    .image-column {
-      flex: 1;
-      display: flex;
-      justify-content: center; /* Center image horizontally */
-      align-items: center; /* Center image vertically */
-      padding: 25px; /* Add padding around image */
-    }
-    .image-column img {
-      max-width: 100%;
-      height: auto;
+    <script src="script.js"></script>
+</head>
 
-    }
-  </style>
-    
-<script src="script.js"></script>
-    
-    </head>  
-    
-    
-    
-<!-- ======= END HEAD ======= -->
-   <body>   
+<body>   
+    <!-- ======= NAVIGATION ======= -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html">TAURUS ENTERTAINMENT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="bios.html">BIOS</a></li>
+                    <li><a href="http://gofundme.com">DONATE</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">ARTICLES</a></li>
+                            <li><a href="#">ARCHIVES</a></li>
+                            <li><a href="#">AWARDS</a></li>
+                            <li><a href="#">FILM FESTIVALS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="special-items"><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                    <li class="special-items"><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                    <li class="special-items"><a href="http://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-       <!-- ======= NAVIGATION ======= -->
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html">TAURUS ENTERTAINMENT</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-     
-      <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">HOME</a></li>
-          <li><a href="bios.html">BIOS</a></li>
-          <li><a href="http://gofundme.com">DONATE</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">ARTICLES</a></li>
-            <li><a href="#">ARCHIVES</a></li>
-            <li><a href="#">AWARDS</a></li>
-            <li><a href="#">FILM FESTIVALS</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">CONTACT</a></li>
-          <li class="socialmedia-icons">          
-          <li class="special-items"><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
-          <li class="special-items"><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
-          <li class="special-items"><a href="http://twitter.com"><i class="fab fa-twitter"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-
-       
- <!-- ======= COVER ======= -->   
-       
-       
-
-       
-    
-      
-       
-         <div class="video-container">
+    <!-- ======= COVER ======= -->   
+    <div class="video-container">
         <video autoplay muted loop class="background-video">
             <source src="Placeholder-Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
         <div class="content">
-             <h2>Biography, Documentary, Filmmaking, Photography, WWII</h2>
-        <h1>Being Adolph Gasser</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="https://vimeo.com/916568434?password=181SecondStreet" target="_blank">
-            <button class="cta-button">Play Trailer</button>
-        </a>
+            <h2>Biography, Documentary, Filmmaking, Photography, WWII</h2>
+            <h1>Being Adolph Gasser</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="https://vimeo.com/916568434?password=181SecondStreet" target="_blank">
+                <button class="cta-button">Play Trailer</button>
+            </a>
         </div>
     </div>
-       
 
-       
-  
-   
-       
- <!-- ======= CAROUSEL ======= -->  
-     
-<div class="owl-carousel owl-theme">
-    <div class="item">
-        <img src="Placeholder1.png" alt="Image 1">
-        <div class="overlay">Text 1</div>
+    <!-- ======= CAROUSEL ======= -->  
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="Placeholder1.png" alt="Image 1">
+            <div class="overlay">Text 1</div>
         </div>
-    <div class="item">
-        <img src="Placeholder2.png" alt="Image 2">
-    <div class="overlay">Text 2</div>
+        <div class="item">
+            <img src="Placeholder2.png" alt="Image 2">
+            <div class="overlay">Text 2</div>
+        </div>
+        <div class="item">
+            <img src="Placeholder3.png" alt="Image 3">
+            <div class="overlay">Text 3</div>
+        </div>
+        <div class="item">
+            <img src="Placeholder4.png" alt="Image 4">
+            <div class="overlay">Text 4</div>
+        </div>
+        <div class="item">
+            <img src="Placeholder5.png" alt="Image 5">
+            <div class="overlay">Text 5</div>
+        </div>
+        <div class="item">
+            <img src="Placeholder6.png" alt="Image 5">
+            <div class="overlay">Text 6</div>
+        </div>
     </div>
-    <div class="item">
-        <img src="Placeholder3.png" alt="Image 3">
-    <div class="overlay">Text 3</div>
-    </div>
-    <div class="item">
-        <img src="Placeholder4.png" alt="Image 4">
-    <div class="overlay">Text 4</div>
-    </div>
-    <div class="item">
-        <img src="Placeholder5.png" alt="Image 5">
-    <div class="overlay">Text 5</div>
-    </div>
-     <div class="item">
-         <img src="Placeholder6.png" alt="Image 5">
-    <div class="overlay">Text 6</div>
-    </div>
-    <!-- Add more items as needed -->
-  </div>
 
- <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 3, // Display 3 items at a time
-    loop: true, // Enable looping
-    margin: 0, // Space between items
-    nav: true, // Show next/prev buttons
-    autoplay: true, // Enable autoplay
-    autoplayTimeout: 5000, // Autoplay interval in milliseconds (5000ms = 5s)
-    autoplayHoverPause: true, // Pause autoplay on hover
-    smartSpeed: 1000, // Transition speed when triggered by autoplay or navigation buttons (1000ms = 1s)
-    autoplaySpeed: 1000, // Speed of the autoplay transition (1000ms = 1s)
-    responsive: {
-      0: {
-        items: 1 // Display 1 item at a time on small screens
-      },
-      600: {
-        items: 2 // Display 2 items at a time on medium screens
-      },
-      1000: {
-        items: 3 // Display 3 items at a time on large screens
-      }
-    }
-  });
-});
-</script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 0,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                autoplaySpeed: 1000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
 
-       
-  
-       
-       
-       
     <!-- ======= BODY ======= -->      
+
+
        
  <div class="container-home">
 
