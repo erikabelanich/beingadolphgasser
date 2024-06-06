@@ -1,187 +1,170 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <meta name="description" content="Seedling Theatre Company located in Las Vegas, NV, The leading theatre in Henderson.">
+    <meta name="description" content="Being Adolph Gasser">
     <meta name="author" content="Erika Belanich">
     <title>Being Adolph Gasser</title>
     
+    <!-- ======= FONTS & STYLES ======= -->  
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  
-<!-- ======= FONTS & STYLES ======= -->  
-    
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-</style> 
-    
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
-</style>  
-      
-    
-<link rel="stylesheet" href="mystyle.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
- <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-</style>     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
-
-
-
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <!-- Bootstrap and jQuery (for demonstration) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
-    
-
-    </head>  
-<!-- ======= END HEAD ======= -->
-   <body>   
-<!-- ======= NAVIGATION ======= -->
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">TAURUS ENTERTAINMENT</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-     
-      <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">HOME</a></li>
-          <li><a href="https://www.google.com/">BIOS</a></li>
-          <li><a href="#">DONATE</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">ARTICLES</a></li>
-            <li><a href="#">ARCHIVES</a></li>
-            <li><a href="#">AWARDS</a></li>
-            <li><a href="#">FILM FESTIVALS</a></li>
-          </ul>
-        </li>
-        <li><a href="#">CONTACT</a></li>
-
-          <li class="special-items"><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li class="special-items"><a href="#"><i class="fab fa-instagram"></i></a></li>
-           <li class="special-items"><a href="#"><i class="fab fa-youtube"></i></a></li>
-          <li class="special-items"><a href="#"><i class="fab fa-twitter"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-       
-       
-        <div class="loading" id="loading">
-        <i class="fa fa-spinner fa-spin"></i> Loading...
-    </div>
-  
-<style>
-        /* Styles for the loading symbol */
-        .loading {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    <style>
+        @media (max-width: 768px) {
+            .container-home {
+                display: flex;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                margin: 0 auto;
+            }
         }
-        .loading i {
-            font-size: 30px;
+        @media (min-width: 768px) {
+            .container-home {
+                display: flex;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .text-column {
+            flex: 1;
+            padding: 25px;
+        }
+        .text-column h1 {
+            margin-top: 0;
+        }
+        .text-column p {
+            margin-bottom: 0;
+        }
+        .image-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+        .image-column img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
-       
- <!-- ======= COVER ======= -->   
-       
-       
+    
+    <script src="script.js"></script>
+</head>
 
-       
-    
-      
-       
-         <div class="video-container">
-        <video autoplay muted loop class="background-video">
-            <source src="../Videos/PlaceholderVideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        <div class="content">
-             <h2>Biography, Documentary, Filmmaking, Photography, WWII</h2>
-        <h1>Being Adolph Gasser</h1>
-        <p>Adolph Gasser, a WWII veteran and renowned camera repairman, reflects on his 70-year career, including his friendship with Ansel Adams and contributions to the first Nikon camera. Despite modern challenges, filmmaker John C. Aliano captures Gasser's enduring legacy and the inspiration he provides to others.</p>
-          <a href="https://vimeo.com/916568434" class="cta-link" onclick="showPassword(); return false;">
-            <button class="cta-button">Play Trailer</button>
-        </a>
-        </div>
-    </div>
-       
-       
-       
-          <script>
-        function showPassword() {
-            var password = '181SecondStreet'; // Replace 'yourpassword' with the actual password
-            var customText = 'Password: '; // Custom text for the alert dialog
-            alert(customText + password);
-            window.open('https://vimeo.com/916568434?password=181SecondStreet', '_blank'); // Replace VIDEO_ID and PASSWORD
-        }
-    </script>
-       
-    
-       
-  
-       
+<body> 
 
-       
-       
-       
-    
-       
-       
-       
-       
- <!-- ======= CAROUSEL ======= -->  
-       
-       <div class="carousel-container">
-        <div class="carousel2">
-            <div class="carousel-inner">
-                <img src="../Images/Image1.jpg" alt="Image 1">
-                <img src="../Images/Image2.jpg" alt="Image 2">
-                <img src="../Images/Image3.jpg" alt="Image 3">
-                <img src="../Images/Image4.jpg" alt="Image 4">
-                <img src="../Images/Image5.jpg" alt="Image 5">
-                <img src="../Images/Image6.jpg" alt="Image 6">
-                <!-- Add more images as needed -->
+
+
+    <!-- ======= NAVIGATION ======= -->
+ <!-- ======= NAVIGATION ======= -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html">TAURUS ENTERTAINMENT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="bios.html">BIOS</a></li>
+                    <li><a href="http://gofundme.com">DONATE</a></li>
+              
+<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        <li><a href="#">ARTICLES</a></li>
+        <li><a href="#">ARCHIVES</a></li>
+        <li><a href="#">AWARDS</a></li>
+        <li><a href="#">FILM FESTIVALS</a></li>
+    </ul>
+</li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                     <li class="socialmedia-icons">   
+                    <li class="special-items"><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                    <li class="special-items"><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                    <li class="special-items"><a href="http://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                </li> </ul>
             </div>
         </div>
+    </nav>
+
+<script>
+    $(document).ready(function(){
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
+
+       
+ <!-- ======= COVER ======= -->  
+       
+       <div class="cover-container">
+        <div class="cover-image"></div>
+        <div class="cover-text">
+            <h1>CONTACT</h1>
+        </div>
     </div>
-         <script src="../JS/script.js"></script>
-    <!-- ======= BODY ======= -->      
+
+
+ <!-- ======= CONTACT ======= --> 
+
+    
+ <!-- ======= FOOTER ======= --> 
        
-      
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <p class="footer-title">Being Adolph Gasser</p>
+            </div>
+            <div class="footer-column">
+               <p>Phone: 123-456-7890</p>
+                <p>Email: example@example.com</p>
+            </div>
+            <div class="footer-column">
+            
+                <div class="social-icons">
+                    
+                    
+                           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-bar">
+        &copy; 2024 Taurus Entertainment. All rights reserved.
+    </div>
+    
        
-       <div class="container">
-  <h3>Right Aligned Navbar</h3>
-  <p>Nearing the end of his life, Adolph Gasser looks back on a seventy year career as a world class camera repairman, WWII veteran, best friend of nature photographer Ansel Adams, contributing developer of the first Nikon camera and a sales/rental/camera repair store owner who empowered other prominent Bay Area visual artists and inventors to succeed. As eminent domain, the internet and changing technologies threaten everything he has built, he struggles to find a way to keep moving forward. Inspired by his unique stories and abilities, film maker and professor John C. Aliano follows im over the course of several years and reflects on his own career trajectory. Ultimately, he learns the greatest accomplishment of the film's namesake is Being Adolph Gasser.</p>
-</div>
 
     
     
@@ -192,5 +175,3 @@
 
 
 
-    
-    
