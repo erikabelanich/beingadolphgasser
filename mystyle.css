@@ -99,17 +99,16 @@ body{
 
 
 /* NAVIGATION */
-
-.navbar{
+.navbar {
     margin-bottom: 0px!important;
-      box-shadow: none;
+    box-shadow: none;
 }
 .navbar-inverse {
     background-color: black!important;
     border-color: black;
     border-radius: 0!important;
     padding: 15px;
-      box-shadow: none; 
+    box-shadow: none; 
 }
 .navbar-inverse .navbar-brand {
     color: white!important;
@@ -117,7 +116,7 @@ body{
     align-items: center; 
     justify-content: center; 
     height: 100%; 
-      font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     letter-spacing: .2em;
     font-weight: 400;
@@ -129,49 +128,39 @@ body{
     letter-spacing: .2em;
     font-weight: 600;
 }
-
 .navbar-inverse .navbar-nav .dropdown-menu {
     border: 1px solid darkgrey; 
     border-radius: 0;
-  left: 0; /* Align the dropdown menu to the left */
-  right: auto; /* Ensure the right alignment is not applied */
+    left: 0; /* Align the dropdown menu to the left */
+    right: auto; /* Ensure the right alignment is not applied */
     background-color: #1e1e1e;
 }
 .navbar-inverse .navbar-nav .dropdown-menu > li > a {
     font-family: "Montserrat", sans-serif;
-      color: white!important;
+    color: white!important;
     font-size: 12px;
     letter-spacing: .2em;
     font-weight: 600;
 }
 .navbar-inverse .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-inverse .navbar-nav .dropdown-menu > li > a:focus {
-   color: darkgrey!important;
+    color: darkgrey!important;
     background-color: transparent;
 }
-
-
-.navbar-inverse .navbar-toggle{
- border-color: transparent!important;   
-    
+.navbar-inverse .navbar-toggle {
+    border-color: transparent!important;   
 }
-
-
- .navbar-header .navbar-brand {
-      white-space: normal; /* Allow text to wrap */
-    }
-
-    .navbar-toggle {
-      margin-left: auto; /* Push the toggle button to the right */
-    }
-
-
-
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+.navbar-header .navbar-brand {
+    white-space: normal; /* Allow text to wrap */
+}
+.navbar-toggle {
+    margin-left: auto; /* Push the toggle button to the right */
+}
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
     background-color: transparent!important;
     border-color: #333!important;
 }
-
 .dropdown-toggle {
     cursor: pointer; /* Ensure the cursor indicates it's clickable */
     color: white; /* Match other nav link styles */
@@ -185,36 +174,28 @@ body{
         color: darkgrey!important;
     }
     .navbar-inverse .navbar-nav > li > a:hover {
-    color: #B0B3B8!important; /* hover color */
+        color: #B0B3B8!important; /* hover color */
     }
 }
 
-/* Show dropdown menu on hover (mobile only) */
+/* Show dropdown menu on click (mobile only) */
 @media (max-width: 768px) {
-    .navbar-inverse .navbar-brand{
+    .navbar-inverse .navbar-brand {
         font-size: 12px;
-        
     }
-}
-
-
-/* Ensure the social media icons are in a row on mobile */
-@media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column; /* Ensure other nav links stack vertically */
     }
-
-  .nav>li{
-  display: flex!important;
+    .nav>li {
+        display: flex!important;
+    }
 }
-}
-
 
 /* Ensure the social media icons are in a row on desktop */
 @media (min-width: 769px) {
     .nav-icons {
+        display: flex; /* Ensure social links display in a row */
         align-items: center; /* Vertically center the icons */
-        flex-direction: row; /* Ensure social links display in a row */
     }
 }
 
