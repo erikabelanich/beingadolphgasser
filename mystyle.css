@@ -545,7 +545,7 @@ margin-top: 55px;
     color: white;
 }
 
-.mobile-nav {
+.mobile-timelinenav {
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -553,7 +553,7 @@ margin-top: 55px;
     margin: 20px auto;
 }
 
-.mobile-nav button {
+.mobile-timelinenav button {
     background: none;
     border: none;
     cursor: pointer;
