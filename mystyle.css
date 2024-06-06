@@ -12,7 +12,7 @@
 
 /* Styles for mobile view */
 @media (max-width: 768px) {
-  .container {
+  .container-body {
     display: flex;
     flex-direction: column;
   }
