@@ -399,7 +399,7 @@ margin-top: 55px;
   height: auto; /* Maintain the aspect ratio */
 }
 
-
+/* 
 .owl-carousel .item:hover img {
   transform: scale(1.01);
 }
@@ -424,7 +424,15 @@ margin-top: 55px;
 .owl-carousel .item:hover .overlay {
   opacity: 1; /* Show overlay on hover */
 }
+*/
 
+
+.owl-theme .owl-dots, .owl-theme .owl-nav{
+  padding-top:15px!important;
+}
+.owl-theme .owl-nav{
+  display: none!important;
+}
 
  /* MOBILE CAROUSEL*/
 @media (max-width: 768px) {
