@@ -21,6 +21,7 @@
 
   .text-column {
     order: 2;
+    align-content: center;
   }
 
   .text-column h1 {
