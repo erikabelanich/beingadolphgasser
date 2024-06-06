@@ -192,7 +192,7 @@ body{
 
 /* Ensure the social media icons are in a row on desktop */
 @media (min-width: 769px) {
-    .nav-icons {
+    .socialmedia-icons {
         display: flex; /* Ensure social links display in a row */
         align-items: center; /* Vertically center the icons */
     }
