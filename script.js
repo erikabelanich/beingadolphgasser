@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
     // Show loading symbol on link click
     $(".navbar-nav a").click(function () {
