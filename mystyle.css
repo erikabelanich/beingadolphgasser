@@ -171,53 +171,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* Show dropdown menu on hover (desktop only) */
-@media (min-width: 768px) {
-    .navbar-inverse .navbar-nav > li.dropdown:hover .dropdown-menu {
-        display: block;
-        color: darkgrey!important;
-    }
-    .navbar-inverse .navbar-nav > li > a:hover {
-        color: #B0B3B8!important; /* hover color */
-    }
-}
-
-/* Show dropdown menu on click (mobile only) */
-@media (max-width: 768px) {
-    .navbar-inverse .navbar-brand {
-        font-size: 12px;
-    }
-    .navbar-nav {
-        flex-direction: column; /* Ensure other nav links stack vertically */
-    }
-    .nav>li {
-        display: flex!important;
-    }
-}
-
-/* Ensure the social media icons are in a row on desktop */
-@media (min-width: 769px) {
-    .nav-icons {
-        display: flex; /* Ensure social links display in a row */
-        align-items: center; /* Vertically center the icons */
-    }
-}
-
-
-
-
-
  /* PRIMARY BUTTON */
 .styled-button {
      font-family: "Montserrat", sans-serif;
