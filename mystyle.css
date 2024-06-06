@@ -45,12 +45,6 @@ body{
 }
 
 
-
-.containter{
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-
 #unique-title {
    font-family: "Montserrat", sans-serif;
     font-size: 26px!important;
@@ -958,7 +952,6 @@ color: darkgrey;
     max-width: 800px;
     width: 100%;
     padding: 20px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
