@@ -173,6 +173,19 @@ body{
 
 
 
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .special-items {
+        display: inline-block; /* Display list items inline */
+    }
+    .navbar-inverse .navbar-nav .special-items a {
+        padding-left: 10px; /* Adjust padding if necessary */
+    }
+}
+
+
+
+
+
 
 
 /* Custom Styles for Mobile Dropdown */
