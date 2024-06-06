@@ -165,9 +165,7 @@ body{
       margin-left: auto; /* Push the toggle button to the right */
     }
 
-.nav>li>a{
-  display: inline;
-}
+
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
     background-color: transparent!important;
