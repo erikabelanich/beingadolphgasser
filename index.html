@@ -89,6 +89,7 @@
    <body>   
 <!-- ======= NAVIGATION ======= -->
 
+<!-- ======= NAVIGATION ======= -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -100,14 +101,12 @@
       <a class="navbar-brand" href="index.html">TAURUS ENTERTAINMENT</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     
       <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">HOME</a></li>
-          <li><a href="bios.html">BIOS</a></li>
-          <li><a href="https://www.gofundme.com/">DONATE</a></li>
-        
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="bios.html">BIOS</a></li>
+        <li><a href="https://www.gofundme.com/">DONATE</a></li>
         <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">NEWS<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">NEWS <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="articles.html">ARTICLES</a></li>
             <li><a href="archives.html">ARCHIVES</a></li>
@@ -116,21 +115,36 @@
           </ul>
         </li>
         <li><a href="contact.html">CONTACT</a></li>
-
-    <li class="nav-icons">
+        <li class="nav-icons">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
           <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
           <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         </li>
       </ul>
-
-
-
-
     </div>
   </div>
 </nav>
+
+<script>
+  // Toggle the NEWS dropdown on mobile view
+  document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+      if (window.innerWidth < 768) {
+        e.preventDefault();
+        const dropdownMenu = this.nextElementSibling;
+        dropdownMenu.classList.toggle('show');
+      }
+    });
+  });
+
+  // Toggle the sandwich menu on click
+  document.querySelector('.navbar-toggle').addEventListener('click', function() {
+    const collapse = document.getElementById('myNavbar');
+    collapse.classList.toggle('in');
+  });
+</script>
+
        
        
 
