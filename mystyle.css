@@ -805,6 +805,15 @@ color: darkgrey;
     .footer-column {
      
     }
+
+      .footer-column:nth-child(2) {
+        order: 1; 
+    }
+
+    .footer-column:nth-child(1) {
+        order: 2; 
+    }
+
 }
 
 
