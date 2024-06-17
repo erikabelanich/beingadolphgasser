@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use - [Your Documentary Film Website Name]</title>
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+
+
+
+  <main>
+    <section class="terms-of-use">
+      <h1>Terms of Use</h1>
+      <p>Effective Date: [Date]</p>
+      
+      <h2>1. Acceptance of Terms</h2>
+      <p>Welcome to [Your Documentary Film Website Name] (“Website”). By accessing or using our Website, you agree to comply with and be bound by these Terms of Use (“Terms”). If you do not agree with these Terms, please do not use our Website.</p>
+      
+      <h2>2. Use of the Website</h2>
+      <p>You agree to use our Website for lawful purposes only and in a manner consistent with all applicable local, state, national, and international laws and regulations. You agree not to use our Website in any way that could damage, disable, overburden, or impair the Website or interfere with any other party’s use and enjoyment of the Website.</p>
+      
+      <h2>3. Intellectual Property</h2>
+      <p>All content on our Website, including text, graphics, images, logos, and software, is the property of [Your Documentary Film Website Name] or its content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, distribute, or create derivative works from any content on our Website without our prior written consent.</p>
+      
+      <h2>4. User Content</h2>
+      <p>If you submit any content to our Website, including comments, feedback, or other materials (“User Content”), you grant us a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such User Content throughout the world in any media. You represent and warrant that you own or otherwise control all of the rights to the User Content that you submit and that the User Content is accurate, does not violate these Terms, and will not cause injury to any person or entity.</p>
+      
+      <h2>5. Links to Third-Party Websites</h2>
+      <p>Our Website may contain links to third-party websites that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. By using our Website, you expressly relieve us from any and all liability arising from your use of any third-party website.</p>
+      
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>Our Website is provided on an “as is” and “as available” basis. We make no representations or warranties of any kind, express or implied, as to the operation of our Website or the information, content, materials, or products included on our Website. You expressly agree that your use of our Website is at your sole risk.</p>
+      
+      <h2>7. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, [Your Documentary Film Website Name] and its officers, directors, employees, and agents shall not be liable for any damages of any kind arising from the use of our Website or from any information, content, materials, or products included on or otherwise made available to you through our Website, including, but not limited to, direct, indirect, incidental, punitive, and consequential damages.</p>
+      
+      <h2>8. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless [Your Documentary Film Website Name] and its officers, directors, employees, and agents from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney’s fees) arising from your use of and access to our Website or your violation of these Terms.</p>
+      
+      <h2>9. Changes to These Terms</h2>
+      <p>We reserve the right to update or modify these Terms at any time without prior notice. Any changes will be effective immediately upon posting on this page. We encourage you to review these Terms periodically for any updates or changes.</p>
+      
+      <h2>10. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Nevada, without regard to its conflict of law principles.</p>
+      
+      <h2>11. Contact Us</h2>
+      <p>If you have any questions about these Terms, please contact us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+    </section>
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> <!-- Include Font Awesome JS -->
+</body>
+</html>
