@@ -805,12 +805,14 @@ color: darkgrey;
     .footer-column {
      
     }
-
-      .footer-column:nth-child(2) {
-        order: 1; 
+   .footer-column:nth-child(1) {
+        order: 3; 
     }
 
-    .footer-column:nth-child(1) {
+    .footer-column:nth-child(2) {
+        order: 1; 
+    }
+    .footer-column:nth-child(3) {
         order: 2; 
     }
 
@@ -828,6 +830,8 @@ color: darkgrey;
     .footer-column:last-child {
         text-align: right;
     }
+
+
 }
 
 /* SUB PAGE COVER IMAGE HEADER */
