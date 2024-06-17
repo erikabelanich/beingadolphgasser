@@ -313,6 +313,26 @@ margin-top: 55px;
 }
 
 
+.video-container .content .cta-button::before {
+  content: attr(data-password);
+  position: absolute;
+  top: -30px; /* Position above the button */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.video-container .content .cta-button:hover::before {
+  opacity: 1; /* Show password text on hover */
+}
+
+
  /* MOBILE COVER */
 @media (max-width: 768px) {
     .video-container {
