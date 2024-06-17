@@ -845,7 +845,7 @@ color: darkgrey;
     overflow: hidden; /* Ensure no unwanted overflow */
 }
 
-.cover-image {
+.cover-image-contact {
     background-image: url('..//Images/test4.png');
     height: 100%;
     width: 100%;
@@ -860,7 +860,51 @@ color: darkgrey;
     bottom: 0;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
-
+.cover-image-bios {
+    background-image: url('..//Images/test4.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust opacity for darker effect */
+}
+.cover-image-terms {
+    background-image: url('..//Images/test4.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust opacity for darker effect */
+}
+.cover-image-privacy {
+    background-image: url('..//Images/test4.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust opacity for darker effect */
+}
 .biocover-image {
     background-image: url('PlaceholderBackground.jpg');
     height: 100%;
@@ -964,7 +1008,7 @@ color: darkgrey;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.4; /* Adjust opacity for darker effect */
+    opacity: 0.8; /* Adjust opacity for darker effect */
 }
 
 .feature-image {
