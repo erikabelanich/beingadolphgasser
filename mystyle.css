@@ -402,9 +402,9 @@ margin-top: 55px;
   height: auto; /* Maintain the aspect ratio */
 }
 
-/* 
+
 .owl-carousel .item:hover img {
-  transform: scale(1.01);
+  transform: scale(1.0);
 }
 
 .owl-carousel .item .overlay {
@@ -420,14 +420,13 @@ margin-top: 55px;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 
 .owl-carousel .item:hover .overlay {
   opacity: 1; 
 }
-*/
 
 
 .owl-theme .owl-dots, .owl-theme .owl-nav{
