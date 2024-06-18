@@ -943,6 +943,12 @@ color: darkgrey;
 
 
 
+        .cover-text h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
 
 .cover-overlay {
     position: absolute;
