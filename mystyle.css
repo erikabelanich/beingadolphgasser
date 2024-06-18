@@ -316,7 +316,7 @@ margin-top: 55px;
 .cta-button::before {
   content: attr(data-password);
   position: absolute;
-  top: -50px; /* Position above the button */
+  top: 50px; /* Position the button */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
