@@ -1102,7 +1102,9 @@ color: darkgrey;
 .contact-container {
     background-color: black;
     position: relative;
+         display: flex;
+                justify-content: center;
+                align-items: center;
     max-width: 80%; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
-    text-align: center; /* Center text within the container */
 }
