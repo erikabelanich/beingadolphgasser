@@ -866,7 +866,7 @@ color: darkgrey;
 }
 
 .cover-image-contact {
-    background-image: url('..//Images/test4.png');
+    background-image: url('Placeholder-Body2.png');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -881,7 +881,7 @@ color: darkgrey;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 .cover-image-bios {
-    background-image: url('..//Images/test4.png');
+    background-image: url('Placeholder-Body1.png');
     height: 100%;
     width: 100%;
     background-position: center;
