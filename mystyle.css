@@ -1094,7 +1094,19 @@ color: darkgrey;
     text-align: center;
 }
 
+/* FESTIVALS */
 
+
+.festivals-container {
+    background-color: black;
+    position: relative;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    max-width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+  padding-bottom: 50px;
+}
 
 /* CONTACT */
 
