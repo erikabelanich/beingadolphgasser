@@ -80,6 +80,15 @@ body{
     text-decoration: none;
 }
 
+a{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
 
 
 
