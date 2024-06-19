@@ -873,13 +873,22 @@ color: darkgrey;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .cover-image-contact {
+        height: 330px; /* Adjust the height for mobile */
+      background-position: top;
+    }
+}
+
 .cover-image-bios {
     background-image: url('Placeholder-Body1.png');
     height: 100%;
