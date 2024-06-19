@@ -884,7 +884,8 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
-        height: 330px; /* Adjust the height for mobile */
+      background-size: revert;
+     height: 330px; /* Adjust the height for mobile */
       background-position: top;
     }
 }
