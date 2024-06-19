@@ -103,11 +103,19 @@
         }
       
         .contact-form {
-            width: 300px;
+            width: 50%px;
                 justify-content: center;
                 align-items: center;
-
         }
+            @media (max-width: 768px) {
+    .contact-form {
+        width: 100%; 
+        padding-right: 15px;
+        padding-left: 15px;
+
+    }
+}
+            
         .contact-form h2 {
             font-size: 23px;
             text-align: left;
