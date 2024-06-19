@@ -82,11 +82,12 @@ body{
 
 a{
   font-family: "Montserrat", sans-serif;
+   font-size: 13px;
   color: white;
 }
 
 a:hover {
-    color: #ccc;
+    color: #cccccc!important;
     text-decoration: none;
 }
 
