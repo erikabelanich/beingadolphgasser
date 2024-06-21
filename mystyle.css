@@ -2,12 +2,6 @@
 
 /*GLOBAL*/
 
-@font-face {
-    font-family: 'Bugiman';
-    src: url('Bugiman.ttf') format('truetype'),
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'CremeGlaceeInkBleed-Regular';
@@ -396,8 +390,7 @@ margin-top: 55px;
 
 .video-container .content h2 {
     animation-delay: 0.5s; /* Delay before the h1 fades in */
-  'FarsonStampRounded' 
-  font-family: FarsonStampRounded;
+   font-family:  Montserrat;
     text-transform: uppercase;
     font-weight: 200;
     font-size: 12px;
@@ -407,7 +400,7 @@ margin-top: 55px;
 
 .video-container .content h1 {
     animation-delay: 0.5s; /* Delay before the h2 fades in */
-     font-family: Montserrat;
+     font-family: "CremeGlaceeInkBleed-Regular";
      font-weight: 600;
     text-transform: uppercase;
     
