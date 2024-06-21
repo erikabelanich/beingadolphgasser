@@ -3,15 +3,15 @@
 /*GLOBAL*/
 
 @font-face {
-    font-family: 'FarsonStampRounded';
-    src: url('FarsonStampRounded.ttf') format('truetype'),
+    font-family: 'NorthernPassage-Regular';
+    src: url('NorthernPassage-Regular.ttf') format('truetype'),
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'FonsecaRoundedBold.ttf';
-    src: url('FonsecaRoundedBold.ttf') format('truetype'),
+    font-family: 'CARoughRider-Italic';
+    src: url('CARoughRider-Italic.ttf') format('truetype'),
     font-weight: normal;
     font-style: normal;
 }
