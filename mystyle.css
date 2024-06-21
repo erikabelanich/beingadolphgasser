@@ -1001,44 +1001,35 @@ color: darkgrey;
     color: white;
     height: 30vh; /* Adjusted height */
     overflow: hidden; /* Ensure no unwanted overflow */
-    background-image: url('ContactCover.jpg');
-    background-position: center; /* Center the image horizontally and vertically */
-    background-repeat: no-repeat;
-    background-size: cover; /* Cover the container */
-    opacity: 0.5; /* Adjust opacity for darker effect */
 }
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .cover-container {
-        height: 320px; /* Adjust the height for mobile */
-   }
-}
-
-
 
 .cover-image-contact {
     background-image: url('ContactCover.jpg');
     height: 100%;
     width: 100%;
-    background-position: center; /* Center the image horizontally and vertically */
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Cover the container */
-    background-attachment: fixed; /* Keep the image fixed in place while scrolling */
-    position: absolute; /* Use absolute positioning to ensure full coverage */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
-        background-attachment: scroll; /* Change to scroll to avoid mobile issues */
-        background-size: cover; /* Ensure the full width of the image is visible */
-        background-position: center; /* Center the image horizontally and vertically */
+     background-size: revert;
+     height: 330px; /* Adjust the height for mobile */
+     background-position: top;
     }
 }
+
+
+
 
 
 
