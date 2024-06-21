@@ -2,6 +2,20 @@
 
 /*GLOBAL*/
 
+@font-face {
+    font-family: 'FarsonStampRounded';
+    src: url('FarsonStampRounded.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fonseca Rounded Bold.ttf';
+    src: url('Fonseca Rounded Bold.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
 .image-column,
 .text-column {
   flex: 1;
@@ -383,7 +397,8 @@ margin-top: 55px;
 
 .video-container .content h2 {
     animation-delay: 0.5s; /* Delay before the h1 fades in */
-    font-family: Montserrat;
+  'FarsonStampRounded' 
+  font-family: FarsonStampRounded;
     text-transform: uppercase;
     font-weight: 200;
     font-size: 12px;
