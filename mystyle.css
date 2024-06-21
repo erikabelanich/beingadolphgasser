@@ -1014,7 +1014,7 @@ color: darkgrey;
     position: relative;
     text-align: center;
     color: white;
-    height: 30vh; /* Adjusted height */
+    height: 40vh; /* Adjusted height */
     overflow: hidden; /* Ensure no unwanted overflow */
 }
 
