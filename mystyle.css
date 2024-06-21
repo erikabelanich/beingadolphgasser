@@ -1009,7 +1009,7 @@ color: darkgrey;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain; /* Ensure the entire image fits within the container */
     background-attachment: fixed;
     position: relative;
     top: 0;
@@ -1022,9 +1022,9 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
-     background-size: revert;
-     height: 330px; /* Adjust the height for mobile */
-     background-position: top;
+        background-size: contain; /* Ensure the entire image fits within the container on mobile as well */
+        height: 330px; /* Adjust the height for mobile */
+        background-position: top;
     }
 }
 
