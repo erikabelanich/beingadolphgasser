@@ -1005,7 +1005,6 @@ color: darkgrey;
     background-position: center; /* Center the image horizontally and vertically */
     background-repeat: no-repeat;
     background-size: cover; /* Cover the container */
-    background-attachment: fixed; /* Fixed background */
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
