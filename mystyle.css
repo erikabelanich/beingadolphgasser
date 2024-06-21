@@ -1012,10 +1012,8 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-container {
-        height: 330px; /* Adjust the height for mobile */
-        background-size: contain; /* Ensure the full width of the image is visible */
-        background-position: center; /* Center the image horizontally and vertically */
-    }
+        height: 320px; /* Adjust the height for mobile */
+   }
 }
 
 
