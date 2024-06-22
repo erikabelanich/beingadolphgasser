@@ -16,13 +16,13 @@ $(document).ready(function () {
     document.addEventListener('DOMContentLoaded', function() {
       document.body.addEventListener('mouseover', function(event) {
         if (event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') {
-          document.body.style.cursor = 'url("camera.png"), auto';
+          document.body.style.cursor = 'url("Mouse.png"), auto';
         }
       });
 
       document.body.addEventListener('mouseout', function(event) {
         if (event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') {
-          document.body.style.cursor = 'url("camera.png"), auto';
+          document.body.style.cursor = 'url("Mouse.png"), auto';
         }
       });
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
           document.body.style.cursor = 'pointer';
         });
         element.addEventListener('mouseout', function() {
-          document.body.style.cursor = 'url("camera.png"), auto';
+          document.body.style.cursor = 'url("Mouse.png"), auto';
         });
       });
     });
