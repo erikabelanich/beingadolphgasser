@@ -51,9 +51,9 @@ p{
 
 body{
     background-color: black; /* Black background */
-      background-image: url('vintage-overlay.png'); /* Vintage texture image */
-      background-size: cover;
-      background-attachment: fixed; /* Ensure the image scrolls with the page */
+      background-image: url('FilmScratches.png'); /* Vintage texture image */
+      background-size: 100%;
+      background-attachment: scroll; /* Ensure the image scrolls with the page */
      
 }
 
