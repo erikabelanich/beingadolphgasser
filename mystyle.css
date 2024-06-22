@@ -401,6 +401,7 @@ margin-top: 55px;
 .video-container .content h1 {
     animation-delay: 0.5s; /* Delay before the h2 fades in */
      font-family: "CremeGlaceeInkBleed-Regular";
+    letter-spacing: 3px;
      font-weight: 600;
     text-transform: uppercase;
     
@@ -779,6 +780,8 @@ padding-top: 25px;
 
 .footer-title {
     font-size: 24px;
+    font-family: "CremeGlaceeInkBleed-Regular";
+    letter-spacing: 3px;
     font-weight: bold;
     margin: 0;
 }
