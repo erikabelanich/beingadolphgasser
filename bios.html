@@ -70,13 +70,24 @@ align-content: center;
             height: auto;
         }
 
-        /* Show dropdown menu on hover (desktop only) */
-@media (max-width: 768px) {
-.image-column img 
-    {
-      transform: none; /  
-    }
+
+
+
+
+        .rotate-img {
+  /* Rotate the image by 356 degrees */
+  transform: rotate(356deg);
 }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .rotate-img {
+    /* Override rotation for mobile devices */
+    transform: none; /* or transform: rotate(0deg); */
+  }
+}
+
+        
         
     </style>
     
