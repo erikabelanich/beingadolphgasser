@@ -478,6 +478,10 @@ margin-top: 55px;
   display: none!important;
 }
 
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+    background: transparent!important;
+}
+
  /* MOBILE CAROUSEL*/
 @media (max-width: 768px) {
   .owl-carousel{
