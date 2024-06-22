@@ -2,6 +2,13 @@
 
 /*GLOBAL*/
 
+ body {
+      cursor: url('Mouse.png'), auto; /* Default cursor as camera icon */
+    }
+    a, button {
+      cursor: pointer; /* Set pointer cursor for links and buttons */
+    }
+
 
 @font-face {
     font-family: 'CremeGlaceeInkBleed-Regular';
