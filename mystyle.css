@@ -1062,6 +1062,8 @@ color: darkgrey;
 }
 
 /* Media query for mobile devices */
+
+
 @media (max-width: 768px) {
     .cover-image-bios {
      background-size: revert;
@@ -1176,17 +1178,8 @@ color: darkgrey;
 
 .cover-text h1 {
     font-size: 36px;
-    letter-spacing: 0.05em;
-}
-
-@media (max-width: 768px) {
-    .cover-text h1 {
-        font-size: 36px;
-    }
-
-    .cover-text p {
-        font-size: 1em;
-    }
+    letter-spacing: 0.2em;
+ font-family: "Montserrat", sans-serif;
 }
 
 .main-content {
