@@ -73,19 +73,12 @@ align-content: center;
 
 
 
-
-        .rotate-img {
-  /* Rotate the image by 356 degrees */
-  transform: rotate(356deg);
-}
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 768px) {
-  .rotate-img {
-    /* Override rotation for mobile devices */
-    transform: none; /* or transform: rotate(0deg); */
-  }
-}
+ @media only screen and (max-width: 768px) {
+      img {
+        /* Override rotation for mobile devices */
+        transform: rotate(0deg) !important;
+      }
+    }
 
         
         
