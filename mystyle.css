@@ -1020,7 +1020,7 @@ color: darkgrey;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; /* Ensure the entire image fits within the container */
+    background-size: cover; /* Ensure the entire image fits within the container */
     background-attachment: fixed;
     position: relative;
     top: 0;
@@ -1033,7 +1033,7 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
-        background-size: contain; /* Ensure the entire image fits within the container on mobile as well */
+        background-size: cover; /* Ensure the entire image fits within the container on mobile as well */
         height: 330px; /* Adjust the height for mobile */
         background-position: top;
     }
@@ -1066,7 +1066,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-     background-size: revert;
+     background-size: cover;
      height: 330px; /* Adjust the height for mobile */
      background-position: top;
     }
@@ -1091,7 +1091,7 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-terms {
-     background-size: revert;
+     background-size: cover;
      height: 330px; /* Adjust the height for mobile */
      background-position: top;
     }
@@ -1116,7 +1116,7 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-privacy {
-     background-size: revert;
+     background-size: cover;
      height: 330px; /* Adjust the height for mobile */
      background-position: top;
     }
