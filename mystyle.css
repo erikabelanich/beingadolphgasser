@@ -2,7 +2,6 @@
 
 /*GLOBAL*/
 
-
 @font-face {
     font-family: 'CremeGlaceeInkBleed-Regular';
     src: url('CremeGlaceeInkBleed-Regular.ttf') format('truetype'),
@@ -66,7 +65,6 @@ body{
     color: #ffffff!important;
     letter-spacing: 2px;
     font-weight: 200; 
-
 }
 
 .text-link {
@@ -199,7 +197,7 @@ a:hover {
         display: inline-block; /* Display list items inline */
     }
     .navbar-inverse .navbar-nav .special-items a {
-        padding-left: 10px; /* Adjust padding if necessary */
+        padding-left: 10px;
     }
 .navbar-inverse .navbar-brand {
         font-size: 12px;
@@ -340,12 +338,12 @@ margin-top: 55px;
   top: 50px; /* Position the button */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.8); 
   color: #fff;
   padding: 5px 7px;
   border-radius: 3px;
   font-size: 11px;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   transition: opacity 0.3s ease;
 }
 
@@ -427,7 +425,8 @@ margin-top: 55px;
 
 
 
- /* CSS for the overlay background */
+ /* LOADING GIF */
+
     #loading-overlay {
       display: none; /* Hidden by default */
       position: fixed;
@@ -435,23 +434,23 @@ margin-top: 55px;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7); /* Black background with 50% opacity */
-      z-index: 9998; /* Make sure it's behind the loading spinner but above other content */
+      background-color: rgba(0, 0, 0, 0.7); 
+      z-index: 9998; 
     }
 
     /* CSS for the loading spinner */
     #loading-spinner {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 9999; /* Make sure it's on top of other elements */
+      z-index: 9999; 
     }
 
     #loading-spinner img {
-      width: 300px; /* Adjust the width as needed */
-      height: 251px; /* Adjust the height as needed */
+      width: 300px; 
+      height: 251px; 
     }
 
 
@@ -473,7 +472,7 @@ margin-top: 55px;
 }
 
 .owl-carousel .item img {
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease; 
   width: 100%; 
   height: auto; 
 }
@@ -737,9 +736,9 @@ padding-top: 25px;
 .review-container {
     background-color: black;
     position: relative;
-    max-width: 80%; /* Adjust as needed */
-    margin: 0 auto; /* Center the container */
-    text-align: center; /* Center text within the container */
+    max-width: 80%; 
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .review-slide {
@@ -765,7 +764,7 @@ padding-top: 25px;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     color: white;
-    padding: 25px 50px; /* Added more padding */
+    padding: 25px 50px;
 }
 
 .arrow {
@@ -781,15 +780,15 @@ padding-top: 25px;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    z-index: 1; /* Ensure arrows stay above the review content */
+    z-index: 1;
 }
 
 .arrow-left {
-    left: 10px; /* Adjusted left position */
+    left: 10px; 
 }
 
 .arrow-right {
-    right: 10px; /* Adjusted right position */
+    right: 10px; 
 }
 
 /* Mobile Styles */
@@ -863,8 +862,8 @@ color: darkgrey;
 .social-icons a {
     display: inline-block;
     margin-right: 10px;
-    color: #fff; /* Optional: Set the color of the icons */
-    font-size: 24px; /* Adjust the size of the icons */
+    color: #fff; 
+    font-size: 20px; 
     text-decoration: none;
 }
 
@@ -919,9 +918,7 @@ color: darkgrey;
 }
 
 
-/* HOME PAGE BACKGROUND IMAGE SCROLL */
-
-
+/* HOME PAGE BACKGROUND IMAGE*/
 
 .hero-container, .feature-section {
     position: relative;
@@ -1039,8 +1036,8 @@ color: darkgrey;
     display: flex;
      justify-content: center;
     align-items: center;
-    max-width: 80%; /* Adjust as needed */
-    margin: 0 auto; /* Center the container */
+    max-width: 80%; 
+    margin: 0 auto;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -1048,7 +1045,7 @@ color: darkgrey;
 
 
 
-/* SUB PAGE COVER IMAGE HEADER */
+/* SUB PAGE COVER IMAGES */
 
 
 .cover-container {
@@ -1113,7 +1110,6 @@ color: darkgrey;
     opacity: 0.5; 
 }
 
-
 @media (max-width: 768px) {
     .cover-image-bios {
         background-image: url('bios-mobile.png');
@@ -1121,6 +1117,7 @@ color: darkgrey;
      background-position: top;
     }
 }
+
 
 .cover-image-terms {
     background-image: url('use-cover.jpg');
@@ -1145,6 +1142,7 @@ color: darkgrey;
      background-position: top;
     }
 }
+
 
 .cover-image-privacy {
     background-image: url('privacy-cover.jpg');
@@ -1171,9 +1169,34 @@ color: darkgrey;
 }
 
 
+.cover-image-festivals {
+    background-image: url('festivals-cover.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; 
+}
+
+@media (max-width: 768px) {
+    .cover-image-festivals {
+        background-image: url('festivals-mobile.jpg');
+     background-size: contain;
+     background-position: top;
+    }
+}
 
 
-        .cover-text h4 {
+
+
+.cover-text h4 {
     font-size: 16px;
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
