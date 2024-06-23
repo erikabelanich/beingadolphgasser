@@ -492,11 +492,12 @@ margin-top: 55px;
   background: rgba(0, 0, 0, 0.5); 
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Align content to the bottom */
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 20px;
+  font-size: 11px;
+  padding: 20px;
   text-align: center;
 }
 
