@@ -1056,7 +1056,13 @@ color: darkgrey;
     text-align: center;
     color: white;
     height: 40vh; /* Adjusted height */
-    overflow: hidden; /* Ensure no unwanted overflow */
+    overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+    .cover-image-contact {
+         height: 25vh;
+    }
 }
 
 .cover-image-contact {
@@ -1075,12 +1081,10 @@ color: darkgrey;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
         background-image: url('mobiletest.jpg');
      background-size: contain;
-     height: 320px; 
      background-position: top;
     }
 }
@@ -1107,14 +1111,11 @@ color: darkgrey;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
-/* Media query for mobile devices */
-
 
 @media (max-width: 768px) {
     .cover-image-bios {
         background-image: url('mobiletest.jpg');
      background-size: contain;
-     height: 320px; 
      background-position: top;
     }
 }
@@ -1135,12 +1136,10 @@ color: darkgrey;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-terms {
         background-image: url('mobiletest.jpg');
      background-size: contain;
-     height: 320px; 
      background-position: top;
     }
 }
@@ -1161,7 +1160,6 @@ color: darkgrey;
     opacity: 0.5; /* Adjust opacity for darker effect */
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-privacy {
         background-image: url('mobiletest.jpg');
@@ -1170,6 +1168,9 @@ color: darkgrey;
      background-position: top;
     }
 }
+
+
+
 
         .cover-text h4 {
     font-size: 16px;
@@ -1216,7 +1217,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
 .cover-text h1 {
-    font-size: 31px;
+    font-size: 30px;
 }
 }
 
