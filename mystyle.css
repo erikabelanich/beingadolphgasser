@@ -1164,7 +1164,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-privacy {
-        background-image: url('mobiletest.jpg');
+        background-image: url('mobiletest2.jpg');
      background-size: contain;
      height: 320px; 
      background-position: top;
