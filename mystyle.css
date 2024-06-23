@@ -1166,7 +1166,6 @@ color: darkgrey;
     .cover-image-privacy {
         background-image: url('mobiletest2.jpg');
      background-size: contain;
-     height: 320px; 
      background-position: top;
     }
 }
