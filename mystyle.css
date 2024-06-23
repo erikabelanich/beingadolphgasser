@@ -1061,7 +1061,9 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-contact {
-         height: 25vh;
+        height: 25vh;
+        text-align: center;
+        overflow: hidden; 
     }
 }
 
