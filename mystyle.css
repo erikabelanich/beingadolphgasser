@@ -426,6 +426,29 @@ margin-top: 55px;
 
 
 
+
+  /* CSS for the loading spinner */
+    #loading {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999; /* Make sure it's on top of other elements */
+    }
+
+    #loading img {
+      width: 400px; /* Adjust the width as needed */
+      height: 335px; /* Adjust the height as needed */
+    }
+
+
+
+
+
+
+
+
  /* CAROUSEL */
 
 .owl-carousel{
