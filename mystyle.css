@@ -1116,7 +1116,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-        background-image: url('mobiletest.jpg');
+        background-image: url('bios-mobile.png');
      background-size: contain;
      background-position: top;
     }
@@ -1140,7 +1140,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-terms {
-        background-image: url('mobiletest.jpg');
+        background-image: url('use-mobile.jpg');
      background-size: contain;
      background-position: top;
     }
