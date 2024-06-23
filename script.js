@@ -1,14 +1,13 @@
-$(document).ready(function () {
-    // Show loading symbol on link click
-    $(".navbar-nav a").click(function () {
-        var href = $(this).attr("href");
-        $("#loading").fadeIn(); // Show loading symbol
-
-        setTimeout(function () {
-            window.location.href = href; // Redirect after a delay (simulated loading time)
-        }, 2000); // Simulated loading time (2000 milliseconds = 2 seconds)
-        
-        return false; // Prevent default link behavior
+// JavaScript to show the loading spinner on link click
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      document.getElementById('loading').style.display = 'block';
+      
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 2000); // Delay for 2 seconds before navigating
     });
+  });
 });
-
