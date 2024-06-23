@@ -1098,7 +1098,7 @@ color: darkgrey;
 
 
 .cover-image-bios {
-    background-image: url('cover3.jpg');
+    background-image: url('bios-cover.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1123,7 +1123,7 @@ color: darkgrey;
 }
 
 .cover-image-terms {
-    background-image: url('Cover.jpg');
+    background-image: url('use-cover.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1147,7 +1147,7 @@ color: darkgrey;
 }
 
 .cover-image-privacy {
-    background-image: url('Cover4.jpg');
+    background-image: url('privacy-cover.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
