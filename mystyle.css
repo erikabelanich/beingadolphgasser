@@ -492,13 +492,17 @@ margin-top: 55px;
   background: rgba(0, 0, 0, 0.5); 
   color: white;
   display: flex;
-  justify-content: flex-end; /* Align content to the bottom */
+  justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 11px;
+  font-size: 12px;
   padding: 20px;
-  text-align: center;
+  text-align: center; /* Align text to the left */
+}
+
+.owl-carousel .item .overlay .text {
+  align-self: flex-end; /* Align text to the bottom */
 }
 
 .owl-carousel .item:hover .overlay {
