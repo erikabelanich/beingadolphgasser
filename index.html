@@ -70,11 +70,10 @@
         }
     </style>
     
-    <script src="script.js"></script>
 </head>
 
 <body>
-  <div class="loading" id="loading">
+   <div class="loading" id="loading">
     <img src="cameraloading.gif" alt="Loading">
   </div>
 
@@ -94,8 +93,8 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">HOME</a></li>
-                    <li><a href="bios.html">BIOS</a></li>
-                    <li><a href="http://gofundme.com">DONATE</a></li>
+                    <li><a href="bios.html" class="link">BIOS</a></li>
+                    <li><a href="http://gofundme.com" class="link">DONATE</a></li>
 
                     <!--             
 <li class="dropdown">
@@ -109,7 +108,7 @@
 </li>
     -->
 
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="contact.html" class="link">CONTACT</a></li>
                      <li class="socialmedia-icons">   
                     <li class="special-items"><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
                     <li class="special-items"><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
@@ -141,7 +140,7 @@
             <h2>Biography, Documentary, Filmmaking, Photography, WWII</h2>
             <h1>Being Adolph Gasser</h1>
             <p></p>
-            <a href="https://vimeo.com/916568434?password=181SecondStreet" target="_blank">
+            <a href="https://vimeo.com/916568434?password=181SecondStreet" class="link" target="_blank">
                 <button class="cta-button" data-password="Password: 181SecondStreet">Play Trailer</button>
             </a>
         </div>
@@ -418,8 +417,8 @@ showSlide(currentSlide);
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a><br>
+                <a href="privacy.html" class="link">Privacy Policy</a>
+                <a href="terms.html" class="link">Terms of Use</a><br>
         
             </div>
             <div class="footer-column">
@@ -447,7 +446,24 @@ showSlide(currentSlide);
     
        
 
-    
+
+
+
+      <script>
+    // JavaScript to show the loading spinner on link click
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.link').forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          document.getElementById('loading').style.display = 'block';
+          
+          setTimeout(() => {
+            window.location.href = this.href;
+          }, 2000); // Delay for 2 seconds before navigating
+        });
+      });
+    });
+  </script>
     
 </body>
     
