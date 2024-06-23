@@ -1078,9 +1078,10 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-contact {
-        background-size: cover; /* Ensure the entire image fits within the container on mobile as well */
-        height: 330px; /* Adjust the height for mobile */
-        background-position: top;
+        background-image: url('mobiletest.jpg');
+     background-size: contain;
+     height: 320px; 
+     background-position: top;
     }
 }
 
@@ -1111,8 +1112,9 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-     background-size: cover;
-     height: 330px; /* Adjust the height for mobile */
+        background-image: url('mobiletest.jpg');
+     background-size: contain;
+     height: 320px; 
      background-position: top;
     }
 }
@@ -1136,8 +1138,9 @@ color: darkgrey;
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .cover-image-terms {
-     background-size: cover;
-     height: 330px; /* Adjust the height for mobile */
+        background-image: url('mobiletest.jpg');
+     background-size: contain;
+     height: 320px; 
      background-position: top;
     }
 }
@@ -1162,8 +1165,8 @@ color: darkgrey;
 @media (max-width: 768px) {
     .cover-image-privacy {
         background-image: url('mobiletest.jpg');
-     background-size: cover;
-     height: 330px; /* Adjust the height for mobile */
+     background-size: contain;
+     height: 320px; 
      background-position: top;
     }
 }
