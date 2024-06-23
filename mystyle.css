@@ -427,8 +427,20 @@ margin-top: 55px;
 
 
 
-  /* CSS for the loading spinner */
-    #loading {
+ /* CSS for the overlay background */
+    #loading-overlay {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+      z-index: 9998; /* Make sure it's behind the loading spinner but above other content */
+    }
+
+    /* CSS for the loading spinner */
+    #loading-spinner {
       display: none; /* Hidden by default */
       position: fixed;
       top: 50%;
@@ -437,11 +449,10 @@ margin-top: 55px;
       z-index: 9999; /* Make sure it's on top of other elements */
     }
 
-    #loading img {
-      width: 400px; /* Adjust the width as needed */
-      height: 335px; /* Adjust the height as needed */
+    #loading-spinner img {
+      width: 300px; /* Adjust the width as needed */
+      height: 251px; /* Adjust the height as needed */
     }
-
 
 
 
