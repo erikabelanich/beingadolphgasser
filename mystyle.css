@@ -1055,7 +1055,7 @@ color: darkgrey;
     position: relative;
     text-align: center;
     color: white;
-    height: 40vh; /* Adjusted height */
+    height: 40vh;
     overflow: hidden; 
 }
 
@@ -1073,19 +1073,19 @@ color: darkgrey;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Ensure the entire image fits within the container */
+    background-size: cover; 
     background-attachment: fixed;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5; /* Adjust opacity for darker effect */
+    opacity: 0.5; 
 }
 
 @media (max-width: 768px) {
     .cover-image-contact {
-        background-image: url('mobiletest.jpg');
+        background-image: url('contact-mobile.jpg');
      background-size: contain;
      background-position: top;
     }
@@ -1110,7 +1110,7 @@ color: darkgrey;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5; /* Adjust opacity for darker effect */
+    opacity: 0.5; 
 }
 
 
@@ -1135,7 +1135,7 @@ color: darkgrey;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5; /* Adjust opacity for darker effect */
+    opacity: 0.5; 
 }
 
 @media (max-width: 768px) {
@@ -1159,12 +1159,12 @@ color: darkgrey;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5; /* Adjust opacity for darker effect */
+    opacity: 0.5; 
 }
 
 @media (max-width: 768px) {
     .cover-image-privacy {
-        background-image: url('mobiletest2.jpg');
+        background-image: url('privacy-mobile.jpg');
      background-size: contain;
      background-position: top;
     }
@@ -1187,7 +1187,7 @@ color: darkgrey;
     right: 0;
     bottom: 0;
     background-color: black;
-    opacity: 0.5; /* Black overlay behind the image */
+    opacity: 0.5; 
 }
 
 .cover-text {
@@ -1197,7 +1197,7 @@ color: darkgrey;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    z-index: 1; /* Ensure text is above overlay and image */
+    z-index: 1; 
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
 }
 
