@@ -1060,7 +1060,7 @@ color: darkgrey;
 }
 
 .cover-image-contact {
-    background-image: url('ContactCover.jpg');
+    background-image: url('Cover2.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1091,7 +1091,7 @@ color: darkgrey;
 
 
 .cover-image-bios {
-    background-image: url('BiosCover.jpg');
+    background-image: url('Cover3.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1118,7 +1118,7 @@ color: darkgrey;
 }
 
 .cover-image-terms {
-    background-image: url('TermsCover.jpg');
+    background-image: url('Cover1.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1143,7 +1143,7 @@ color: darkgrey;
 }
 
 .cover-image-privacy {
-    background-image: url('PrivacyCover.jpg');
+    background-image: url('Cover4.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
