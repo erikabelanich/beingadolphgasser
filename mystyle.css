@@ -493,7 +493,7 @@ margin-top: 55px;
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 12px;
@@ -501,9 +501,6 @@ margin-top: 55px;
   text-align: center; /* Align text to the left */
 }
 
-.owl-carousel .item .overlay .text {
-  align-self: flex-end; /* Align text to the bottom */
-}
 
 .owl-carousel .item:hover .overlay {
   opacity: 1; 
