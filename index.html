@@ -139,9 +139,23 @@
             <h2>Biography, Documentary, Filmmaking, Photography, WWII</h2>
             <h1>Being Adolph Gasser</h1>
             <p></p>
-            <a href="https://vimeo.com/916568434?password=181SecondStreet" class="link" target="_blank">
-                <button class="cta-button" data-password="Password: 181SecondStreet">Play Trailer</button>
-            </a>
+
+
+            <body>
+    <button id="openPopup">Watch Video</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <video id="video" controls controlsList="nodownload">
+                <source src="https://vimeo.com/916568434?password=181SecondStreet" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+            
+        
         </div>
     </div>
 
