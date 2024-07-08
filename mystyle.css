@@ -1261,10 +1261,6 @@ color: darkgrey;
 
 /* Video Popup*/
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 #openPopup {
     padding: 10px 20px;
     font-size: 16px;
@@ -1290,7 +1286,7 @@ body {
     width: 50%;
     max-width: 800px; /* Could be more or less, depending on screen size */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
 }
 
 .popup-content video {
