@@ -67,6 +67,25 @@
             max-width: 100%;
             height: auto;
         }
+
+        #music-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+#music-icon.muted::after {
+    content: "🔇";
+}
+
+        
     </style>
     
 </head>
@@ -76,6 +95,15 @@
   <div id="loading-spinner">
     <img src="load.gif" alt="Loading">
   </div>
+
+
+    <div id="music-icon" onclick="toggleMute()">
+        🔊
+    </div>
+    <audio id="background-music" loop>
+        <source src="testmusic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
 
  <!-- ======= NAVIGATION ======= -->
@@ -126,6 +154,29 @@
     $(document).ready(function(){
         $('.dropdown-toggle').dropdown();
     });
+</script>
+
+<script>
+
+    window.onload = function() {
+    var music = document.getElementById("background-music");
+    var musicIcon = document.getElementById("music-icon");
+
+    // Play the music when the page loads
+    music.play();
+
+    // Function to toggle mute/unmute
+    window.toggleMute = function() {
+        if (music.muted) {
+            music.muted = false;
+            musicIcon.classList.remove("muted");
+        } else {
+            music.muted = true;
+            musicIcon.classList.add("muted");
+        }
+    };
+};
+
 </script>
 
        <!-- ======= COVER ======= -->   
