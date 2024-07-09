@@ -240,7 +240,15 @@ a:hover {
 
 
 
-
+/* TRAILER */
+.trailer-video {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
 
 
  /* COVER VIDEO */
