@@ -245,9 +245,14 @@ a:hover {
     position: relative;
     top: 0;
     left: 0;
-    max-width: 75%;
     height: auto;
     z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .trailer-video {
+       max-width: 75%;
+}
 }
 
 @media (max-width: 768px) {
