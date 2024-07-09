@@ -68,7 +68,7 @@
             height: auto;
         }
 
-        #music-icon {
+#music-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -81,8 +81,12 @@
     z-index: 1000;
 }
 
-#music-icon.muted::after {
-    content: "🔇";
+#music-icon i {
+    display: none;
+}
+
+#music-icon i.active {
+    display: inline;
 }
 
         
@@ -97,13 +101,18 @@
   </div>
 
 
-    <div id="music-icon" onclick="toggleMute()">
-        🔊
+
+        <div id="music-icon" onclick="toggleMute()">
+        <i id="unmuted-icon" class="fas fa-volume-up"></i>
+        <i id="muted-icon" class="fas fa-volume-mute" style="display: none;"></i>
     </div>
     <audio id="background-music" loop>
-        <source src="testmusic.mp3" type="audio/mp3">
+        <source src="BeneaththeStarryNight.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+    
+
 
 
  <!-- ======= NAVIGATION ======= -->
@@ -158,9 +167,10 @@
 
 <script>
 
-    window.onload = function() {
+window.onload = function() {
     var music = document.getElementById("background-music");
-    var musicIcon = document.getElementById("music-icon");
+    var unmutedIcon = document.getElementById("unmuted-icon");
+    var mutedIcon = document.getElementById("muted-icon");
 
     // Play the music when the page loads
     music.play();
@@ -169,13 +179,19 @@
     window.toggleMute = function() {
         if (music.muted) {
             music.muted = false;
-            musicIcon.classList.remove("muted");
+            unmutedIcon.classList.add("active");
+            mutedIcon.classList.remove("active");
         } else {
             music.muted = true;
-            musicIcon.classList.add("muted");
+            unmutedIcon.classList.remove("active");
+            mutedIcon.classList.add("active");
         }
     };
+
+    // Set the initial state
+    unmutedIcon.classList.add("active");
 };
+
 
 </script>
 
