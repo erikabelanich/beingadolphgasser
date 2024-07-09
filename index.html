@@ -100,7 +100,9 @@
     <img src="load.gif" alt="Loading">
   </div>
 
-  <div id="music-icon" onclick="toggleMute()">
+
+
+     <div id="music-icon" onclick="toggleMute()">
         <i id="unmuted-icon" class="fas fa-volume-up active"></i>
         <i id="muted-icon" class="fas fa-volume-mute"></i>
     </div>
@@ -108,6 +110,19 @@
         <source src="BeneaththeStarryNight.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+
+      <div id="music-icon" onclick="toggleMute()">
+        <i id="unmuted-icon" class="fas fa-volume-up active"></i>
+        <i id="muted-icon" class="fas fa-volume-mute"></i>
+    </div>
+    <button id="start-music" onclick="startMusic()">Start Music</button>
+    <audio id="background-music" loop>
+        <source src="your-music-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
     
 
 
@@ -163,30 +178,39 @@
 </script>
 
 <script>
+function startMusic() {
+    var music = document.getElementById("background-music");
+    music.play();
+    document.getElementById("start-music").style.display = 'none'; // Hide the button after starting music
+}
 
-
-    window.onload = function() {
+window.onload = function() {
     var music = document.getElementById("background-music");
     var unmutedIcon = document.getElementById("unmuted-icon");
     var mutedIcon = document.getElementById("muted-icon");
 
-// Play the music when the page loads
-    music.play();
+    // Attempt to play music on load
+    music.play().catch(function(error) {
+        console.log("Autoplay was prevented. Click to start audio.");
+    });
 
     // Function to toggle mute/unmute
     window.toggleMute = function() {
         if (music.muted) {
             music.muted = false;
-            musicIcon.classList.remove("muted");
+            unmutedIcon.classList.add("active");
+            mutedIcon.classList.remove("active");
         } else {
             music.muted = true;
-            musicIcon.classList.add("muted");
+            unmutedIcon.classList.remove("active");
+            mutedIcon.classList.add("active");
         }
     };
+
+    // Set the initial state
+    unmutedIcon.classList.add("active");
+    mutedIcon.classList.remove("active");
 };
-
-
-
 
 </script>
 
