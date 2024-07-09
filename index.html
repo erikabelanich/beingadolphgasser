@@ -163,13 +163,20 @@
 </script>
 
 <script>
-window.onload = function() {
+
+
+    window.onload = function() {
     var music = document.getElementById("background-music");
     var unmutedIcon = document.getElementById("unmuted-icon");
     var mutedIcon = document.getElementById("muted-icon");
 
-    // Play the music when the page loads
-    music.play();
+    // Try to play the music when the page loads
+    music.play().then(function() {
+        console.log("Audio is playing automatically.");
+    }).catch(function(error) {
+        console.log("Autoplay was prevented.");
+        // Optionally handle autoplay prevention (e.g., show a button to manually start the music)
+    });
 
     // Function to toggle mute/unmute
     window.toggleMute = function() {
@@ -188,6 +195,7 @@ window.onload = function() {
     unmutedIcon.classList.add("active");
     mutedIcon.classList.remove("active");
 };
+
 
 
 </script>
