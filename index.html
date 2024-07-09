@@ -100,17 +100,14 @@
     <img src="load.gif" alt="Loading">
   </div>
 
-
-
-        <div id="music-icon" onclick="toggleMute()">
-        <i id="unmuted-icon" class="fas fa-volume-up"></i>
-        <i id="muted-icon" class="fas fa-volume-mute" style="display: none;"></i>
+  <div id="music-icon" onclick="toggleMute()">
+        <i id="unmuted-icon" class="fas fa-volume-up active"></i>
+        <i id="muted-icon" class="fas fa-volume-mute"></i>
     </div>
     <audio id="background-music" loop>
         <source src="BeneaththeStarryNight.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
     
 
 
@@ -166,7 +163,6 @@
 </script>
 
 <script>
-
 window.onload = function() {
     var music = document.getElementById("background-music");
     var unmutedIcon = document.getElementById("unmuted-icon");
@@ -190,6 +186,7 @@ window.onload = function() {
 
     // Set the initial state
     unmutedIcon.classList.add("active");
+    mutedIcon.classList.remove("active");
 };
 
 
