@@ -170,31 +170,21 @@
     var unmutedIcon = document.getElementById("unmuted-icon");
     var mutedIcon = document.getElementById("muted-icon");
 
-    // Try to play the music when the page loads
-    music.play().then(function() {
-        console.log("Audio is playing automatically.");
-    }).catch(function(error) {
-        console.log("Autoplay was prevented.");
-        // Optionally handle autoplay prevention (e.g., show a button to manually start the music)
-    });
+// Play the music when the page loads
+    music.play();
 
     // Function to toggle mute/unmute
     window.toggleMute = function() {
         if (music.muted) {
             music.muted = false;
-            unmutedIcon.classList.add("active");
-            mutedIcon.classList.remove("active");
+            musicIcon.classList.remove("muted");
         } else {
             music.muted = true;
-            unmutedIcon.classList.remove("active");
-            mutedIcon.classList.add("active");
+            musicIcon.classList.add("muted");
         }
     };
-
-    // Set the initial state
-    unmutedIcon.classList.add("active");
-    mutedIcon.classList.remove("active");
 };
+
 
 
 
