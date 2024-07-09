@@ -144,16 +144,7 @@
     </nav>
 
 
- <!-- ======= MUSIC ======= -->
-<div id="music-icon" onclick="toggleMute()">
-        <i id="unmuted-icon" class="fas fa-volume-up active"></i>
-        <i id="muted-icon" class="fas fa-volume-mute"></i>
-    </div>
-    <button id="start-music" onclick="startMusic()">Start Music</button>
-    <audio id="background-music" loop>
-        <source src="BeneaththeStarryNight.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+
     
 
 <script>
@@ -204,6 +195,20 @@ window.onload = function() {
         <video autoplay muted loop class="background-video">
             <source src="Placeholder-Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
+
+
+             <!-- ======= MUSIC ======= -->
+<div id="music-icon" onclick="toggleMute()">
+        <i id="unmuted-icon" class="fas fa-volume-up active"></i>
+        <i id="muted-icon" class="fas fa-volume-mute"></i>
+    </div>
+    <button id="start-music" onclick="startMusic()">Start Music</button>
+    <audio id="background-music" loop>
+        <source src="BeneaththeStarryNight.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+            
         </video>
         <div class="overlay"></div>
         <div class="content">
