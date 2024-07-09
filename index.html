@@ -173,21 +173,29 @@
 </script>
 
 <script>
-function startMusic() {
-    var music = document.getElementById("background-music");
-    music.play();
-    document.getElementById("start-music").style.display = 'none'; // Hide the button after starting music
-}
 
-window.onload = function() {
+    window.onload = function() {
     var music = document.getElementById("background-music");
     var unmutedIcon = document.getElementById("unmuted-icon");
     var mutedIcon = document.getElementById("muted-icon");
+    var startMusicButton = document.getElementById("start-music");
 
-    // Attempt to play music on load
-    music.play().catch(function(error) {
-        console.log("Autoplay was prevented. Click to start audio.");
+    // Attempt to play music on page load
+    music.play().then(function() {
+        startMusicButton.style.display = 'none'; // Hide the button if music plays successfully
+    }).catch(function(error) {
+        console.log("Autoplay was prevented. User interaction is required.");
+        // Optionally, you can show a message to prompt the user to click the button
     });
+
+    // Function to start music and hide button
+    window.startMusic = function() {
+        music.play().then(function() {
+            startMusicButton.style.display = 'none'; // Hide the button after starting music
+        }).catch(function(error) {
+            console.log("Error playing music:", error);
+        });
+    };
 
     // Function to toggle mute/unmute
     window.toggleMute = function() {
@@ -205,7 +213,13 @@ window.onload = function() {
     // Set the initial state
     unmutedIcon.classList.add("active");
     mutedIcon.classList.remove("active");
+
+    // Hide the start music button after 15 seconds
+    setTimeout(function() {
+        startMusicButton.style.display = 'none';
+    }, 15000);
 };
+
 
 </script>
 
