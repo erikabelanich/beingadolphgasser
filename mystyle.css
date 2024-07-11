@@ -282,6 +282,32 @@ a:hover {
     z-index: 1;
 }
 
+
+
+/* Default video for desktop */
+.background-video {
+  display: block;
+}
+
+/* Mobile video */
+.background-video-mobile {
+  display: none;
+}
+
+/* Media query to switch video on mobile devices */
+@media (max-width: 768px) {
+  .background-video {
+    display: none;
+  }
+  .background-video-mobile {
+    display: block;
+  }
+}
+
+
+
+
+
 .overlay {
     position: absolute;
     bottom: 0;
