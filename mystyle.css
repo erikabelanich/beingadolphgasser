@@ -570,7 +570,7 @@ margin-top: 55px;
  /* MOBILE CAROUSEL*/
 @media (max-width: 768px) {
   .owl-carousel{
-   padding-top: 20px;
+   padding-top: 0px;
 }
 }
 
