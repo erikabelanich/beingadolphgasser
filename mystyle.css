@@ -295,7 +295,7 @@ a:hover {
 }
 
 /* Mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
   .background-video {
     display: none;
   }
