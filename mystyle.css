@@ -405,7 +405,7 @@ margin-top: 55px;
 
 
  /* MOBILE COVER */
-@media (max-width: 768px) {
+@media (max-width: 415px) {
     .video-container {
         height: 70vh;
     }
