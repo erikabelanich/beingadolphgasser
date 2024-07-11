@@ -282,19 +282,15 @@ a:hover {
     z-index: 1;
 }
 
-
-
-/* Default video for desktop */
 .background-video {
   display: block;
 }
 
-/* Mobile video */
 .background-video-mobile {
   display: none;
 }
 
-/* Media query to switch video on mobile devices */
+/* Mobile devices */
 @media (max-width: 768px) {
   .background-video {
     display: none;
@@ -304,6 +300,10 @@ a:hover {
     opacity: 0.5;
     z-index: 1;
   }
+    
+.content {
+    top: 40%;
+}
 }
 
 
