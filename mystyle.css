@@ -335,7 +335,7 @@ a:hover {
 }
 
 .video-container .content .cta-button{
-margin-top: 55px;
+margin-top: 40px;
 }
 
 .content h1 {
@@ -405,7 +405,7 @@ margin-top: 55px;
 
 
  /* MOBILE COVER */
-@media (max-width: 415px) {
+@media (max-width: 515px) {
     .video-container {
         height: 70vh;
     }
@@ -418,6 +418,9 @@ margin-top: 55px;
     }
     .content h1 {
     font-size: 1.8em;
+}
+       .content h1 {
+    font-size: 10px;
 }
 }
 
