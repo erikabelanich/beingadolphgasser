@@ -300,6 +300,7 @@ a:hover {
     display: none;
   }
   .background-video-mobile {
+    width: 100%;
     display: block;
     opacity: 0.5;
     z-index: 1;
