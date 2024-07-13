@@ -574,11 +574,11 @@ showSlide(currentSlide);
         document.getElementById('loading-overlay').style.display = 'block';
         document.getElementById('loading-spinner').style.display = 'block';
         
-        // Set timeout to hide loading spinner after 3 seconds (3000 milliseconds)
+        // Set timeout to hide loading spinner after 2 seconds (2000 milliseconds)
         setTimeout(() => {
           document.getElementById('loading-overlay').style.display = 'none';
           document.getElementById('loading-spinner').style.display = 'none';
-        }, 3000); // Hide after 3 seconds
+        }, 2000); // Hide after 2 seconds
         
         // Navigate to the clicked link after 2 seconds (2000 milliseconds)
         setTimeout(() => {
