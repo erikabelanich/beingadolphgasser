@@ -328,7 +328,7 @@ a:hover {
 .content {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 40%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
@@ -377,32 +377,7 @@ margin-top: 40px;
 }
 
 
- /* 
-.cta-button:active {
-    background-color: rgba(200, 200, 200, 1); 
-    transform: scale(0.95); 
-}
 
-
-.cta-button::before {
-  content: attr(data-password);
-  position: absolute;
-  top: 50px; /* Position the button */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8); 
-  color: #fff;
-  padding: 5px 7px;
-  border-radius: 3px;
-  font-size: 11px;
-  opacity: 0; 
-  transition: opacity 0.3s ease;
-}
-
-.cta-button:hover::before {
-  opacity: 1; /* Show password text on hover */
-}
-*/
 
 
 
