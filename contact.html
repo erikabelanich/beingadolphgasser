@@ -162,10 +162,11 @@ permalink: /contact/
 
 
 
-            <div class="contact-container">
+           <div class="contact-container">
     <div class="contact-form">
         <h2>Get in Touch</h2>
-       <form action="mailto:erikabelanich@gmail.com" method="post" enctype="text/plain">
+        <form name="contact" method="POST" data-netlify="true" action="https://warm-biscochitos-4d3926.netlify.app/">
+            <input type="hidden" name="form-name" value="contact">
             <label for="name">Your Name *</label>
             <input type="text" id="name" name="name" required>
             
@@ -177,8 +178,8 @@ permalink: /contact/
             <input type="submit" value="Send">
         </form>
     </div>
+</div>
 
-            </div>
     
     
  <!-- Footer -->
