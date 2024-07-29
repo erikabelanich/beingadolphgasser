@@ -1144,7 +1144,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-        background-image: url('Team-Mobile.png');
+        background-image: url('Mobile-Team.png');
      background-size: contain;
      background-position: top;
     }
