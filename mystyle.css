@@ -1127,7 +1127,7 @@ color: darkgrey;
 
 
 .cover-image-bios {
-    background-image: url('bios-cover-712.png');
+    background-image: url('Team-Web.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1144,7 +1144,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-        background-image: url('bios-mobile.png');
+        background-image: url('Team-Mobile.png');
      background-size: contain;
      background-position: top;
     }
