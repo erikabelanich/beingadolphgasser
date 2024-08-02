@@ -169,66 +169,6 @@ color: darkgrey;
         </div>
     </nav>
 
-<script>
-    $(document).ready(function(){
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
-
-
-
-
-    
-<script>
-
- window.onload = function() {
-    var music = document.getElementById("background-music");
-    var unmutedIcon = document.getElementById("unmuted-icon");
-    var mutedIcon = document.getElementById("muted-icon");
-    var startMusicButton = document.getElementById("start-music");
-
-    // Attempt to play music on page load
-    music.play().then(function() {
-        startMusicButton.style.display = 'none'; // Hide the button if music plays successfully
-    }).catch(function(error) {
-        console.log("Autoplay was prevented. User interaction is required.");
-        // Optionally, you can show a message to prompt the user to click the button
-    });
-
-    // Function to start music and hide button
-    window.startMusic = function() {
-        music.play().then(function() {
-            startMusicButton.style.display = 'none'; // Hide the button after starting music
-        }).catch(function(error) {
-            console.log("Error playing music:", error);
-        });
-    };
-
-    // Function to toggle mute/unmute
-    window.toggleMute = function() {
-        if (music.muted) {
-            music.muted = false;
-            unmutedIcon.classList.add("active");
-            mutedIcon.classList.remove("active");
-        } else {
-            music.muted = true;
-            unmutedIcon.classList.remove("active");
-            mutedIcon.classList.add("active");
-        }
-    };
-
-    // Set the initial state
-    unmutedIcon.classList.add("active");
-    mutedIcon.classList.remove("active");
-
-    // Hide the start music button after 60 seconds
-    setTimeout(function() {
-        startMusicButton.style.display = 'none';
-    }, 60000);
-};
-
-
-</script>
 
     
  <!-- MUSIC -->
@@ -455,8 +395,7 @@ color: darkgrey;
        
        
      
-       
-       <script>
+              <script>
 
         
         const years = document.querySelectorAll('.year');
@@ -595,7 +534,66 @@ showSlide(currentSlide);
   });
 </script>
 
+ <script>
+    $(document).ready(function(){
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
+
+
+
     
+<script>
+
+ window.onload = function() {
+    var music = document.getElementById("background-music");
+    var unmutedIcon = document.getElementById("unmuted-icon");
+    var mutedIcon = document.getElementById("muted-icon");
+    var startMusicButton = document.getElementById("start-music");
+
+    // Attempt to play music on page load
+    music.play().then(function() {
+        startMusicButton.style.display = 'none'; // Hide the button if music plays successfully
+    }).catch(function(error) {
+        console.log("Autoplay was prevented. User interaction is required.");
+        // Optionally, you can show a message to prompt the user to click the button
+    });
+
+    // Function to start music and hide button
+    window.startMusic = function() {
+        music.play().then(function() {
+            startMusicButton.style.display = 'none'; // Hide the button after starting music
+        }).catch(function(error) {
+            console.log("Error playing music:", error);
+        });
+    };
+
+    // Function to toggle mute/unmute
+    window.toggleMute = function() {
+        if (music.muted) {
+            music.muted = false;
+            unmutedIcon.classList.add("active");
+            mutedIcon.classList.remove("active");
+        } else {
+            music.muted = true;
+            unmutedIcon.classList.remove("active");
+            mutedIcon.classList.add("active");
+        }
+    };
+
+    // Set the initial state
+    unmutedIcon.classList.add("active");
+    mutedIcon.classList.remove("active");
+
+    // Hide the start music button after 60 seconds
+    setTimeout(function() {
+        startMusicButton.style.display = 'none';
+    }, 60000);
+};
+
+
+</script>   
     
 </body>
     
