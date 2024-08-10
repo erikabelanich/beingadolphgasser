@@ -121,6 +121,81 @@ permalink: /updates/
 
 
 
+
+
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.25em;
+}
+
+.accordion-arrow {
+    font-size: 1.25em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    flex-direction: row;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .accordion-content {
+        flex-direction: column;
+    }
+    
+    .video-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* JS Controlled styles */
+.accordion-item.active .accordion-content {
+    display: flex;
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg); /* Arrow pointing up when open */
+}
+
+        
+
   
     </style>
   
@@ -253,6 +328,28 @@ permalink: /updates/
 </div>
 
 
+<!-- accordian -->
+
+    <div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h3>What Shoes to Wear?</h3>
+            <span class="accordion-arrow">&#x25BC;</span> <!-- Down arrow -->
+        </div>
+        <div class="accordion-content">
+            <div class="video-container">
+                <video controls poster="video-poster.jpg">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content">
+                <p>Here is some information about what shoes to wear for this event. Consider wearing comfortable shoes...</p>
+            </div>
+        </div>
+    </div>
+    <!-- Repeat similar accordion-item structure for more items -->
+</div>
 
     
        
@@ -290,8 +387,14 @@ permalink: /updates/
     </div>
     
        
-
-    
+ <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        accordionItem.classList.toggle('active');
+    });
+});
+ </script>
     
 </body>
     
