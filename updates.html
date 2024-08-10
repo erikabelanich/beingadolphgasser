@@ -57,6 +57,8 @@ permalink: /updates/
 
 
 
+
+/* Card Container */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -64,8 +66,10 @@ permalink: /updates/
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    box-sizing: border-box;
 }
 
+/* Individual Card */
 .card {
     background-color: #fff;
     border-radius: 8px;
@@ -74,12 +78,14 @@ permalink: /updates/
     transition: transform 0.2s ease-in-out;
 }
 
+/* Card Image */
 .card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
+/* Card Content */
 .card-content {
     padding: 15px;
 }
@@ -100,16 +106,20 @@ permalink: /updates/
     margin-top: 10px;
 }
 
+/* Hover Effect */
 .card:hover {
     transform: translateY(-5px);
 }
 
+/* Responsive Design */
 @media screen and (max-width: 600px) {
     .card-container {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 }
+
+
 
   
     </style>
@@ -179,86 +189,69 @@ permalink: /updates/
 
 
 
- <!-- ======= CARDS ======= --> 
+<!-- ======= CARDS ======= --> 
 
-    <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
+<div class="card-container">
+    <div class="card">
+        <img src="image1.jpg" alt="Nature Image 1">
+        <div class="card-content">
+            <h3>Most Popular Nature Photographers</h3>
+            <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
+            <p class="posted-by">Posted by Canicula</p>
         </div>
-
-
-       <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-
-
-          <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-
-
-             <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-
-
-                <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-
-
-                   <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-
-
-                      <div class="card-container">
-        <div class="card">
-            <img src="image1.jpg" alt="Nature Image 1">
-            <div class="card-content">
-                <h3>Most Popular Nature Photographers</h3>
-                <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-                <p class="posted-by">Posted by Canicula</p>
-            </div>
-        </div>
-        <!-- Repeat similar card structure for more cards -->
     </div>
 
+    <div class="card">
+        <img src="image2.jpg" alt="Nature Image 2">
+        <div class="card-content">
+            <h3>Exploring the Wilderness</h3>
+            <p>Quisque vel lacus a arcu tempor consequat...</p>
+            <p class="posted-by">Posted by Natura</p>
+        </div>
+    </div>
+
+        <div class="card">
+        <img src="image2.jpg" alt="Nature Image 2">
+        <div class="card-content">
+            <h3>Exploring the Wilderness</h3>
+            <p>Quisque vel lacus a arcu tempor consequat...</p>
+            <p class="posted-by">Posted by Natura</p>
+        </div>
+    </div>
+
+        <div class="card">
+        <img src="image2.jpg" alt="Nature Image 2">
+        <div class="card-content">
+            <h3>Exploring the Wilderness</h3>
+            <p>Quisque vel lacus a arcu tempor consequat...</p>
+            <p class="posted-by">Posted by Natura</p>
+        </div>
+    </div>
+
+        <div class="card">
+        <img src="image2.jpg" alt="Nature Image 2">
+        <div class="card-content">
+            <h3>Exploring the Wilderness</h3>
+            <p>Quisque vel lacus a arcu tempor consequat...</p>
+            <p class="posted-by">Posted by Natura</p>
+        </div>
+    </div>
+
+        <div class="card">
+        <img src="image2.jpg" alt="Nature Image 2">
+        <div class="card-content">
+            <h3>Exploring the Wilderness</h3>
+            <p>Quisque vel lacus a arcu tempor consequat...</p>
+            <p class="posted-by">Posted by Natura</p>
+        </div>
+    </div>
+
+    <!-- Add more cards as needed -->
+</div>
+
+
+
+    
        
     
 <!-- Footer -->
