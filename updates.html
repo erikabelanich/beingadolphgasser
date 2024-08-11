@@ -54,100 +54,34 @@ permalink: /updates/
         }
   
 
+        
 
 
-
-
-/* Card Container */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-    box-sizing: border-box;
-}
-
-/* Individual Card */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Card Image */
-.card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-/* Card Content */
-.card-content {
-    padding: 15px;
-}
-
-.card-content h3 {
-    margin-top: 0;
-    font-size: 1.25em;
-}
-
-.card-content p {
-    color: #555;
-    line-height: 1.5;
-}
-
-.card-content .posted-by {
-    font-size: 0.85em;
-    color: #999;
-    margin-top: 10px;
-}
-
-/* Hover Effect */
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    .card-container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-}
-
-
-
-
-.accordion-content {
+        .accordion-content {
   display: none;
   flex-direction: column;
-  gap: 20px; /* Space between accordion items */
+  gap: 20px;
 }
 
 .accordion-item {
-  margin-bottom: 20px; /* Space between each accordion box */
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
 }
 
 @media (min-width: 768px) {
   .accordion-content {
-    display: none;
     flex-direction: row;
     align-items: flex-start;
   }
 
   .accordion-video {
-    flex: 1; /* Adjusts the size of the video container */
+    flex: 1;
     padding-right: 20px;
   }
 
   .accordion-text {
-    flex: 1; /* Adjusts the size of the text container */
+    flex: 1;
   }
 }
 
@@ -165,7 +99,6 @@ permalink: /updates/
   width: 100%;
   height: auto;
 }
-
 
 
         
@@ -237,71 +170,6 @@ permalink: /updates/
     </div>
 
 
-
-<!-- ======= CARDS ======= --> 
-
-<div class="card-container">
-    <div class="card">
-        <video controls poster="cover-image.jpg" width="100%" height="350px">
-            <source src="../August92024.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="card-content">
-            <h3>Most Popular Nature Photographers</h3>
-            <p>Nulla porta iaculis neque, et vehicula libero lacus lacinia...</p>
-            <p class="posted-by">Posted by Canicula</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="image2.jpg" alt="Nature Image 2">
-        <div class="card-content">
-            <h3>Exploring the Wilderness</h3>
-            <p>Quisque vel lacus a arcu tempor consequat...</p>
-            <p class="posted-by">Posted by Natura</p>
-        </div>
-    </div>
-
-        <div class="card">
-        <img src="image2.jpg" alt="Nature Image 2">
-        <div class="card-content">
-            <h3>Exploring the Wilderness</h3>
-            <p>Quisque vel lacus a arcu tempor consequat...</p>
-            <p class="posted-by">Posted by Natura</p>
-        </div>
-    </div>
-
-        <div class="card">
-        <img src="image2.jpg" alt="Nature Image 2">
-        <div class="card-content">
-            <h3>Exploring the Wilderness</h3>
-            <p>Quisque vel lacus a arcu tempor consequat...</p>
-            <p class="posted-by">Posted by Natura</p>
-        </div>
-    </div>
-
-        <div class="card">
-        <img src="image2.jpg" alt="Nature Image 2">
-        <div class="card-content">
-            <h3>Exploring the Wilderness</h3>
-            <p>Quisque vel lacus a arcu tempor consequat...</p>
-            <p class="posted-by">Posted by Natura</p>
-        </div>
-    </div>
-
-        <div class="card">
-        <img src="image2.jpg" alt="Nature Image 2">
-        <div class="card-content">
-            <h3>Exploring the Wilderness</h3>
-            <p>Quisque vel lacus a arcu tempor consequat...</p>
-            <p class="posted-by">Posted by Natura</p>
-        </div>
-    </div>
-
-    <!-- Add more cards as needed -->
-</div>
-
-
 <!-- accordian -->
 
 <div class="accordion">
@@ -323,26 +191,9 @@ permalink: /updates/
     </div>
   </div>
 
-  <div class="accordion-item">
-    <div class="accordion-title">
-      <h3>What Shoes?</h3>
-      <span class="arrow">&#9660;</span>
-    </div>
-    <div class="accordion-content">
-      <div class="accordion-video">
-        <video controls poster="thumbnail.jpg">
-          <source src="video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="accordion-text">
-        <p>Your body copy goes here. Add as much detail as necessary.</p>
-      </div>
-    </div>
-  </div>
-
-    
+  <!-- Repeat this block for additional accordion items -->
 </div>
+
 
 
        
