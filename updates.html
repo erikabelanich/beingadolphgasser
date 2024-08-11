@@ -88,12 +88,24 @@ permalink: /updates/
 .accordion-title {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align the arrow vertically in the middle */
   cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0; /* Adjust background color if needed */
+  border: 1px solid #ccc; /* Optional: border around the title */
 }
 
 .accordion-title h3 {
   margin: 0;
+  font-size: 1.2em;
+  flex-grow: 1; /* Allow title to take up available space */
 }
+
+.accordion-title .arrow {
+  margin-left: 10px; /* Space between title text and arrow */
+  font-size: 1.2em; /* Adjust arrow size as needed */
+}
+
 
 .accordion-content video {
   width: 100%;
