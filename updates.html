@@ -88,31 +88,28 @@ permalink: /updates/
 .accordion-title {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align the arrow vertically in the middle */
   cursor: pointer;
-  padding: 10px;
-  background-color: #f0f0f0; /* Adjust background color if needed */
-  border: 1px solid #ccc; /* Optional: border around the title */
 }
 
 .accordion-title h3 {
   margin: 0;
-  font-size: 1.2em;
-  flex-grow: 1; /* Allow title to take up available space */
 }
-
-.accordion-title .arrow {
-  margin-left: 10px; /* Space between title text and arrow */
-  font-size: 1.2em; /* Adjust arrow size as needed */
-}
-
 
 .accordion-content video {
   width: 100%;
   height: auto;
 }
 
+.accordion .accordion-title .accordion-arrow {
+  margin-left: 10px;
+  font-size: 1.2em;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
 
+.accordion-item.active .accordion-title .accordion-arrow {
+  transform: rotate(180deg);
+}
         
 
   
@@ -188,7 +185,7 @@ permalink: /updates/
   <div class="accordion-item">
     <div class="accordion-title">
       <h3>What Shoes?</h3>
-      <span class="arrow">&#9660;</span>
+      <span class="accordion-arrow">&#9660;</span>
     </div>
     <div class="accordion-content">
       <div class="accordion-video">
@@ -271,4 +268,3 @@ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
     
 </html>
     
-
