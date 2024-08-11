@@ -381,20 +381,25 @@ permalink: /updates/
     
        
  <script>
-document.querySelectorAll('.accordion-title').forEach((item) => {
-  item.addEventListener('click', () => {
-    const accordionItem = item.parentNode;
+document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
+  accordionTitle.addEventListener('click', function() {
+    const accordionItem = this.parentElement;
+    const accordionContent = accordionItem.querySelector('.accordion-content');
 
+    // Toggle the active state
     accordionItem.classList.toggle('active');
 
-    const content = accordionItem.querySelector('.accordion-content');
     if (accordionItem.classList.contains('active')) {
-      content.style.maxHeight = content.scrollHeight + 'px';
+      accordionContent.style.display = 'flex';
     } else {
-      content.style.maxHeight = '0';
+      accordionContent.style.display = 'none';
     }
+
+    // Smooth transition
+    accordionContent.style.transition = 'all 0.4s ease';
   });
 });
+
 
 
  </script>
