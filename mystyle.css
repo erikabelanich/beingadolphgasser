@@ -1201,6 +1201,35 @@ color: darkgrey;
 }
 
 
+
+.cover-image-updates {
+    background-image: url('update-cover.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; 
+}
+
+@media (max-width: 768px) {
+    .cover-image-updates {
+        background-image: url('updates-mobile.png');
+     background-size: contain;
+     background-position: top;
+    }
+}
+
+
+
+
+
 .cover-image-festivals {
     background-image: url('festivals-cover.jpg');
     height: 100%;
