@@ -143,9 +143,15 @@ font-family: "Montserrat", sans-serif;
 }
 
 .custom-slides img {
-  width: 100%;
+  max-width: 300px;
   display: block;
 }
+
+        @media (min-width: 768px) {
+.custom-slides img {
+  max-width: 100%;
+}
+        }
 
 .custom-prev, .custom-next {
   cursor: pointer;
