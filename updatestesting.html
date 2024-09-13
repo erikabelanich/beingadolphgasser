@@ -136,24 +136,18 @@ font-family: "Montserrat", sans-serif;
 
 
 
-.custom-slider {
+.slider {
   position: relative;
   max-width: 600px;
   margin: auto;
 }
 
-.custom-slides img {
-  max-width: 300px;
+.slides img {
+  width: 100%;
   display: block;
 }
 
-        @media (min-width: 768px) {
-.custom-slides img {
-  max-width: 100%;
-}
-        }
-
-.custom-prev, .custom-next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -167,21 +161,21 @@ font-family: "Montserrat", sans-serif;
   border-radius: 0 3px 3px 0;
 }
 
-.custom-next {
+.next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-.custom-prev:hover, .custom-next:hover {
+.prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-.custom-dots {
+.dots {
   text-align: center;
   padding: 10px 0;
 }
 
-.custom-dot {
+.dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -192,7 +186,7 @@ font-family: "Montserrat", sans-serif;
   transition: background-color 0.6s ease;
 }
 
-.custom-active, .custom-dot:hover {
+.active, .dot:hover {
   background-color: #717171;
 }
 
@@ -287,29 +281,22 @@ font-family: "Montserrat", sans-serif;
 
 
 
-<div class="custom-slider">
-  <div class="custom-slides">
-    <img src="../Sept7Update.jpg" class="custom-slide" alt="Image 1">
-    <img src="image2.jpg" class="custom-slide" alt="Image 2" style="display:none;">
-    <img src="../Sept7Update.jpg" class="custom-slide" alt="Image 3" style="display:none;">
-    <img src="image4.jpg" class="custom-slide" alt="Image 4" style="display:none;">
-    <img src="../Sept7Update.jpg" class="custom-slide" alt="Image 5" style="display:none;">
+<div class="slider">
+  <div class="slides">
+    <img src="../Sept7Update-2.jpg" class="slide" alt="Image 1">
+    <img src="../Sept7Update-2.jpg" class="slide" alt="Image 2" style="display:none;">
   </div>
 
   <!-- Navigation arrows -->
-  <a class="custom-prev" onclick="customChangeSlide(-1)">&#10094;</a>
-  <a class="custom-next" onclick="customChangeSlide(1)">&#10095;</a>
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
   <!-- Navigation dots -->
-  <div class="custom-dots">
-    <span class="custom-dot" onclick="customCurrentSlide(1)"></span>
-    <span class="custom-dot" onclick="customCurrentSlide(2)"></span>
-    <span class="custom-dot" onclick="customCurrentSlide(3)"></span>
-    <span class="custom-dot" onclick="customCurrentSlide(4)"></span>
-    <span class="custom-dot" onclick="customCurrentSlide(5)"></span>
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
   </div>
 </div>
-
 
 
 
@@ -418,39 +405,39 @@ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
 
 
 
-let customSlideIndex = 0;
-customShowSlide(customSlideIndex);
+let currentSlideIndex = 0;
+showSlide(currentSlideIndex);
 
-function customChangeSlide(n) {
-  customSlideIndex += n;
-  customShowSlide(customSlideIndex);
+function changeSlide(n) {
+  currentSlideIndex += n;
+  showSlide(currentSlideIndex);
 }
 
-function customCurrentSlide(n) {
-  customSlideIndex = n - 1;
-  customShowSlide(customSlideIndex);
+function currentSlide(n) {
+  currentSlideIndex = n - 1;
+  showSlide(currentSlideIndex);
 }
 
-function customShowSlide(index) {
-  let slides = document.getElementsByClassName("custom-slide");
-  let dots = document.getElementsByClassName("custom-dot");
+function showSlide(index) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
 
   if (index >= slides.length) {
-    customSlideIndex = 0;
+    currentSlideIndex = 0;
   } 
   if (index < 0) {
-    customSlideIndex = slides.length - 1;
+    currentSlideIndex = slides.length - 1;
   }
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" custom-active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  slides[customSlideIndex].style.display = "block";  
-  dots[customSlideIndex].className += " custom-active";
+  slides[currentSlideIndex].style.display = "block";  
+  dots[currentSlideIndex].className += " active";
 }
 
 
