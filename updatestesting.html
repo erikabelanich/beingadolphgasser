@@ -136,106 +136,58 @@ font-family: "Montserrat", sans-serif;
 
 
 
-
-        *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.slider{
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+.slider {
   position: relative;
+  max-width: 600px;
+  margin: auto;
 }
 
-.slides{
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  width: 20%;
-  transition: 2s;
-}
-
-.slide img{
+.slides img {
   width: 100%;
-  height: 100%;
+  display: block;
 }
 
-.navigation-manual{
-  position: absolute;
-  width: 100%;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn{
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
+.prev, .next {
   cursor: pointer;
-  transition: 0.3s;
-  margin: 0 10px;
-}
-
-.manual-btn:hover{
-  background: white;
-}
-
-#radio1:checked ~ .first{
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-  margin-left: -20%;
-}
-
-#radio3:checked ~ .first{
-  margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-  margin-left: -60%;
-}
-
-#radio5:checked ~ .first{
-  margin-left: -80%;
-}
-
-/* Navigation dots */
-.navigation-auto{
   position: absolute;
-  width: 100%;
-  margin-top: 350px;
-  display: flex;
-  justify-content: center;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
 }
 
-.navigation-auto div{
-  width: 10px;
-  height: 10px;
-  border: 2px solid white;
-  margin: 0 5px;
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
   border-radius: 50%;
-  animation: move 20s infinite;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-@keyframes move{
-  0%, 20%{
-    background: white;
-  }
-  25%, 100%{
-    background: transparent;
-  }
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 
@@ -331,48 +283,27 @@ font-family: "Montserrat", sans-serif;
 
 <div class="slider">
   <div class="slides">
-    <!-- Slide 1 -->
-    <input type="radio" name="radio-btn" id="radio1">
-    <input type="radio" name="radio-btn" id="radio2">
-    <input type="radio" name="radio-btn" id="radio3">
-    <input type="radio" name="radio-btn" id="radio4">
-    <input type="radio" name="radio-btn" id="radio5">
-
-    <div class="slide first">
-      <img src="../Sept7Update.jpg" alt="">
-    </div>
-    <div class="slide">
-      <img src="../Sept7Update.jpg" alt="">
-    </div>
-    <div class="slide">
-      <img src="../Sept7Update.jpg" alt="">
-    </div>
-    <div class="slide">
-      <img src="../Sept7Update.jpg" alt="">
-    </div>
-    <div class="slide">
-      <img src="../Sept7Update.jpg" alt="">
-    </div>
-
-    <!-- Automatic navigation dots -->
-    <div class="navigation-auto">
-      <div class="auto-btn1"></div>
-      <div class="auto-btn2"></div>
-      <div class="auto-btn3"></div>
-      <div class="auto-btn4"></div>
-      <div class="auto-btn5"></div>
-    </div>
+    <img src="../Sept7Update.jpg" class="slide" alt="Image 1">
+    <img src="../Sept7Update.jpg" class="slide" alt="Image 2" style="display:none;">
+    <img src="../Sept7Update.jpg" class="slide" alt="Image 3" style="display:none;">
+    <img src="../Sept7Update.jpg" class="slide" alt="Image 4" style="display:none;">
+    <img src="../Sept7Update.jpg" class="slide" alt="Image 5" style="display:none;">
   </div>
 
-  <!-- Manual navigation arrows -->
-  <div class="navigation-manual">
-    <label for="radio1" class="manual-btn"></label>
-    <label for="radio2" class="manual-btn"></label>
-    <label for="radio3" class="manual-btn"></label>
-    <label for="radio4" class="manual-btn"></label>
-    <label for="radio5" class="manual-btn"></label>
+  <!-- Navigation arrows -->
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+  <!-- Navigation dots -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
   </div>
 </div>
+
 
 
                 
@@ -479,16 +410,41 @@ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
 });
 
 
-     let counter = 1;
-setInterval(function(){
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if(counter > 5){
-    counter = 1;
+
+let currentSlideIndex = 0;
+showSlide(currentSlideIndex);
+
+function changeSlide(n) {
+  currentSlideIndex += n;
+  showSlide(currentSlideIndex);
+}
+
+function currentSlide(n) {
+  currentSlideIndex = n - 1;
+  showSlide(currentSlideIndex);
+}
+
+function showSlide(index) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  if (index >= slides.length) {
+    currentSlideIndex = 0;
+  } 
+  if (index < 0) {
+    currentSlideIndex = slides.length - 1;
   }
-}, 5000);
 
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
 
+  slides[currentSlideIndex].style.display = "block";  
+  dots[currentSlideIndex].className += " active";
+}
 
 
  </script>
