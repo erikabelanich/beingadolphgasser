@@ -69,13 +69,7 @@ permalink: /updates/
     }
 }
 
-  .accordion-img {
-    flex: 0;
-    padding-right: 20px;
-  }
-
-        
-
+    
 .accordion-title {
   display: flex;
   justify-content: space-between;
@@ -138,6 +132,72 @@ font-family: "Montserrat", sans-serif;
 #unique-title {
         padding-bottom: 15px;
 }
+
+
+
+
+.custom-slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.custom-slides img {
+  max-width: 350px; 
+  display: block;
+  max-height: 100%; 
+}
+
+@media (max-width: 768px) {
+  .custom-slides img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.custom-prev, .custom-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -40px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.custom-dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.custom-dot {
+  cursor: pointer;
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: #313131;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.custom-active, .custom-dot:hover {
+  background-color: #717171;
+}
+ 
     </style>
   
 </head>
@@ -212,18 +272,204 @@ font-family: "Montserrat", sans-serif;
     <h1 id="unique-title">Crowd-funding Campaign News</h1>
 
     <div class="accordion">
+<!-- New Accordion Block -->
+            <div class="accordion-item">
+            <div class="accordion-title" data-target="#content-5">
+                <h3>September 10, 2024 Update</h3>
+                <span class="accordion-arrow">&#9660;</span>
+            </div>
+            <div class="accordion-content">
+        
 
+<div class="custom-slider" id="slider-4">
+  <div class="custom-slides">
+    <img src="../Max-1.jpg" class="custom-slide" alt="Image 1">
+    <img src="../Max-2.jpg" class="custom-slide" alt="Image 2">
+    <img src="../Max-3.jpg" class="custom-slide" alt="Image 3">
+
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="custom-prev" onclick="customChangeSlide(-1, 'slider-4')">&#10094;</a>
+  <a class="custom-next" onclick="customChangeSlide(1, 'slider-4')">&#10095;</a>
+
+  <!-- Navigation dots -->
+  <div class="custom-dots">
+  <span class="custom-dot" onclick="customCurrentSlide(1, 'slider-4')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(2, 'slider-4')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(3, 'slider-4')"></span>
+ 
+
+  </div>
+</div>
+
+                
+                <div class="accordion-text">
+                    <h1 id="unique-title">Max Schoenfeld Reflects on 41 Years with Adolph Gasser</h1>
+                    <p>
+                        The final leg of recent documentary filming was with Max Schoenfeld, who worked with both John and Adolph Gasser for 41 years! How many people work with a company for 41 years? Max saw the expansive growth of sales and stores, exceeding 120 employees at one point. Then the decline and eventual closing of the business. He worked tirelessly and knew well the school of hard knocks, as taught by John Gasser. Nothing was black and white and knowing human nature was key to the business. There was almost nothing Adolph could not repair and with Max by his side, car engines (they had a fleet of cars for outside sales employees) to 
+                        film processors were par for the course. It was an exceptional insight into the family.<br><br>
+                        <a href="https://www.indiegogo.com/projects/being-adolph-gasser#/" class="unique-link" target="_blank">www.indiegogo.com/projects/being-adolph-gasser#/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       <!-- New Accordion Block END -->
+
+         <!-- New Accordion Block -->
+            <div class="accordion-item">
+            <div class="accordion-title" data-target="#content-4">
+                <h3>September 8, 2024 Update</h3>
+                <span class="accordion-arrow">&#9660;</span>
+            </div>
+            <div class="accordion-content">
+        
+
+<div class="custom-slider" id="slider-3">
+  <div class="custom-slides">
+    <img src="../Yosemite-1.jpg" class="custom-slide" alt="Image 1">
+    <img src="../Yosemite-2.jpg" class="custom-slide" alt="Image 2">
+    <img src="../Yosemite-3.jpg" class="custom-slide" alt="Image 3">
+    <img src="../Yosemite-4.jpg" class="custom-slide" alt="Image 4">
+    <img src="../Yosemite-5.jpg" class="custom-slide" alt="Image 5">
+    <img src="../Yosemite-6.jpg" class="custom-slide" alt="Image 6">
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="custom-prev" onclick="customChangeSlide(-1, 'slider-3')">&#10094;</a>
+  <a class="custom-next" onclick="customChangeSlide(1, 'slider-3')">&#10095;</a>
+
+  <!-- Navigation dots -->
+  <div class="custom-dots">
+     <span class="custom-dot" onclick="customCurrentSlide(1, 'slider-3')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(2, 'slider-3')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(3, 'slider-3')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(4, 'slider-3')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(5, 'slider-3')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(6, 'slider-3')"></span>
+  </div>
+</div>
+
+                
+                <div class="accordion-text">
+                    <h1 id="unique-title">An Early Journey to Yosemite</h1>
+                    <p>
+                        Part of my feature documentary journey recently led me to the Yosemite Valley and some of the great landmarks of nature. In the 1930's, 40's and 50's this was expertly captured by the world renown photographer Ansel Adams, whose son Michael was interviewed by both Don and I last year. Ansel was best friends with Adolph Gasser and worked closely with him as Adolph set up his darkroom in San Francisco and the same in Carmel, CA (with a unique enlarger, custom built by Adolph, that allowed murals to be made). These were two masters of their respective crafts working hand in hand. Since we did not have reservations to get into the park and they were sold out for that day, we had to be there before 5am to make it past the gates. 
+                        With 8 minutes to spare we made it in and you can see the beauty everyone should experience at least once in their lives.<br><br>
+                        <a href="https://www.indiegogo.com/projects/being-adolph-gasser#/" class="unique-link" target="_blank">www.indiegogo.com/projects/being-adolph-gasser#/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       <!-- New Accordion Block END -->
+
+
+
+        
+   <!-- New Accordion Block -->
+            <div class="accordion-item">
+            <div class="accordion-title" data-target="#content-3">
+                <h3>September 7, 2024 Update (Part 2)</h3>
+                <span class="accordion-arrow">&#9660;</span>
+            </div>
+            <div class="accordion-content">
+        
+
+<div class="custom-slider" id="slider-2">
+  <div class="custom-slides">
+    <img src="../Andrew-1.jpg" class="custom-slide" alt="Image 1">
+    <img src="../Andrew-2.jpg" class="custom-slide" alt="Image 2">
+    <img src="../Andrew-3.jpg" class="custom-slide" alt="Image 3">
+    <img src="../Andrew-4.jpg" class="custom-slide" alt="Image 4">
+    <img src="../Andrew-5.jpg" class="custom-slide" alt="Image 5">
+    <img src="../Andrew-6.jpg" class="custom-slide" alt="Image 6">
+    <img src="../Andrew-7.jpg" class="custom-slide" alt="Image 7">
+    <img src="../Andrew-8.jpg" class="custom-slide" alt="Image 8">
+    <img src="../Andrew-9.jpg" class="custom-slide" alt="Image 9">
+    <img src="../Andrew-10.jpg" class="custom-slide" alt="Image 10">
+    <img src="../Andrew-11.jpg" class="custom-slide" alt="Image 11">
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="custom-prev" onclick="customChangeSlide(-1, 'slider-2')">&#10094;</a>
+  <a class="custom-next" onclick="customChangeSlide(1, 'slider-2')">&#10095;</a>
+
+  <!-- Navigation dots -->
+  <div class="custom-dots">
+    <span class="custom-dot" onclick="customCurrentSlide(1, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(2, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(3, 'slider-2')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(4, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(5, 'slider-2')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(6, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(7, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(8, 'slider-2')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(9, 'slider-2')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(10, 'slider-2')"></span>
+      <span class="custom-dot" onclick="customCurrentSlide(11, 'slider-2')"></span>
+  </div>
+</div>
+
+
+
+
+                
+                <div class="accordion-text">
+                    <h1 id="unique-title">A Heartfelt Interview with Andrew Ausley</h1>
+                    <p>
+                        The first interview of the past couple of weeks was with Andrew Ausley, grandson of Adolph Gasser. He lives in a lovely rustic area near Yosemite (free of mice due to his vigilant cat "Scratches") and graciously gave time for editor and camera operator Don and I to film him in his garage. An eclectic mix of tools and machinery surrounded us, some of which is from the Gasser store days, as well as a unique poster of his grandfather with various moments of his life depicted. It was an homage to a larger than life figure who played prominently in so many lives. Andrew spoke passionately of his experiences and made us feel like we were transported back in time and occasionally reflected on the universal truths played out in our lives. Articulate, informative and engaging, this was a wonderful interview. He also showed old photo books and remarkably a shot of both Adolph and I having a laugh. 
+                        I cannot thank him enough for his kindness and generosity.<br><br>
+                        <a href="https://www.indiegogo.com/projects/being-adolph-gasser#/" class="unique-link" target="_blank">www.indiegogo.com/projects/being-adolph-gasser#/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       <!-- New Accordion Block END -->
+
+        
+
+
+        
 
      <!-- New Accordion Block -->
             <div class="accordion-item">
             <div class="accordion-title" data-target="#content-2">
-                <h3>September 7, 2024 Update</h3>
+                <h3>September 7, 2024 Update (Part 1)</h3>
                 <span class="accordion-arrow">&#9660;</span>
             </div>
             <div class="accordion-content">
-                <div class="accordion-img">
-              <img src="../Sept7Update.jpg" alt="John, Don, and Andrew" width="300" height="200">
-                </div>
+        
+
+
+
+
+<div class="custom-slider" id="slider-1">
+  <div class="custom-slides">
+    <img src="../Update-1.jpg" class="custom-slide" alt="Image 1">
+    <img src="../Update-2.jpg" class="custom-slide" alt="Image 2">
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="custom-prev" onclick="customChangeSlide(-1, 'slider-1')">&#10094;</a>
+  <a class="custom-next" onclick="customChangeSlide(1, 'slider-1')">&#10095;</a>
+
+  <!-- Navigation dots -->
+  <div class="custom-dots">
+    <span class="custom-dot" onclick="customCurrentSlide(1, 'slider-1')"></span>
+    <span class="custom-dot" onclick="customCurrentSlide(2, 'slider-1')"></span>
+  </div>
+</div>
+
+
+
+
+                
                 <div class="accordion-text">
                     <h1 id="unique-title">Catching Up with Gratitude: Thank You, Indiegogo Supporters!</h1>
                     <p>
@@ -324,6 +570,51 @@ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
     // Smooth transition
     accordionContent.style.transition = 'all 0.4s ease';
   });
+});
+
+
+
+let slideIndex = {};
+
+function initSlider(sliderId) {
+  slideIndex[sliderId] = 1;
+  showSlides(1, sliderId);
+}
+
+function customChangeSlide(n, sliderId) {
+  showSlides(slideIndex[sliderId] += n, sliderId);
+}
+
+function customCurrentSlide(n, sliderId) {
+  showSlides(slideIndex[sliderId] = n, sliderId);
+}
+
+function showSlides(n, sliderId) {
+  let i;
+  let slides = document.querySelectorAll(`#${sliderId} .custom-slide`);
+  let dots = document.querySelectorAll(`#${sliderId} .custom-dot`);
+  
+  if (n > slides.length) { slideIndex[sliderId] = 1 }
+  if (n < 1) { slideIndex[sliderId] = slides.length }
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" custom-active", "");
+  }
+  
+  slides[slideIndex[sliderId] - 1].style.display = "block";
+  dots[slideIndex[sliderId] - 1].className += " custom-active";
+}
+
+// Initialize sliders
+document.addEventListener('DOMContentLoaded', () => {
+  initSlider('slider-1');
+  initSlider('slider-2');
+      initSlider('slider-3');
+      initSlider('slider-4');
 });
 
 
