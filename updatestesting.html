@@ -574,40 +574,49 @@ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
 
 
 
-let customSlideIndex = 0;
-customShowSlide(customSlideIndex);
+let slideIndex = {};
 
-function customChangeSlide(n) {
-  customSlideIndex += n;
-  customShowSlide(customSlideIndex);
+function initSlider(sliderId) {
+  slideIndex[sliderId] = 1;
+  showSlides(1, sliderId);
 }
 
-function customCurrentSlide(n) {
-  customSlideIndex = n - 1;
-  customShowSlide(customSlideIndex);
+function customChangeSlide(n, sliderId) {
+  showSlides(slideIndex[sliderId] += n, sliderId);
 }
 
-function customShowSlide(index) {
-  let slides = document.getElementsByClassName("custom-slide");
-  let dots = document.getElementsByClassName("custom-dot");
+function customCurrentSlide(n, sliderId) {
+  showSlides(slideIndex[sliderId] = n, sliderId);
+}
 
-  if (index >= slides.length) {
-    customSlideIndex = 0;
-  } 
-  if (index < 0) {
-    customSlideIndex = slides.length - 1;
+function showSlides(n, sliderId) {
+  let i;
+  let slides = document.querySelectorAll(`#${sliderId} .custom-slide`);
+  let dots = document.querySelectorAll(`#${sliderId} .custom-dot`);
+  
+  if (n > slides.length) { slideIndex[sliderId] = 1 }
+  if (n < 1) { slideIndex[sliderId] = slides.length }
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (let i = 0; i < dots.length; i++) {
+  
+  for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" custom-active", "");
   }
-
-  slides[customSlideIndex].style.display = "block";  
-  dots[customSlideIndex].className += " custom-active";
+  
+  slides[slideIndex[sliderId] - 1].style.display = "block";
+  dots[slideIndex[sliderId] - 1].className += " custom-active";
 }
+
+// Initialize sliders
+document.addEventListener('DOMContentLoaded', () => {
+  initSlider('slider-1');
+  initSlider('slider-2');
+      initSlider('slider-3');
+      initSlider('slider-4');
+});
+
 
 
  </script>
