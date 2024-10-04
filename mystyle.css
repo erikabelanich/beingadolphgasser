@@ -1127,7 +1127,7 @@ color: darkgrey;
 
 
 .cover-image-bios {
-    background-image: url('Bios-Web-Oct.jpg');
+    background-image: url('Bio-Web-Oct.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1144,7 +1144,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-bios {
-        background-image: url('Bios-Mobile-Oct.png');
+        background-image: url('Bio-Mobile-Oct.png');
      background-size: contain;
      background-position: top;
     }
