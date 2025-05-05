@@ -1083,6 +1083,30 @@ john@beingadolphgasser.com
     
        
  <script>
+
+
+
+ document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
+  accordionTitle.addEventListener('click', function() {
+    const accordionItem = this.parentElement;
+    const accordionContent = accordionItem.querySelector('.accordion-content');
+
+    // Toggle the active state
+    accordionItem.classList.toggle('active');
+
+    if (accordionItem.classList.contains('active')) {
+      accordionContent.style.display = 'flex';
+    } else {
+      accordionContent.style.display = 'none';
+    }
+
+    // Smooth transition
+    accordionContent.style.transition = 'all 0.4s ease';
+  });
+});
+
+
+
 let slideIndex = {};
 
 function initSlider(sliderId) {
@@ -1099,36 +1123,44 @@ function customCurrentSlide(n, sliderId) {
 }
 
 function showSlides(n, sliderId) {
+  let i;
   let slides = document.querySelectorAll(`#${sliderId} .custom-slide`);
   let dots = document.querySelectorAll(`#${sliderId} .custom-dot`);
-
-  if (slides.length === 0) return; // Safety check
-
-  if (n > slides.length) {
-    slideIndex[sliderId] = 1;
+  
+  if (n > slides.length) { slideIndex[sliderId] = 1 }
+  if (n < 1) { slideIndex[sliderId] = slides.length }
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  if (n < 1) {
-    slideIndex[sliderId] = slides.length;
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" custom-active", "");
   }
-
-  slides.forEach(slide => {
-    slide.style.display = "none";
-  });
-
-  dots.forEach(dot => {
-    dot.classList.remove("custom-active");
-  });
-
+  
   slides[slideIndex[sliderId] - 1].style.display = "block";
-  dots[slideIndex[sliderId] - 1].classList.add("custom-active");
+  dots[slideIndex[sliderId] - 1].className += " custom-active";
 }
 
-// Initialize sliders dynamically
+// Initialize sliders
 document.addEventListener('DOMContentLoaded', () => {
-  for (let i = 1; i <= 16; i++) {
-    initSlider(`slider-${i}`);
-  }
-});
+  initSlider('slider-1');
+  initSlider('slider-2');
+  initSlider('slider-3');
+  initSlider('slider-4');
+  initSlider('slider-5');
+      initSlider('slider-6');
+    initSlider('slider-7');
+  initSlider('slider-8');
+  initSlider('slider-9');
+  initSlider('slider-10');
+  initSlider('slider-11');
+  initSlider('slider-12');
+  initSlider('slider-13');
+ initSlider('slider-14');
+initSlider('slider-15');
+  initSlider('slider-16');
+});    
 
 
 
