@@ -1089,80 +1089,71 @@ john@beingadolphgasser.com
     </div>
     
        
- <script>
+<script>
+  // Accordion toggle
+  document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
+    accordionTitle.addEventListener('click', function () {
+      const accordionItem = this.parentElement;
+      const accordionContent = accordionItem.querySelector('.accordion-content');
 
+      // Toggle the active state
+      accordionItem.classList.toggle('active');
+      accordionContent.style.display = accordionItem.classList.contains('active') ? 'flex' : 'none';
 
+      // Smooth transition
+      accordionContent.style.transition = 'all 0.4s ease';
+    });
+  });
 
- document.querySelectorAll('.accordion-title').forEach((accordionTitle) => {
-  accordionTitle.addEventListener('click', function() {
-    const accordionItem = this.parentElement;
-    const accordionContent = accordionItem.querySelector('.accordion-content');
+  // Slider logic
+  let slideIndex = {};
 
-    // Toggle the active state
-    accordionItem.classList.toggle('active');
+  function initSlider(sliderId) {
+    slideIndex[sliderId] = 1;
+    showSlides(slideIndex[sliderId], sliderId);
+  }
 
-    if (accordionItem.classList.contains('active')) {
-      accordionContent.style.display = 'flex';
-    } else {
-      accordionContent.style.display = 'none';
+  function customChangeSlide(n, sliderId) {
+    showSlides(slideIndex[sliderId] += n, sliderId);
+  }
+
+  function customCurrentSlide(n, sliderId) {
+    showSlides(slideIndex[sliderId] = n, sliderId);
+  }
+
+  function showSlides(n, sliderId) {
+    let slides = document.querySelectorAll(`#${sliderId} .custom-slide`);
+    let dots = document.querySelectorAll(`#${sliderId} .custom-dot`);
+
+    if (!slides.length) return;
+
+    if (slides.length === 1) {
+      slides[0].style.display = "block";
+      dots.forEach(dot => dot.style.display = "none");
+      return;
     }
 
-    // Smooth transition
-    accordionContent.style.transition = 'all 0.4s ease';
+    if (n > slides.length) slideIndex[sliderId] = 1;
+    if (n < 1) slideIndex[sliderId] = slides.length;
+
+    slides.forEach(slide => slide.style.display = "none");
+    dots.forEach(dot => dot.classList.remove("custom-active"));
+
+    slides[slideIndex[sliderId] - 1].style.display = "block";
+    if (dots[slideIndex[sliderId] - 1]) {
+      dots[slideIndex[sliderId] - 1].classList.add("custom-active");
+    }
+  }
+
+  // Initialize all sliders on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.custom-slider').forEach(slider => {
+      const id = slider.id;
+      if (id) initSlider(id);
+    });
   });
-});
+</script>
 
-
-
-let slideIndex = {};
-
-function initSlider(sliderId) {
-  slideIndex[sliderId] = 1;
-  showSlides(1, sliderId);
-}
-
-function customChangeSlide(n, sliderId) {
-  showSlides(slideIndex[sliderId] += n, sliderId);
-}
-
-function customCurrentSlide(n, sliderId) {
-  showSlides(slideIndex[sliderId] = n, sliderId);
-}
-
-
-function showSlides(n, sliderId) {
-  let slides = document.querySelectorAll(`#${sliderId} .custom-slide`);
-  let dots = document.querySelectorAll(`#${sliderId} .custom-dot`);
-
-  if (!slides.length) return;
-
-  // If only one slide, show it and hide navigation elements
-  if (slides.length === 1) {
-    slides[0].style.display = "block";
-    dots.forEach(dot => dot.style.display = "none");
-    return;
-  }
-
-  if (n > slides.length) slideIndex[sliderId] = 1;
-  if (n < 1) slideIndex[sliderId] = slides.length;
-
-  slides.forEach(slide => slide.style.display = "none");
-  dots.forEach(dot => dot.classList.remove("custom-active"));
-
-  slides[slideIndex[sliderId] - 1].style.display = "block";
-  if (dots[slideIndex[sliderId] - 1]) {
-    dots[slideIndex[sliderId] - 1].classList.add("custom-active");
-  }
-}
-
-
-     
-});    
-
-
-
-
- </script>
     
 </body>
     
