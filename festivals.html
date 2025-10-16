@@ -1,3 +1,6 @@
+---
+permalink: /festivals/
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +11,11 @@
     <meta name="description" content="Being Adolph Gasser">
     <meta name="author" content="Erika Belanich">
     <title>Being Adolph Gasser</title>
+
+    <link rel="icon" href="../favicon-1.png" type="image/x-icon">
     
     <!-- ======= FONTS & STYLES ======= -->  
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="../mystyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -30,46 +35,180 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <style>
-        @media (max-width: 768px) {
-            .container-home {
-                display: flex;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                margin: 0 auto;
-            }
+.accordion-content {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .accordion-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .accordion-video {
+    flex: 0;
+    padding-right: 20px;
+  }
+
+  .accordion-text {
+    flex: 1;
+  }
+    .container-accordion{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
+}
+
+    
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-title h3 {
+  margin: 0;
+}
+
+.accordion-content video {
+  width: 18em;
+  height: 32em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion .accordion-title .accordion-arrow {
+color: white;
+  margin-left: 10px;
+  font-size: 1.2em;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-title .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.container-accordion {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        max-width: 80%;
+        margin: 0 auto;
+}
+
+        .accordion-title h3{
+font-family: "Montserrat", sans-serif;
+    font-size: 18px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 200;  
         }
-        @media (min-width: 768px) {
-            .container-home {
-                display: flex;
-                padding-top: 100px;
-                padding-bottom: 100px;
-                max-width: 80%;
-                margin: 0 auto;
-            }
+
+
+                      .unique-link{
+        font-family: "Montserrat", sans-serif;
+        color: #868686;
+        text-decoration: none;
         }
-        .text-column {
-            flex: 1;
-            padding: 25px;
-align-content: center;
-        }
-        .text-column h1 {
-            margin-top: 0;
-        }
-        .text-column p {
-            margin-bottom: 0;
-        }
-        .image-column {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 25px;
-        }
-        .image-column img {
-            max-width: 100%;
-            height: auto;
-        }
+        
+                .unique-link:hover {
+    color: #ccc;
+            text-decoration: none;
+}
+
+#unique-title {
+        padding-bottom: 15px;
+}
+
+
+
+
+.custom-slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+        
+
+.custom-slides img {
+  max-width: 380px; 
+  display: block;
+  max-height: 100%; 
+}
+
+@media (max-width: 768px) {
+  .custom-slides img {
+    width: 100%;
+    max-width: none;
+  }
+    .container-accordion {
+        max-width: 90%;
+}
+}
+
+.custom-prev, .custom-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -40px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.custom-dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.custom-dot {
+  cursor: pointer;
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: #313131;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.custom-active, .custom-dot:hover {
+  background-color: #717171;
+}
+
+        .custom-slide {
+  display: none;
+}
+ 
     </style>
+  
 </head>
 
 <body> 
@@ -86,15 +225,18 @@ align-content: center;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                 </button>
-                <a class="navbar-brand" href="index.html">TAURUS ENTERTAINMENT</a>
+                <a class="navbar-brand" href="https://www.beingadolphgasser.com/">TAURUS ENTERTAINMENT</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">HOME</a></li>
-                    <li><a href="bios.html">BIOS</a></li>
-                    <li><a href="http://gofundme.com">DONATE</a></li>
-
-                    <!--             
+                    <li class="active"><a href="https://www.beingadolphgasser.com/">HOME</a></li>
+                    <li><a href="/bios/">BIOS</a></li>
+                    
+<!-- HIDDEN DONATE   
+                 <li><a href="https://igg.me/at/BeingAdolphGasser/x/37984458#/" class="link">DONATE</a></li>
+-->
+                    
+                    <!-- HIDDEN DROPDOWN             
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS <span class="caret"></span></a>
     <ul class="dropdown-menu">
@@ -105,13 +247,15 @@ align-content: center;
     </ul>
 </li>
     -->
-
-                    <li><a href="contact.html">CONTACT</a></li>
+<li><a href="/festivals/" class="link">FILM FESTIVALS</a></li>
+                    
+<li><a href="/updates/" class="link">UPDATES</a></li>
+                    <li><a href="/contact/" class="link">CONTACT</a></li>
                      <li class="socialmedia-icons">   
-                    <li class="special-items"><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li class="special-items"><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
-                    <li class="special-items"><a href="http://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li class="special-items"><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a></li>
+                    <li class="special-items"><a href="https://www.facebook.com/beingadolphgasser"><i class="fab fa-facebook"></i></a></li>
+                    <li class="special-items"><a href="https://www.instagram.com/beingadolphgasser"><i class="fab fa-instagram"></i></a></li>
+                    <li class="special-items"><a href="https://x.com/BeingAdolphFilm"><i class="fab fa-twitter"></i></a></li>
+                
                 </li> </ul>
             </div>
         </div>
