@@ -331,31 +331,44 @@ font-family: "Montserrat", sans-serif;
             font-weight: 400;
         }
 
-        .event-card {
-            border: 1px solid #555;
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: #111;
-        }
 
-        .event-card .date {font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
 
-        .event-card .event-name {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+/* Container styles */
+.event-card .description {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
 
-        .event-card .description {
-            font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
-        }
+/* Image column */
+.event-card .image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 300px; /* adjust if you want a different size on desktop */
+  border-radius: 4px;
+}
+
+/* Text column */
+.event-card .text-column {
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .event-card .description {
+    flex-direction: column;
+  }
+
+  .event-card .image-column img {
+    max-width: 100%; /* full width on mobile */
+  }
+}
+
+
+
+        
     </style>
 
 
@@ -460,7 +473,7 @@ In addition, one of my former students, Hisonni Johnson, had his Student Product
         </div>
     </footer>
     <div class="copyright-bar">
-         &copy; 2003 - 2024 John C. Aliano / Being Adolph Gasser. All Rights Reserved.
+         &copy; 2003 - 2025 John C. Aliano / Being Adolph Gasser. All Rights Reserved.
     </div>
     
        
