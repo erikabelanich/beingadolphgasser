@@ -212,6 +212,51 @@ font-family: "Montserrat", sans-serif;
 
 
 
+/* Only affect the FIRST event-card (the one with the image + long text) */
+.festivals-container .event-card:first-of-type .description {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Image column */
+.festivals-container .event-card:first-of-type .image-column {
+  flex: 0 0 35%;        /* image takes ~35% on desktop */
+  max-width: 35%;
+}
+
+.festivals-container .event-card:first-of-type .image-column img {
+  width: 100%;          /* make image fit its column */
+  height: auto;
+  display: block;
+}
+
+/* Text column */
+.festivals-container .event-card:first-of-type .text-column {
+  flex: 1;              /* take remaining width */
+  line-height: 1.5;
+}
+
+/* Mobile: stack image on top, full width */
+@media (max-width: 768px) {
+  .festivals-container .event-card:first-of-type .description {
+    flex-direction: column;
+  }
+
+  .festivals-container .event-card:first-of-type .image-column,
+  .festivals-container .event-card:first-of-type .text-column {
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .festivals-container .event-card:first-of-type .image-column img {
+    width: 100%;        /* full-width on mobile */
+  }
+}
+
+        
+
+
 
         
 
