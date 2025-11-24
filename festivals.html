@@ -313,43 +313,6 @@ font-family: "Montserrat", sans-serif;
             font-weight: 400;
         }
 
-
-
-/* Only event-cards that include BOTH image and text columns */
-.event-card .description:has(.image-column):has(.text-column) {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-/* Image column ONLY inside those */
-.event-card .description:has(.image-column):has(.text-column) .image-column img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 300px; /* desktop size */
-  border-radius: 4px;
-}
-
-/* Text column */
-.event-card .description:has(.image-column):has(.text-column) .text-column {
-  flex: 1;
-  line-height: 1.5;
-}
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-  .event-card .description:has(.image-column):has(.text-column) {
-    flex-direction: column;
-  }
-
-  .event-card .description:has(.image-column):has(.text-column) .image-column img {
-    max-width: 100%;
-  }
-}
-
-
-
         
     </style>
 
