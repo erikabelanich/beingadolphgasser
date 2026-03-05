@@ -4,768 +4,425 @@ permalink: /festivals/
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <meta name="description" content="Being Adolph Gasser">
-    <meta name="author" content="Erika Belanich">
-    <title>Being Adolph Gasser</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Being Adolph Gasser">
+  <meta name="author" content="Erika Belanich">
+  <title>Being Adolph Gasser</title>
 
-    <link rel="icon" href="../favicon-1.png" type="image/x-icon">
-    
-    <!-- ======= FONTS & STYLES ======= -->  
-    <link rel="stylesheet" href="../mystyle.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="../favicon-1.png" type="image/x-icon">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+  <!-- ======= FONTS & STYLES ======= -->
+  <link rel="stylesheet" href="../mystyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
-    <!-- Bootstrap and jQuery (for demonstration) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <style>
-.accordion-content {
-  display: none;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 30px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 
-.accordion-item {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
+  <!-- jQuery + Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-@media (min-width: 768px) {
-  .accordion-content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .accordion-video {
-    flex: 0;
-    padding-right: 20px;
-  }
-
-  .accordion-text {
-    flex: 1;
-  }
-    .container-accordion{
-        padding-top: 40px;
-        padding-bottom: 40px;
-        margin: 0 auto;
+  <!-- ======= FESTIVALS (SCOPED STYLES - WON'T AFFECT FOOTER) ======= -->
+  <style>
+    /* IMPORTANT: everything is scoped to .festivals-page so it won't touch your footer/nav */
+    .festivals-page{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 60px 20px 80px; /* page padding */
+      color: rgba(255,255,255,0.88);
+      font-family: "Montserrat", sans-serif;
     }
-}
 
-    
-.accordion-title {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.accordion-title h3 {
-  margin: 0;
-}
-
-.accordion-content video {
-  width: 18em;
-  height: 32em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.accordion .accordion-title .accordion-arrow {
-color: white;
-  margin-left: 10px;
-  font-size: 1.2em;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.accordion-item.active .accordion-title .accordion-arrow {
-  transform: rotate(180deg);
-}
-
-.container-accordion {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        max-width: 80%;
-        margin: 0 auto;
-}
-
-        .accordion-title h3{
-font-family: "Montserrat", sans-serif;
-    font-size: 18px !important;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 200;  
-        }
-
-
-                      .unique-link{
-        font-family: "Montserrat", sans-serif;
-        color: #868686;
-        text-decoration: none;
-        }
-        
-                .unique-link:hover {
-    color: #ccc;
-            text-decoration: none;
-}
-
-#unique-title {
-        padding-bottom: 15px;
-}
-
-
-
-
-.custom-slider {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-}
-
-        
-
-.custom-slides img {
-  max-width: 380px; 
-  display: block;
-  max-height: 100%; 
-}
-
-@media (max-width: 768px) {
-  .custom-slides img {
-    width: 100%;
-    max-width: none;
-  }
-    .container-accordion {
-        max-width: 90%;
-}
-}
-
-.custom-prev, .custom-next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -40px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-.custom-next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.custom-prev:hover, .custom-next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.custom-dots {
-  text-align: center;
-  padding: 10px 0;
-}
-
-.custom-dot {
-  cursor: pointer;
-  height: 9px;
-  width: 9px;
-  margin: 0 2px;
-  background-color: #313131;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.custom-active, .custom-dot:hover {
-  background-color: #717171;
-}
-
-        .custom-slide {
-  display: none;
-}
-
-
-
-        
- 
-    </style>
-  
-</head>
-
-<body> 
-
-
-
-
-  <!-- ======= NAVIGATION ======= -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
-                </button>
-                <a class="navbar-brand" href="https://www.beingadolphgasser.com/">TAURUS ENTERTAINMENT</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="https://www.beingadolphgasser.com/">HOME</a></li>
-                    <li><a href="/festivals/" class="link">FILM FESTIVALS</a></li>
-                    <li><a href="https://spectrum.rosco.com/lighting-the-documentary-being-adolph-gasser" class="link">BLOG</a></li> 
-                    <li><a href="/bios/">BIOS</a></li>
-                    
-<!-- HIDDEN DONATE   
-                 <li><a href="https://igg.me/at/BeingAdolphGasser/x/37984458#/" class="link">DONATE</a></li>
--->
-                    
-                    <!-- HIDDEN DROPDOWN             
-<li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS <span class="caret"></span></a>
-    <ul class="dropdown-menu">
-        <li><a href="#">ARTICLES</a></li>
-        <li><a href="#">ARCHIVES</a></li>
-        <li><a href="#">AWARDS</a></li>
-        <li><a href="#">FILM FESTIVALS</a></li>
-    </ul>
-</li>
-    -->
-
-                    
-<li><a href="/updates/" class="link">UPDATES</a></li>
-                    <li><a href="/contact/" class="link">CONTACT</a></li>
-                     <li class="socialmedia-icons">   
-                    <li class="special-items"><a href="https://www.facebook.com/beingadolphgasser"><i class="fab fa-facebook"></i></a></li>
-                    <li class="special-items"><a href="https://www.instagram.com/beingadolphgasser"><i class="fab fa-instagram"></i></a></li>
-                    <li class="special-items"><a href="https://x.com/BeingAdolphFilm"><i class="fab fa-twitter"></i></a></li>
-                
-                </li> </ul>
-            </div>
-        </div>
-    </nav>
-
-<script>
-    $(document).ready(function(){
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
-
-       
- <!-- ======= COVER ======= -->  
-       
-       <div class="cover-container">
-        <div class="cover-image-festivals"></div>
-        <div class="cover-text">
-            <h1>FILM FESTIVALS</h1>
-        </div>
-    </div>
-
-
-
-    <style>
-
-             /* === FESTIVALS LAYOUT === */
-
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-/* Container for the festivals section */
-.festivals-container {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Heading inside festivals section */
-.festivals-container h2 {
-  font-size: 23px;
-  text-align: left;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-/* Generic festival card */
-.event-card {
-  border: 1px solid #555;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #111;
-}
-
-/* Date line */
-.event-card .date {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-/* Event name */
-.event-card .event-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* Description text */
-.event-card .description {
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-}
-
-/* === SPECIAL LAYOUT FOR CARD WITH IMAGE === */
-/* Add class: <div class="event-card event-card--with-image"> */
-
-.festivals-container .event-card--with-image .description {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-/* Image column */
-.festivals-container .event-card--with-image .image-column {
-  flex: 0 0 45%;     /* adjust to 40/50/etc if you want narrower/wider image */
-  max-width: 45%;
-}
-
-.festivals-container .event-card--with-image .image-column img {
-  width: 100%;       /* makes image fit its column */
-  height: auto;
-  display: block;
-}
-
-/* Text column */
-.festivals-container .event-card--with-image .text-column {
-  flex: 1;
-  line-height: 1.5;
-}
-
-/* === MOBILE: STACK IMAGE ON TOP, TEXT BELOW === */
-@media (max-width: 768px) {
-  .festivals-container {
-    width: 90%;
-  }
-
-  .festivals-container .event-card--with-image .description {
-    flex-direction: column;
-  }
-
-  .festivals-container .event-card--with-image .image-column,
-  .festivals-container .event-card--with-image .text-column {
-    max-width: 100%;
-    flex: 0 0 auto;
-  }
-
-  .festivals-container .event-card--with-image .image-column img {
-    width: 100%;
-  }
-}
-
-
-
-/* === NEW === */        
-  :root{
-    --bg: transparent;
-    --card: rgba(255,255,255,0.06);
-    --card2: rgba(255,255,255,0.04);
-    --border: rgba(255,255,255,0.14);
-    --text: rgba(255,255,255,0.88);
-    --muted: rgba(255,255,255,0.62);
-    --title: rgba(255,255,255,0.95);
-    --accent: rgba(255,215,130,0.95);
-    --btn: rgba(255,255,255,0.08);
-    --btnHover: rgba(255,255,255,0.12);
-    --shadow: 0 12px 30px rgba(0,0,0,0.35);
-    --radius: 14px;
-  }
-
-  .festivals {
-    color: var(--text);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 18px 0;
-  }
-
-  .festivals .eyebrow{
-    text-transform: uppercase;
-    letter-spacing: .18em;
-    font-size: 13px;
-    color: var(--muted);
-    margin: 0 0 10px;
-  }
-
-  .festivals h2{
-    margin: 0 0 14px;
-    font-size: 30px;
-    font-weight: 650;
-    color: var(--title);
-  }
-
-  .divider{
-    height: 1px;
-    background: rgba(255,255,255,0.12);
-    margin: 24px 0;
-  }
-
-  /* Card layout */
-  .festival-card{
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 18px;
-    padding: 18px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: linear-gradient(180deg, var(--card), var(--card2));
-    box-shadow: var(--shadow);
-    margin: 14px 0;
-  }
-
-  .poster{
-    width: 180px;
-    aspect-ratio: 2 / 3;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: rgba(255,255,255,0.06);
-  }
-  .poster img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .festival-meta h3{
-    margin: 2px 0 6px;
-    font-size: 24px;
-    line-height: 1.15;
-    color: var(--title);
-    font-weight: 680;
-  }
-
-  .festival-meta .sub{
-    margin: 0 0 10px;
-    color: var(--muted);
-    font-size: 15px;
-  }
-
-  .festival-meta .screening{
-    margin: 0 0 14px;
-    color: rgba(255,255,255,0.78);
-    font-size: 14px;
-  }
-
-  /* Description + more/less */
-  .desc{
-    color: rgba(255,255,255,0.84);
-    font-size: 15px;
-    line-height: 1.55;
-    margin: 0;
-  }
-
-  .desc[data-collapsed="true"]{
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* collapsed lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .actions{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 14px;
-  }
-
-  .btn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.14);
-    background: var(--btn);
-    color: var(--title);
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1;
-    cursor: pointer;
-    transition: transform .08s ease, background .15s ease, border-color .15s ease;
-    user-select: none;
-  }
-  .btn:hover{
-    background: var(--btnHover);
-    border-color: rgba(255,255,255,0.22);
-  }
-  .btn:active{ transform: translateY(1px); }
-
-  .btn-accent{
-    border-color: rgba(255,215,130,0.35);
-  }
-  .btn-accent:hover{
-    border-color: rgba(255,215,130,0.55);
-  }
-
-  /* Accordion */
-  .accordion{
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: rgba(255,255,255,0.03);
-  }
-
-  .accordion-header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 16px 18px;
-    background: rgba(255,255,255,0.04);
-    border: none;
-    color: var(--title);
-    cursor: pointer;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 650;
-  }
-
-  .accordion-header .hint{
-    color: var(--muted);
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: .02em;
-  }
-
-  .chev{
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid rgba(255,255,255,0.7);
-    border-bottom: 2px solid rgba(255,255,255,0.7);
-    transform: rotate(45deg);
-    transition: transform .18s ease;
-    flex: 0 0 auto;
-    margin-left: 6px;
-  }
-
-  .accordion[data-open="true"] .chev{
-    transform: rotate(-135deg);
-  }
-
-  .accordion-panel{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .22s ease;
-  }
-
-  .accordion-inner{
-    padding: 0 18px 18px;
-  }
-
-  /* Responsive */
-  @media (max-width: 720px){
-    .festival-card{
-      grid-template-columns: 1fr;
+    .festivals-page .eyebrow{
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      color: rgba(255,255,255,0.62);
+      margin: 0 0 10px;
     }
-    .poster{
+
+    .festivals-page h2{
+      margin: 0 0 14px;
+      font-size: 30px;
+      font-weight: 650;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .festivals-page .divider{
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 26px 0;
+    }
+
+    .festivals-page .festival-card{
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      margin: 14px 0;
+    }
+
+    .festivals-page .poster{
+      width: 180px;
+      aspect-ratio: 2 / 3;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+    }
+    .festivals-page .poster img{
       width: 100%;
-      max-width: 260px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-  }
 
+    .festivals-page .festival-meta h3{
+      margin: 2px 0 6px;
+      font-size: 24px;
+      line-height: 1.15;
+      color: rgba(255,255,255,0.95);
+      font-weight: 680;
+    }
+    .festivals-page .sub{
+      margin: 0 0 10px;
+      color: rgba(255,255,255,0.62);
+      font-size: 15px;
+    }
+    .festivals-page .screening{
+      margin: 0 0 14px;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+    }
 
+    .festivals-page .desc{
+      color: rgba(255,255,255,0.84);
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .festivals-page .desc[data-collapsed="true"]{
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-        
-    </style>
+    .festivals-page .actions{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
 
+    /* scoped button styles so we don't touch bootstrap .btn */
+    .festivals-page .fest-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+      user-select: none;
+    }
+    .festivals-page .fest-btn:hover{
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.22);
+      text-decoration: none;
+      color: rgba(255,255,255,0.95);
+    }
+    .festivals-page .fest-btn:active{ transform: translateY(1px); }
 
+    .festivals-page .fest-btn-accent{
+      border-color: rgba(255,215,130,0.35);
+    }
+    .festivals-page .fest-btn-accent:hover{
+      border-color: rgba(255,215,130,0.55);
+    }
 
+    /* Accordion */
+    .festivals-page .accordion{
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .festivals-page .accordion-header{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.04);
+      border: none;
+      color: rgba(255,255,255,0.95);
+      cursor: pointer;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .festivals-page .accordion-header .hint{
+      color: rgba(255,255,255,0.62);
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+
+    .festivals-page .chev{
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid rgba(255,255,255,0.7);
+      border-bottom: 2px solid rgba(255,255,255,0.7);
+      transform: rotate(45deg);
+      transition: transform .18s ease;
+      flex: 0 0 auto;
+      margin-left: 6px;
+    }
+    .festivals-page .accordion[data-open="true"] .chev{
+      transform: rotate(-135deg);
+    }
+
+    .festivals-page .accordion-panel{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .22s ease;
+    }
+    .festivals-page .accordion-inner{
+      padding: 0 18px 18px;
+    }
+
+    @media (max-width: 720px){
+      .festivals-page{
+        padding: 40px 16px 70px;
+      }
+      .festivals-page .festival-card{
+        grid-template-columns: 1fr;
+      }
+      .festivals-page .poster{
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-
-
-<section class="festivals" aria-label="Festivals and screenings">
-  <p class="eyebrow">UPCOMING FESTIVALS</p>
-  <h2>Upcoming Festivals</h2>
-
-  <!-- UPCOMING (NOT ACCORDION) -->
-  <article class="festival-card">
-    <div class="poster">
-      <!-- Replace with your poster image -->
-      <img src="https://via.placeholder.com/600x900.png?text=Festival+Poster" alt="DOCUTAH festival poster">
-    </div>
-
-    <div class="festival-meta">
-      <h3>DOCUTAH International Film Festival</h3>
-      <p class="sub">February 26–28, 2026 | St. George, Utah</p>
-      <p class="screening">Screening: Thursday, Feb 26 | 12:15 PM (MST) | Theater 4</p>
-
-      <p class="desc" data-collapsed="true" id="desc-upcoming-1">
-        Being Adolph Gasser has been selected by the DOCUTAH International Film Festival, Feb. 26–28, 2026, in St. George, Utah.
-        This was the first film festival I submitted it to and one of the best I have attended in the past.
-        Come see the film in a great location with wonderful programmers.
-        <br><br>
-        In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film,
-        <em>Legend Has It: The Remarkable Rise of Stephen McCain</em> (created in my Documentary II class at CSN) selected as well.
-        Teacher and student both showing films at the same festival! Now that is special...
-      </p>
-
-      <div class="actions">
-        <!-- Replace with your schedule URL -->
-        <a class="btn btn-accent" href="#" target="_blank" rel="noopener">View Schedule</a>
-
-        <!-- More/Less toggle for long text -->
-        <button class="btn js-toggle-more" type="button" data-target="#desc-upcoming-1">More</button>
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://www.beingadolphgasser.com/">TAURUS ENTERTAINMENT</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="https://www.beingadolphgasser.com/">HOME</a></li>
+          <li><a href="/festivals/" class="link">FILM FESTIVALS</a></li>
+          <li><a href="https://spectrum.rosco.com/lighting-the-documentary-being-adolph-gasser" class="link">BLOG</a></li>
+          <li><a href="/bios/">BIOS</a></li>
+          <li><a href="/updates/" class="link">UPDATES</a></li>
+          <li><a href="/contact/" class="link">CONTACT</a></li>
+          <li class="special-items"><a href="https://www.facebook.com/beingadolphgasser"><i class="fab fa-facebook"></i></a></li>
+          <li class="special-items"><a href="https://www.instagram.com/beingadolphgasser"><i class="fab fa-instagram"></i></a></li>
+          <li class="special-items"><a href="https://x.com/BeingAdolphFilm"><i class="fab fa-twitter"></i></a></li>
+        </ul>
       </div>
     </div>
-  </article>
+  </nav>
 
-  <div class="divider"></div>
+  <script>
+    $(document).ready(function(){
+      $('.dropdown-toggle').dropdown();
+    });
+  </script>
 
-    
-
-        
- <!-- ======= FESTIVALS ======= --> 
-       <div class="festivals-container">
-           <h1 id="unique-title">Upcoming Festivals</h1>
-        <h2>Past Festival</h2>  
-           
-    <div class="event-card">
-            <div class="event-name">DOCUTAH Festival 2026</div>
-            <div class="date">February 26 - 28, 2026 | St. George, Utah</div>
-            <div class="description">Thursday, Februrary 26 | 12:15 PM (MST) | Theater 4<br><br>
-                Founded at Utah Tech University by Emmy-winning filmmaker Phil Tuckett, presents new documentary films in the stunning natural setting of St. George, Utah.<br><br>
-                <a href="https://docutah.com/docutah-schedule/" class="text-link">View Schedule &rarr;</a></p></div>
- </div>
-
-           <div class="event-card event-card--with-image">
-  <div class="description">
-    <div class="image-column">
-      <img src="../DOCUTAH.jpg" alt="DOCUTAH">
+  <!-- ======= COVER ======= -->
+  <div class="cover-container">
+    <div class="cover-image-festivals"></div>
+    <div class="cover-text">
+      <h1>FILM FESTIVALS</h1>
     </div>
-    <div class="text-column">
-                Being Adolph Gasser, has been selected by the Docutah International Film Festival, 
-                Feb. 26–28, 2026, in St. George, Utah. This was the first film festival I submitted it to and one of the best I have attended in the past. 
-                Come see the film in a great location with wonderful programmers.<br><br>
-
-In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy 
-                Award–winning film, Legend Has It: The Remarkable Rise of Stephen McCain 
-                (created in my Documentary II class at CSN) selected as well. Teacher and student both 
-                showing films at the same festival! Now that is special...
   </div>
-  </div>
-</div>
 
-           
-         
-        <!--  <div class="event-card">
-            <div class="date">April 5</div>
-            <div class="event-name">Film Festival Name</div>
-            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+  <!-- ======= FESTIVALS CONTENT ======= -->
+  <section class="festivals-page" aria-label="Festivals and screenings">
+
+    <p class="eyebrow">UPCOMING FESTIVALS</p>
+    <h2>Upcoming Festivals</h2>
+
+    <!-- UPCOMING (NOT ACCORDION) -->
+    <article class="festival-card">
+      <div class="poster">
+        <!-- Replace with your image -->
+        <img src="../DOCUTAH.jpg" alt="DOCUTAH festival poster">
+      </div>
+
+      <div class="festival-meta">
+        <h3>DOCUTAH International Film Festival</h3>
+        <p class="sub">February 26–28, 2026 | St. George, Utah</p>
+        <p class="screening">Screening: Thursday, Feb 26 | 12:15 PM (MST) | Theater 4</p>
+
+        <p class="desc" data-collapsed="true" id="desc-upcoming-1">
+          Being Adolph Gasser has been selected by the DOCUTAH International Film Festival, Feb. 26–28, 2026, in St. George, Utah.
+          This was the first film festival I submitted it to and one of the best I have attended in the past. Come see the film in a great location with wonderful programmers.
+          <br><br>
+          In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film,
+          <em>Legend Has It: The Remarkable Rise of Stephen McCain</em> (created in my Documentary II class at CSN) selected as well.
+          Teacher and student both showing films at the same festival! Now that is special...
+        </p>
+
+        <div class="actions">
+          <a class="fest-btn fest-btn-accent" href="https://docutah.com/docutah-schedule/" target="_blank" rel="noopener">View Schedule</a>
+          <button class="fest-btn js-toggle-more" type="button" data-target="#desc-upcoming-1">More</button>
         </div>
-        <div class="event-card">
-            <div class="date">May 14</div>
-            <div class="event-name">Film Festival Name</div>
-            <div class="description">Lorem ipsum dolor sit amet, dolor sit amet. consectetur adipiscing elit.</div>
+      </div>
+    </article>
+
+    <div class="divider"></div>
+
+    <!-- PAST (ACCORDION) -->
+    <p class="eyebrow">PAST SCREENINGS</p>
+
+    <div class="accordion" data-open="false" id="past-accordion">
+      <button class="accordion-header" type="button" aria-expanded="false" aria-controls="past-panel">
+        <span>Past Screenings <span class="hint">(click to expand)</span></span>
+        <span class="chev" aria-hidden="true"></span>
+      </button>
+
+      <div class="accordion-panel" id="past-panel" role="region" aria-label="Past screenings list">
+        <div class="accordion-inner">
+
+          <!-- Example PAST item (duplicate as needed) -->
+          <article class="festival-card" style="box-shadow:none;">
+            <div class="poster">
+              <img src="../DOCUTAH.jpg" alt="DOCUTAH festival poster">
+            </div>
+
+            <div class="festival-meta">
+              <h3>DOCUTAH International Film Festival</h3>
+              <p class="sub">February 26–28, 2026 | St. George, Utah</p>
+              <p class="screening">Screening: Thursday, Feb 26 | 12:15 PM (MST) | Theater 4</p>
+
+              <p class="desc" data-collapsed="true" id="desc-past-1">
+                Being Adolph Gasser was selected for the DOCUTAH International Film Festival. This marked the film’s first festival selection and was one of the best festivals I’ve attended.
+                <br><br>
+                In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film selected as well — teacher and student both showing films at the same festival.
+              </p>
+
+              <div class="actions">
+                <a class="fest-btn fest-btn-accent" href="https://docutah.com/docutah-schedule/" target="_blank" rel="noopener">View Schedule</a>
+                <button class="fest-btn js-toggle-more" type="button" data-target="#desc-past-1">More</button>
+              </div>
+            </div>
+          </article>
+
         </div>
-        <div class="event-card">
-            <div class="date">May 30</div>
-            <div class="event-name">Film Festival Name</div>
-            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div> --> 
+      </div>
     </div>
 
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <br>
-    &nbsp;
-    &nbsp;
-    &nbsp;<br>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-       &nbsp;
-    &nbsp;
-    &nbsp;
-    <br>
-    &nbsp;
-    &nbsp;
-    &nbsp;<br>
-    &nbsp;
-    &nbsp;
-    &nbsp;
+  </section>
 
+  <script>
+    // Accordion toggle (Past Screenings)
+    (function () {
+      const accordion = document.getElementById('past-accordion');
+      if (!accordion) return;
 
-   <!-- Footer -->
-       
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <a href="/privacy/">Privacy Policy</a>
-                <a href="/terms/">Terms of Use</a><br>
-        
-            </div>
-            <div class="footer-column">
-               <p class="footer-title">Being Adolph Gasser</p>
-                
-            </div>
-            <div class="footer-column">
-            
-                <div class="social-icons">
-                    
-                    
-                           <a href="https://www.facebook.com/beingadolphgasser"><i class="fab fa-facebook"></i></a>
-         <a href="https://www.instagram.com/beingadolphgasser"><i class="fab fa-instagram"></i></a>
+      const header = accordion.querySelector('.accordion-header');
+      const panel = accordion.querySelector('.accordion-panel');
+
+      function setOpen(isOpen){
+        accordion.dataset.open = String(isOpen);
+        header.setAttribute('aria-expanded', String(isOpen));
+        panel.style.maxHeight = isOpen ? (panel.scrollHeight + 'px') : '0px';
+      }
+
+      header.addEventListener('click', () => {
+        const currentlyOpen = accordion.dataset.open === 'true';
+        setOpen(!currentlyOpen);
+      });
+
+      window.addEventListener('resize', () => {
+        const isOpen = accordion.dataset.open === 'true';
+        if (isOpen) panel.style.maxHeight = panel.scrollHeight + 'px';
+      });
+
+      accordion.__recalc = () => {
+        const isOpen = accordion.dataset.open === 'true';
+        if (isOpen) panel.style.maxHeight = panel.scrollHeight + 'px';
+      };
+    })();
+
+    // More/Less toggles for descriptions
+    (function () {
+      const buttons = document.querySelectorAll('.js-toggle-more');
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const sel = btn.getAttribute('data-target');
+          const el = sel ? document.querySelector(sel) : null;
+          if (!el) return;
+
+          const collapsed = el.getAttribute('data-collapsed') === 'true';
+          el.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
+          btn.textContent = collapsed ? 'Less' : 'More';
+
+          const accordion = document.getElementById('past-accordion');
+          if (accordion && typeof accordion.__recalc === 'function') {
+            accordion.__recalc();
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a><br>
+      </div>
+      <div class="footer-column">
+        <p class="footer-title">Being Adolph Gasser</p>
+      </div>
+      <div class="footer-column">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/beingadolphgasser"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/beingadolphgasser"><i class="fab fa-instagram"></i></a>
           <a href="https://x.com/BeingAdolphFilm"><i class="fab fa-twitter"></i></a>
-                
-                    
-                    
-                </div>
-            </div>
         </div>
-    </footer>
-    <div class="copyright-bar">
-         &copy; 2003 - 2025 John C. Aliano / Being Adolph Gasser. All Rights Reserved.
+      </div>
     </div>
-    
-       
+  </footer>
 
-    
+  <div class="copyright-bar">
+    &copy; 2003 - 2025 John C. Aliano / Being Adolph Gasser. All Rights Reserved.
+  </div>
+
 </body>
-    
 </html>
     
