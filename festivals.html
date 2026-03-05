@@ -4,6 +4,7 @@ permalink: /festivals/
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,7 @@ permalink: /festivals/
 
   <link rel="icon" href="../favicon-1.png" type="image/x-icon">
 
-  <!-- ======= FONTS & STYLES ======= -->
+  <!-- ======= GLOBAL STYLES ======= -->
   <link rel="stylesheet" href="../mystyle.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,205 +23,209 @@ permalink: /festivals/
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 
-  <!-- jQuery + Bootstrap -->
+  <!-- Bootstrap and jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <!-- ======= FESTIVALS (SCOPED STYLES - WON'T AFFECT FOOTER) ======= -->
+  <!-- ======= FESTIVALS PAGE ONLY (MATCHES UPDATES ACCORDION STYLE) ======= -->
   <style>
-    /* IMPORTANT: everything is scoped to .festivals-page so it won't touch your footer/nav */
-    .festivals-page{
-      max-width: 1080px;
+    /* Page-only wrapper so nothing touches your footer or other pages */
+    .festivals-page {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 20px 80px; /* page padding */
-      color: rgba(255,255,255,0.88);
+      padding: 70px 20px 90px;
+    }
+
+    @media (max-width: 768px) {
+      .festivals-page { padding: 50px 16px 80px; }
+    }
+
+    /* Headings to match your site’s uppercase/spacing vibe */
+    .festivals-page .section-eyebrow{
       font-family: "Montserrat", sans-serif;
-    }
-
-    .festivals-page .eyebrow{
+      font-size: 14px;
+      font-weight: 200;
       text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: 13px;
-      color: rgba(255,255,255,0.62);
-      margin: 0 0 10px;
+      letter-spacing: 4px;
+      color: #bdbdbd;
+      margin: 0 0 18px;
+      opacity: .9;
     }
 
-    .festivals-page h2{
-      margin: 0 0 14px;
-      font-size: 30px;
-      font-weight: 650;
-      color: rgba(255,255,255,0.95);
-    }
-
-    .festivals-page .divider{
-      height: 1px;
-      background: rgba(255,255,255,0.12);
-      margin: 26px 0;
-    }
-
-    .festivals-page .festival-card{
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 18px;
-      padding: 18px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      margin: 14px 0;
-    }
-
-    .festivals-page .poster{
-      width: 180px;
-      aspect-ratio: 2 / 3;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-    }
-    .festivals-page .poster img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .festivals-page .festival-meta h3{
-      margin: 2px 0 6px;
-      font-size: 24px;
-      line-height: 1.15;
-      color: rgba(255,255,255,0.95);
-      font-weight: 680;
-    }
-    .festivals-page .sub{
-      margin: 0 0 10px;
-      color: rgba(255,255,255,0.62);
-      font-size: 15px;
-    }
-    .festivals-page .screening{
-      margin: 0 0 14px;
-      color: rgba(255,255,255,0.78);
-      font-size: 14px;
-    }
-
-    .festivals-page .desc{
-      color: rgba(255,255,255,0.84);
-      font-size: 15px;
-      line-height: 1.55;
-      margin: 0;
-    }
-    .festivals-page .desc[data-collapsed="true"]{
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .festivals-page .actions{
+    /* --- Updates-style accordion shell --- */
+    .festivals-page .updates-accordion {
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 14px;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    /* scoped button styles so we don't touch bootstrap .btn */
-    .festivals-page .fest-btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.95);
-      text-decoration: none;
-      font-size: 14px;
-      line-height: 1;
-      cursor: pointer;
-      transition: transform .08s ease, background .15s ease, border-color .15s ease;
-      user-select: none;
-    }
-    .festivals-page .fest-btn:hover{
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.22);
-      text-decoration: none;
-      color: rgba(255,255,255,0.95);
-    }
-    .festivals-page .fest-btn:active{ transform: translateY(1px); }
-
-    .festivals-page .fest-btn-accent{
-      border-color: rgba(255,215,130,0.35);
-    }
-    .festivals-page .fest-btn-accent:hover{
-      border-color: rgba(255,215,130,0.55);
-    }
-
-    /* Accordion */
-    .festivals-page .accordion{
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.03);
-    }
-
-    .festivals-page .accordion-header{
+    /* The bar that looks like your Updates rows */
+    .festivals-page .updates-row-btn{
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.04);
-      border: none;
-      color: rgba(255,255,255,0.95);
+      gap: 18px;
+
+      padding: 22px 26px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: transparent;
+
       cursor: pointer;
       text-align: left;
+
+      font-family: "Montserrat", sans-serif;
       font-size: 18px;
-      font-weight: 650;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #ffffff;
     }
 
-    .festivals-page .accordion-header .hint{
-      color: rgba(255,255,255,0.62);
-      font-weight: 500;
-      font-size: 13px;
-      letter-spacing: .02em;
+    @media (max-width: 768px) {
+      .festivals-page .updates-row-btn{
+        font-size: 14px;
+        letter-spacing: 3px;
+        padding: 18px 18px;
+      }
     }
 
-    .festivals-page .chev{
-      width: 12px;
-      height: 12px;
-      border-right: 2px solid rgba(255,255,255,0.7);
-      border-bottom: 2px solid rgba(255,255,255,0.7);
-      transform: rotate(45deg);
-      transition: transform .18s ease;
+    /* Simple triangle caret like your Updates (right side) */
+    .festivals-page .caret-tri{
+      font-size: 18px;
+      line-height: 1;
+      color: #ffffff;
+      opacity: .9;
+      transform: rotate(0deg);
+      transition: transform .2s ease;
       flex: 0 0 auto;
-      margin-left: 6px;
-    }
-    .festivals-page .accordion[data-open="true"] .chev{
-      transform: rotate(-135deg);
     }
 
-    .festivals-page .accordion-panel{
+    .festivals-page .accordion-item[data-open="true"] .caret-tri{
+      transform: rotate(180deg);
+    }
+
+    /* Panel wrapper (inside the big border look) */
+    .festivals-page .panel{
+      border: 1px solid rgba(255,255,255,0.35);
+      border-top: none;
+      padding: 26px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .festivals-page .panel{ padding: 18px; }
+    }
+
+    /* Collapsible panel animation */
+    .festivals-page .panel-wrap{
       max-height: 0;
       overflow: hidden;
-      transition: max-height .22s ease;
-    }
-    .festivals-page .accordion-inner{
-      padding: 0 18px 18px;
+      transition: max-height .25s ease;
     }
 
-    @media (max-width: 720px){
-      .festivals-page{
-        padding: 40px 16px 70px;
-      }
-      .festivals-page .festival-card{
+    /* --- Festival content layout (matches your Updates open item layout) --- */
+    .festivals-page .festival-grid{
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    @media (max-width: 992px){
+      .festivals-page .festival-grid{
         grid-template-columns: 1fr;
       }
-      .festivals-page .poster{
-        width: 100%;
-        max-width: 260px;
-      }
+    }
+
+    /* Left graphic */
+    .festivals-page .festival-img{
+      width: 100%;
+      border: 0;
+      display: block;
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* Right text */
+    .festivals-page .festival-title{
+      font-family: "Montserrat", sans-serif;
+      font-size: 34px;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #ffffff;
+      margin: 0 0 14px;
+      line-height: 1.15;
+    }
+
+    @media (max-width: 768px){
+      .festivals-page .festival-title{ font-size: 22px; letter-spacing: 3px; }
+    }
+
+    .festivals-page .festival-body{
+      font-family: "Montserrat", sans-serif;
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    .festivals-page .festival-signoff{
+      margin-top: 18px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* View Schedule link style (similar to your link hover vibe) */
+    .festivals-page .festival-links{
+      margin-top: 18px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .festivals-page .festival-link{
+      font-family: "Montserrat", sans-serif;
+      color: #bdbdbd;
+      text-decoration: none;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .festivals-page .festival-link:hover{
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* More/Less should feel like a small text control, not a button */
+    .festivals-page .more-toggle{
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      color: #bdbdbd;
+      cursor: pointer;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .festivals-page .more-toggle:hover{ color: #ffffff; }
+
+    /* Truncate long text until More is clicked */
+    .festivals-page .clamp[data-collapsed="true"]{
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Upcoming “always open” uses same border styling, but no collapse */
+    .festivals-page .static-box{
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 26px;
+    }
+
+    @media (max-width: 768px){
+      .festivals-page .static-box{ padding: 18px; }
     }
   </style>
 </head>
@@ -238,10 +243,11 @@ permalink: /festivals/
         </button>
         <a class="navbar-brand" href="https://www.beingadolphgasser.com/">TAURUS ENTERTAINMENT</a>
       </div>
+
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="https://www.beingadolphgasser.com/">HOME</a></li>
-          <li><a href="/festivals/" class="link">FILM FESTIVALS</a></li>
+          <li><a href="https://www.beingadolphgasser.com/">HOME</a></li>
+          <li class="active"><a href="/festivals/" class="link">FILM FESTIVALS</a></li>
           <li><a href="https://spectrum.rosco.com/lighting-the-documentary-being-adolph-gasser" class="link">BLOG</a></li>
           <li><a href="/bios/">BIOS</a></li>
           <li><a href="/updates/" class="link">UPDATES</a></li>
@@ -254,12 +260,6 @@ permalink: /festivals/
     </div>
   </nav>
 
-  <script>
-    $(document).ready(function(){
-      $('.dropdown-toggle').dropdown();
-    });
-  </script>
-
   <!-- ======= COVER ======= -->
   <div class="cover-container">
     <div class="cover-image-festivals"></div>
@@ -268,132 +268,172 @@ permalink: /festivals/
     </div>
   </div>
 
-  <!-- ======= FESTIVALS CONTENT ======= -->
-  <section class="festivals-page" aria-label="Festivals and screenings">
-
-    <p class="eyebrow">UPCOMING FESTIVALS</p>
-    <h2>Upcoming Festivals</h2>
+  <!-- ======= FESTIVALS PAGE CONTENT ======= -->
+  <section class="festivals-page">
 
     <!-- UPCOMING (NOT ACCORDION) -->
-    <article class="festival-card">
-      <div class="poster">
-        <!-- Replace with your image -->
-        <img src="../DOCUTAH.jpg" alt="DOCUTAH festival poster">
-      </div>
+    <p class="section-eyebrow">Upcoming Festivals</p>
 
-      <div class="festival-meta">
-        <h3>DOCUTAH International Film Festival</h3>
-        <p class="sub">February 26–28, 2026 | St. George, Utah</p>
-        <p class="screening">Screening: Thursday, Feb 26 | 12:15 PM (MST) | Theater 4</p>
+    <div class="static-box">
+      <div class="festival-grid">
 
-        <p class="desc" data-collapsed="true" id="desc-upcoming-1">
-          Being Adolph Gasser has been selected by the DOCUTAH International Film Festival, Feb. 26–28, 2026, in St. George, Utah.
-          This was the first film festival I submitted it to and one of the best I have attended in the past. Come see the film in a great location with wonderful programmers.
-          <br><br>
-          In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film,
-          <em>Legend Has It: The Remarkable Rise of Stephen McCain</em> (created in my Documentary II class at CSN) selected as well.
-          Teacher and student both showing films at the same festival! Now that is special...
-        </p>
+        <!-- LEFT IMAGE (replace with your graphic/poster) -->
+        <img class="festival-img" src="../DOCUTAH.jpg" alt="DOCUTAH International Film Festival selection graphic">
 
-        <div class="actions">
-          <a class="fest-btn fest-btn-accent" href="https://docutah.com/docutah-schedule/" target="_blank" rel="noopener">View Schedule</a>
-          <button class="fest-btn js-toggle-more" type="button" data-target="#desc-upcoming-1">More</button>
+        <!-- RIGHT TEXT -->
+        <div>
+          <h2 class="festival-title">DOCUTAH International Film Festival</h2>
+
+          <p class="festival-body clamp" data-collapsed="true" id="upcoming-desc-1">
+            Being Adolph Gasser has been selected by the DOCUTAH International Film Festival, Feb. 26–28, 2026, in St. George, Utah.
+            This was the first film festival I submitted it to and one of the best I have attended in the past. Come see the film in a great location with wonderful programmers.
+            <br><br>
+            In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film,
+            <em>Legend Has It: The Remarkable Rise of Stephen McCain</em> (created in my Documentary II class at CSN) selected as well.
+            Teacher and student both showing films at the same festival! Now that is special...
+            <br><br>
+            — John C. Aliano, Producer/Director<br>
+            john@beingadolphgasser.com
+          </p>
+
+          <div class="festival-links">
+            <a class="festival-link" href="https://docutah.com/docutah-schedule/" target="_blank" rel="noopener">View Schedule →</a>
+            <button class="more-toggle js-more" type="button" data-target="#upcoming-desc-1">More</button>
+          </div>
         </div>
-      </div>
-    </article>
 
-    <div class="divider"></div>
-
-    <!-- PAST (ACCORDION) -->
-    <p class="eyebrow">PAST SCREENINGS</p>
-
-    <div class="accordion" data-open="false" id="past-accordion">
-      <button class="accordion-header" type="button" aria-expanded="false" aria-controls="past-panel">
-        <span>Past Screenings <span class="hint">(click to expand)</span></span>
-        <span class="chev" aria-hidden="true"></span>
-      </button>
-
-      <div class="accordion-panel" id="past-panel" role="region" aria-label="Past screenings list">
-        <div class="accordion-inner">
-
-          <!-- Example PAST item (duplicate as needed) -->
-          <article class="festival-card" style="box-shadow:none;">
-            <div class="poster">
-              <img src="../DOCUTAH.jpg" alt="DOCUTAH festival poster">
-            </div>
-
-            <div class="festival-meta">
-              <h3>DOCUTAH International Film Festival</h3>
-              <p class="sub">February 26–28, 2026 | St. George, Utah</p>
-              <p class="screening">Screening: Thursday, Feb 26 | 12:15 PM (MST) | Theater 4</p>
-
-              <p class="desc" data-collapsed="true" id="desc-past-1">
-                Being Adolph Gasser was selected for the DOCUTAH International Film Festival. This marked the film’s first festival selection and was one of the best festivals I’ve attended.
-                <br><br>
-                In addition, one of my former students, Hisonni Johnson, had his Student Production Emmy Award–winning film selected as well — teacher and student both showing films at the same festival.
-              </p>
-
-              <div class="actions">
-                <a class="fest-btn fest-btn-accent" href="https://docutah.com/docutah-schedule/" target="_blank" rel="noopener">View Schedule</a>
-                <button class="fest-btn js-toggle-more" type="button" data-target="#desc-past-1">More</button>
-              </div>
-            </div>
-          </article>
-
-        </div>
       </div>
     </div>
 
+    <div style="height:34px;"></div>
+
+    <!-- PAST (ACCORDION THAT MATCHES UPDATES) -->
+    <p class="section-eyebrow">Past Screenings</p>
+
+    <div class="updates-accordion">
+
+      <!-- Accordion Item 1 -->
+      <div class="accordion-item" data-open="false">
+        <button class="updates-row-btn js-acc-toggle" type="button" aria-expanded="false">
+          February 24, 2026 Update
+          <span class="caret-tri">▼</span>
+        </button>
+
+        <div class="panel-wrap" aria-hidden="true">
+          <div class="panel">
+            <div class="festival-grid">
+              <img class="festival-img" src="../RainierFilmFestivalAward.jpg" alt="Rainier Film Festival award graphic">
+
+              <div>
+                <h2 class="festival-title">Best Director at the Rainier Film Festival</h2>
+
+                <p class="festival-body clamp" data-collapsed="true" id="past-desc-1">
+                  My documentary film "Being Adolph Gasser" just won for Best Director at the Rainier Film Festival in Seattle.
+                  A huge thank you to my team, the talent in the film, Indiegogo supporters, Canon USA, Nanlux, Kondor Blue and more for all their support.
+                  I'm also excited about the Docutah Film Festival in the days ahead.
+                  <br><br>
+                  — John C. Aliano, Producer/Director<br>
+                  john@beingadolphgasser.com
+                </p>
+
+                <div class="festival-links">
+                  <button class="more-toggle js-more" type="button" data-target="#past-desc-1">More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item 2 (duplicate pattern) -->
+      <div class="accordion-item" data-open="false">
+        <button class="updates-row-btn js-acc-toggle" type="button" aria-expanded="false">
+          January 20, 2026 Update
+          <span class="caret-tri">▼</span>
+        </button>
+
+        <div class="panel-wrap" aria-hidden="true">
+          <div class="panel">
+            <div class="festival-grid">
+              <img class="festival-img" src="../DOCUTAH.jpg" alt="Festival graphic">
+
+              <div>
+                <h2 class="festival-title">Festival Update Title</h2>
+
+                <p class="festival-body clamp" data-collapsed="true" id="past-desc-2">
+                  Paste the full text for this update/festival here. Keep it long if needed — the “More” toggle will clamp it by default.
+                  <br><br>
+                  — John C. Aliano, Producer/Director<br>
+                  john@beingadolphgasser.com
+                </p>
+
+                <div class="festival-links">
+                  <a class="festival-link" href="#" target="_blank" rel="noopener">View Link →</a>
+                  <button class="more-toggle js-more" type="button" data-target="#past-desc-2">More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more items as needed -->
+
+    </div>
   </section>
 
+  <!-- ======= FESTIVALS JS (accordion + more/less) ======= -->
   <script>
-    // Accordion toggle (Past Screenings)
-    (function () {
-      const accordion = document.getElementById('past-accordion');
-      if (!accordion) return;
+    // Accordion behavior (Updates-style)
+    (function(){
+      const items = document.querySelectorAll('.festivals-page .accordion-item');
+      items.forEach(item => {
+        const btn = item.querySelector('.js-acc-toggle');
+        const wrap = item.querySelector('.panel-wrap');
+        if (!btn || !wrap) return;
 
-      const header = accordion.querySelector('.accordion-header');
-      const panel = accordion.querySelector('.accordion-panel');
+        function setOpen(isOpen){
+          item.dataset.open = String(isOpen);
+          btn.setAttribute('aria-expanded', String(isOpen));
+          wrap.setAttribute('aria-hidden', String(!isOpen));
+          wrap.style.maxHeight = isOpen ? (wrap.scrollHeight + 'px') : '0px';
+        }
 
-      function setOpen(isOpen){
-        accordion.dataset.open = String(isOpen);
-        header.setAttribute('aria-expanded', String(isOpen));
-        panel.style.maxHeight = isOpen ? (panel.scrollHeight + 'px') : '0px';
-      }
+        btn.addEventListener('click', () => {
+          const isOpen = item.dataset.open === 'true';
+          setOpen(!isOpen);
+        });
 
-      header.addEventListener('click', () => {
-        const currentlyOpen = accordion.dataset.open === 'true';
-        setOpen(!currentlyOpen);
+        // Recalculate height on resize (important for responsive)
+        window.addEventListener('resize', () => {
+          const isOpen = item.dataset.open === 'true';
+          if (isOpen) wrap.style.maxHeight = wrap.scrollHeight + 'px';
+        });
+
+        // expose recalc for "More" toggles inside
+        item.__recalc = () => {
+          const isOpen = item.dataset.open === 'true';
+          if (isOpen) wrap.style.maxHeight = wrap.scrollHeight + 'px';
+        };
       });
-
-      window.addEventListener('resize', () => {
-        const isOpen = accordion.dataset.open === 'true';
-        if (isOpen) panel.style.maxHeight = panel.scrollHeight + 'px';
-      });
-
-      accordion.__recalc = () => {
-        const isOpen = accordion.dataset.open === 'true';
-        if (isOpen) panel.style.maxHeight = panel.scrollHeight + 'px';
-      };
     })();
 
-    // More/Less toggles for descriptions
-    (function () {
-      const buttons = document.querySelectorAll('.js-toggle-more');
-      buttons.forEach((btn) => {
+    // More/Less clamp toggles
+    (function(){
+      const buttons = document.querySelectorAll('.festivals-page .js-more');
+      buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-          const sel = btn.getAttribute('data-target');
-          const el = sel ? document.querySelector(sel) : null;
+          const targetSel = btn.getAttribute('data-target');
+          const el = targetSel ? document.querySelector(targetSel) : null;
           if (!el) return;
 
           const collapsed = el.getAttribute('data-collapsed') === 'true';
           el.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
           btn.textContent = collapsed ? 'Less' : 'More';
 
-          const accordion = document.getElementById('past-accordion');
-          if (accordion && typeof accordion.__recalc === 'function') {
-            accordion.__recalc();
-          }
+          // If this is inside an open accordion, recalc its height so content isn't cut off
+          const item = btn.closest('.accordion-item');
+          if (item && typeof item.__recalc === 'function') item.__recalc();
         });
       });
     })();
