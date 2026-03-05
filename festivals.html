@@ -27,9 +27,8 @@ permalink: /festivals/
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <!-- ======= FESTIVALS PAGE ONLY (MATCHES UPDATES ACCORDION STYLE) ======= -->
+  <!-- ======= FESTIVALS PAGE ONLY (MATCH UPDATES STYLE) ======= -->
   <style>
-    /* Page-only wrapper so nothing touches your footer or other pages */
     .festivals-page {
       max-width: 1200px;
       margin: 0 auto;
@@ -40,7 +39,6 @@ permalink: /festivals/
       .festivals-page { padding: 50px 16px 80px; }
     }
 
-    /* Headings to match your site’s uppercase/spacing vibe */
     .festivals-page .section-eyebrow{
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
@@ -52,14 +50,14 @@ permalink: /festivals/
       opacity: .9;
     }
 
-    /* --- Updates-style accordion shell --- */
+    /* Updates-style accordion list */
     .festivals-page .updates-accordion {
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
-    /* The bar that looks like your Updates rows */
+    /* The top bar (matches Updates) */
     .festivals-page .updates-row-btn{
       width: 100%;
       display: flex;
@@ -90,7 +88,7 @@ permalink: /festivals/
       }
     }
 
-    /* Simple triangle caret like your Updates (right side) */
+    /* triangle caret */
     .festivals-page .caret-tri{
       font-size: 18px;
       line-height: 1;
@@ -100,53 +98,57 @@ permalink: /festivals/
       transition: transform .2s ease;
       flex: 0 0 auto;
     }
-
     .festivals-page .accordion-item[data-open="true"] .caret-tri{
       transform: rotate(180deg);
     }
 
-    /* Panel wrapper (inside the big border look) */
-    .festivals-page .panel{
-      border: 1px solid rgba(255,255,255,0.35);
-      border-top: none;
-      padding: 26px;
-      overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-      .festivals-page .panel{ padding: 18px; }
-    }
-
-    /* Collapsible panel animation */
+    /* Collapsible panel wrapper */
     .festivals-page .panel-wrap{
       max-height: 0;
       overflow: hidden;
       transition: max-height .25s ease;
     }
 
-    /* --- Festival content layout (matches your Updates open item layout) --- */
+    /*
+      IMPORTANT FIX:
+      DO NOT use .panel (Bootstrap collision).
+      Use .fest-panel instead.
+    */
+    .festivals-page .fest-panel{
+      border: 1px solid rgba(255,255,255,0.35);
+      border-top: none;
+      padding: 26px;
+
+      background: transparent; /* keep dark theme */
+      color: rgba(255,255,255,0.85);
+    }
+    @media (max-width: 768px) {
+      .festivals-page .fest-panel{ padding: 18px; }
+    }
+
+    /* Festival layout */
     .festivals-page .festival-grid{
       display: grid;
       grid-template-columns: 420px 1fr;
       gap: 30px;
       align-items: start;
     }
-
     @media (max-width: 992px){
       .festivals-page .festival-grid{
         grid-template-columns: 1fr;
       }
     }
 
-    /* Left graphic */
     .festivals-page .festival-img{
       width: 100%;
-      border: 0;
+      height: auto;
       display: block;
+      max-width: 100%;
+      /* optional: add subtle border like updates cards */
+      border: 0;
       background: rgba(255,255,255,0.04);
     }
 
-    /* Right text */
     .festivals-page .festival-title{
       font-family: "Montserrat", sans-serif;
       font-size: 34px;
@@ -157,7 +159,6 @@ permalink: /festivals/
       margin: 0 0 14px;
       line-height: 1.15;
     }
-
     @media (max-width: 768px){
       .festivals-page .festival-title{ font-size: 22px; letter-spacing: 3px; }
     }
@@ -171,12 +172,6 @@ permalink: /festivals/
       margin: 0;
     }
 
-    .festivals-page .festival-signoff{
-      margin-top: 18px;
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* View Schedule link style (similar to your link hover vibe) */
     .festivals-page .festival-links{
       margin-top: 18px;
       display: flex;
@@ -197,7 +192,6 @@ permalink: /festivals/
       text-decoration: none;
     }
 
-    /* More/Less should feel like a small text control, not a button */
     .festivals-page .more-toggle{
       background: transparent;
       border: none;
@@ -210,7 +204,6 @@ permalink: /festivals/
     }
     .festivals-page .more-toggle:hover{ color: #ffffff; }
 
-    /* Truncate long text until More is clicked */
     .festivals-page .clamp[data-collapsed="true"]{
       display: -webkit-box;
       -webkit-line-clamp: 4;
@@ -218,12 +211,11 @@ permalink: /festivals/
       overflow: hidden;
     }
 
-    /* Upcoming “always open” uses same border styling, but no collapse */
+    /* Upcoming visible container */
     .festivals-page .static-box{
       border: 1px solid rgba(255,255,255,0.35);
       padding: 26px;
     }
-
     @media (max-width: 768px){
       .festivals-page .static-box{ padding: 18px; }
     }
@@ -268,7 +260,7 @@ permalink: /festivals/
     </div>
   </div>
 
-  <!-- ======= FESTIVALS PAGE CONTENT ======= -->
+  <!-- ======= CONTENT ======= -->
   <section class="festivals-page">
 
     <!-- UPCOMING (NOT ACCORDION) -->
@@ -276,11 +268,8 @@ permalink: /festivals/
 
     <div class="static-box">
       <div class="festival-grid">
-
-        <!-- LEFT IMAGE (replace with your graphic/poster) -->
         <img class="festival-img" src="../DOCUTAH.jpg" alt="DOCUTAH International Film Festival selection graphic">
 
-        <!-- RIGHT TEXT -->
         <div>
           <h2 class="festival-title">DOCUTAH International Film Festival</h2>
 
@@ -301,27 +290,27 @@ permalink: /festivals/
             <button class="more-toggle js-more" type="button" data-target="#upcoming-desc-1">More</button>
           </div>
         </div>
-
       </div>
     </div>
 
     <div style="height:34px;"></div>
 
-    <!-- PAST (ACCORDION THAT MATCHES UPDATES) -->
+    <!-- PAST (ACCORDION) -->
     <p class="section-eyebrow">Past Screenings</p>
 
     <div class="updates-accordion">
 
-      <!-- Accordion Item 1 -->
-      <div class="accordion-item" data-open="false">
-        <button class="updates-row-btn js-acc-toggle" type="button" aria-expanded="false">
+      <!-- Item 1 (open by default like your Updates screenshot) -->
+      <div class="accordion-item" data-open="true">
+        <button class="updates-row-btn js-acc-toggle" type="button" aria-expanded="true">
           February 24, 2026 Update
-          <span class="caret-tri">▼</span>
+          <span class="caret-tri">▲</span>
         </button>
 
-        <div class="panel-wrap" aria-hidden="true">
-          <div class="panel">
+        <div class="panel-wrap" aria-hidden="false" style="max-height: 9999px;">
+          <div class="fest-panel">
             <div class="festival-grid">
+              <!-- IMPORTANT: make sure this path exists -->
               <img class="festival-img" src="../RainierFilmFestivalAward.jpg" alt="Rainier Film Festival award graphic">
 
               <div>
@@ -340,12 +329,13 @@ permalink: /festivals/
                   <button class="more-toggle js-more" type="button" data-target="#past-desc-1">More</button>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Accordion Item 2 (duplicate pattern) -->
+      <!-- Item 2 -->
       <div class="accordion-item" data-open="false">
         <button class="updates-row-btn js-acc-toggle" type="button" aria-expanded="false">
           January 20, 2026 Update
@@ -353,64 +343,73 @@ permalink: /festivals/
         </button>
 
         <div class="panel-wrap" aria-hidden="true">
-          <div class="panel">
+          <div class="fest-panel">
             <div class="festival-grid">
-              <img class="festival-img" src="../DOCUTAH.jpg" alt="Festival graphic">
+              <img class="festival-img" src="../DOCUTAH.jpg" alt="DOCUTAH selection graphic">
 
               <div>
-                <h2 class="festival-title">Festival Update Title</h2>
+                <h2 class="festival-title">DOCUTAH Selection Announcement</h2>
 
                 <p class="festival-body clamp" data-collapsed="true" id="past-desc-2">
-                  Paste the full text for this update/festival here. Keep it long if needed — the “More” toggle will clamp it by default.
+                  Paste your full text here for this update.
                   <br><br>
                   — John C. Aliano, Producer/Director<br>
                   john@beingadolphgasser.com
                 </p>
 
                 <div class="festival-links">
-                  <a class="festival-link" href="#" target="_blank" rel="noopener">View Link →</a>
+                  <a class="festival-link" href="https://docutah.com/" target="_blank" rel="noopener">View Link →</a>
                   <button class="more-toggle js-more" type="button" data-target="#past-desc-2">More</button>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Add more items as needed -->
-
     </div>
   </section>
 
-  <!-- ======= FESTIVALS JS (accordion + more/less) ======= -->
+  <!-- ======= JS ======= -->
   <script>
-    // Accordion behavior (Updates-style)
+    // Accordion behavior
     (function(){
       const items = document.querySelectorAll('.festivals-page .accordion-item');
+
       items.forEach(item => {
         const btn = item.querySelector('.js-acc-toggle');
         const wrap = item.querySelector('.panel-wrap');
+        const caret = item.querySelector('.caret-tri');
+
         if (!btn || !wrap) return;
 
         function setOpen(isOpen){
           item.dataset.open = String(isOpen);
           btn.setAttribute('aria-expanded', String(isOpen));
           wrap.setAttribute('aria-hidden', String(!isOpen));
+
+          // caret symbol to match Updates vibe
+          if (caret) caret.textContent = isOpen ? '▲' : '▼';
+
+          // animate open/close
           wrap.style.maxHeight = isOpen ? (wrap.scrollHeight + 'px') : '0px';
         }
+
+        // init based on data-open
+        const initiallyOpen = item.dataset.open === 'true';
+        setOpen(initiallyOpen);
 
         btn.addEventListener('click', () => {
           const isOpen = item.dataset.open === 'true';
           setOpen(!isOpen);
         });
 
-        // Recalculate height on resize (important for responsive)
         window.addEventListener('resize', () => {
           const isOpen = item.dataset.open === 'true';
           if (isOpen) wrap.style.maxHeight = wrap.scrollHeight + 'px';
         });
 
-        // expose recalc for "More" toggles inside
         item.__recalc = () => {
           const isOpen = item.dataset.open === 'true';
           if (isOpen) wrap.style.maxHeight = wrap.scrollHeight + 'px';
@@ -421,6 +420,7 @@ permalink: /festivals/
     // More/Less clamp toggles
     (function(){
       const buttons = document.querySelectorAll('.festivals-page .js-more');
+
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           const targetSel = btn.getAttribute('data-target');
@@ -431,7 +431,6 @@ permalink: /festivals/
           el.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
           btn.textContent = collapsed ? 'Less' : 'More';
 
-          // If this is inside an open accordion, recalc its height so content isn't cut off
           const item = btn.closest('.accordion-item');
           if (item && typeof item.__recalc === 'function') item.__recalc();
         });
@@ -465,4 +464,3 @@ permalink: /festivals/
 
 </body>
 </html>
-    
