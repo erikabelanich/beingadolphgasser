@@ -1233,7 +1233,7 @@ color: darkgrey;
 
 
 .cover-image-festivals {
-    background-image: url('AwardsCover.jpg');
+    background-image: url('AwardsCover1.jpg');
     height: 100%;
     width: 100%;
     background-position: center;
@@ -1250,7 +1250,7 @@ color: darkgrey;
 
 @media (max-width: 768px) {
     .cover-image-festivals {
-        background-image: url('AwardsCover.jpg');
+        background-image: url('AwardsMobile.png');
      background-size: contain;
      background-position: top;
     }
