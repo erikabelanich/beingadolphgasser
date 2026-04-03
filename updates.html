@@ -206,6 +206,128 @@ font-family: "Montserrat", sans-serif;
         .custom-slide {
   display: none;
 }
+
+
+
+.announcement-banner {
+  max-width: 1160px;
+  margin: 40px auto 55px;
+  padding: 28px 38px;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  background: rgba(34, 34, 34, 0.82);
+  border: 1px solid rgba(183, 145, 71, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.announcement-icon {
+  flex: 0 0 auto;
+  font-size: 34px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.announcement-content {
+  width: 100%;
+}
+
+.announcement-title {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.announcement-text {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.announcement-text strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.announcement-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.announcement-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.announcement-btn-filled {
+  background: #d6a53c;
+  color: #111111;
+  border: 1px solid #d6a53c;
+}
+
+.announcement-btn-filled:hover {
+  background: #e3b24a;
+  border-color: #e3b24a;
+}
+
+.announcement-btn-outline {
+  background: transparent;
+  color: #e0b14b;
+  border: 1px solid rgba(224, 177, 75, 0.75);
+}
+
+.announcement-btn-outline:hover {
+  background: rgba(224, 177, 75, 0.12);
+  border-color: #e0b14b;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .announcement-banner {
+    margin: 30px 20px 45px;
+    padding: 24px 22px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .announcement-title {
+    font-size: 22px;
+  }
+
+  .announcement-text {
+    font-size: 16px;
+  }
+
+  .announcement-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .announcement-btn {
+    text-align: center;
+  }
+}
+
+
+
+
+
+        
  
     </style>
   
@@ -279,6 +401,31 @@ font-family: "Montserrat", sans-serif;
     </div>
 
 
+
+    <section class="announcement-banner">
+  <div class="announcement-icon" aria-hidden="true">📣</div>
+
+  <div class="announcement-content">
+    <h2 class="announcement-title">Exciting News!</h2>
+    <p class="announcement-text">
+      Being Adolph Gasser has been picked up by <strong>Indie Rights</strong> and is now
+      available on <strong>Amazon TVOD</strong>. Reviews appreciated!
+    </p>
+
+    <div class="announcement-buttons">
+      <a href="https://www.amazon.com/gp/video/detail/B0GT4MSKGP/ref=atv_dp_share_cu_r" class="announcement-btn announcement-btn-filled">
+        Rent or Buy
+      </a>
+    
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    
 <!-- Accordion -->
 <div class="container-accordion">
 <h1 id="unique-title">Film Campaign News</h1>
