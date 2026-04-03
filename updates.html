@@ -210,15 +210,15 @@ font-family: "Montserrat", sans-serif;
 
 
 .announcement-banner {
-  max-width: 1160px;
+  width: 80%;
   margin: 40px auto 55px;
   padding: 28px 38px;
   display: flex;
   align-items: flex-start;
   gap: 22px;
   background: rgba(34, 34, 34, 0.82);
-  border: 1px solid rgba(183, 145, 71, 0.75);
-  border-radius: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 0px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(2px);
 }
@@ -275,14 +275,15 @@ font-family: "Montserrat", sans-serif;
 }
 
 .announcement-btn-filled {
-  background: #d6a53c;
-  color: #111111;
-  border: 1px solid #d6a53c;
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid darkgrey;
 }
 
 .announcement-btn-filled:hover {
   background: #e3b24a;
   border-color: #e3b24a;
+      text-decoration: none;
 }
 
 .announcement-btn-outline {
@@ -299,7 +300,6 @@ font-family: "Montserrat", sans-serif;
 
 @media (max-width: 768px) {
   .announcement-banner {
-    margin: 30px 20px 45px;
     padding: 24px 22px;
     flex-direction: column;
     gap: 16px;
