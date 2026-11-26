@@ -323,26 +323,23 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
 
 
            
- <div class="container-home">
+ <!-- POSTER + VIEWER QUOTES (poster left, quotes right) -->
+ <div class="container-home poster-quote-row">
 
-   <div class="image-single">
+   <div class="image-column poster-column">
       <img src="PosterMay2026.png" alt="Posters">
   </div>
-     
 
-                
-</div>   
-
-
-
-
-
-
+   <div class="text-column quote-column">
     <div class="film-quotes" aria-label="Viewer quotes">
-  <figure class="film-quote">
-    <blockquote></blockquote>
-    <figcaption></figcaption>
-  </figure>
+      <h1 id="unique-title">What Viewers Are Saying</h1>
+      <figure class="film-quote">
+        <blockquote></blockquote>
+        <figcaption></figcaption>
+      </figure>
+    </div>
+   </div>
+
 </div>
 
 <style>
@@ -400,6 +397,21 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
     height: 380px;
   }
 }
+
+  /* Poster + quotes side by side */
+  .poster-quote-row { align-items: center; }
+  .poster-quote-row .quote-column { display: flex; align-items: center; }
+  .poster-quote-row .film-quotes { max-width: none; margin: 0; padding: 0; text-align: left; width: 100%; }
+  .poster-quote-row .film-quotes h1 { margin: 0 0 22px; }
+  .poster-quote-row .film-quote { height: auto; min-height: 230px; justify-content: flex-start; }
+  .poster-quote-row .film-quote blockquote { padding: 0; font-size: clamp(19px, 1.7vw, 25px); }
+  .poster-quote-row .film-quote figcaption { margin-top: 16px; }
+  .poster-quote-row .poster-column img { max-width: 100%; height: auto; }
+
+  @media (max-width: 768px) {
+    .poster-quote-row .film-quotes { text-align: center; }
+    .poster-quote-row .film-quote { min-height: 300px; }
+  }
 
     
 </style>
@@ -485,15 +497,15 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
        
  <div class="container-home">
 
-   <div class="image-column">
-      <img src="synopsis.png" alt="synopsis">
-  </div>
-     
 <div class="text-column">
    <h1 id="unique-title">Synopsis</h1>
         <p>Nearing the end of his life, Adolph Gasser looks back on a seventy-year career as a world-class camera repairman, WWII veteran, inventor, and best friend of nature photographer Ansel Adams, contributing developer of the first Nikon camera and a sales/rental/camera repair store owner who empowered other prominent Bay Area visual artists and inventors to succeed. As eminent domain, the internet and changing technologies threaten everything he has built, he struggles to find a way to keep moving forward. Inspired by his unique stories and abilities, filmmaker and professor John C. Aliano follows him over the course of several years and reflects on his own career trajectory. 
             Ultimately, he learns the greatest accomplishment of the film's namesake is Being Adolph Gasser.
         </p>
+  </div>
+
+   <div class="image-column">
+      <img src="synopsis.png" alt="synopsis">
   </div>
 
                 
@@ -508,6 +520,10 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
    <div class="container-home">
   
 
+              <div class="image-column">
+    <img src="CrewHomePage.png" alt="meet the crew"> 
+  </div>
+
                 <div class="text-column">
   <h1 id="unique-title">Meet the Crew</h1>
     <p>
@@ -517,9 +533,6 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
         <br><br><a href="/bios/" class="text-link">Learn More &rarr;</a></p>
   </div>
 
-              <div class="image-column">
-    <img src="CrewHomePage.png" alt="meet the crew"> 
-  </div>
 
        
 </div>     
