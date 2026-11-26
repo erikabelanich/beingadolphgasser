@@ -318,6 +318,15 @@ permalink: /festivals/
     @media (hover: hover) { .laurels-row:hover img { opacity: 0.55; } .laurels-row:hover img:hover { opacity: 1; } }
     .laurel-tip { position: fixed; z-index: 2000; max-width: 250px; color: rgba(255,255,255,0.85); font-family: "Montserrat", sans-serif; font-size: 10px; line-height: 1.45; letter-spacing: 0.06em; text-align: center; text-shadow: 0 1px 6px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.8); pointer-events: none; opacity: 0; transform: translate(-50%, 0) translateY(-4px); transition: opacity 0.3s ease, transform 0.3s ease; }
     .laurel-tip.show { opacity: 1; transform: translate(-50%, 0) translateY(0); }
+
+    /* Festival detail lines with minimal icons */
+    .fest-meta { list-style: none; margin: 0 0 18px; padding: 0 0 18px; border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; gap: 9px; }
+    .fest-meta li { display: flex; align-items: flex-start; gap: 12px; font-family: "Montserrat", sans-serif; font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.78); }
+    .fest-meta li svg { flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; fill: none; stroke: rgba(255,255,255,0.55); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fest-meta li.fm-date { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; font-weight: 500; }
+    .fest-meta li.fm-award { color: #fff; }
+    .fest-meta .fm-sub { display: block; opacity: 0.6; text-transform: none; letter-spacing: 0; font-weight: 400; }
+    .festival-grid .festival-body { color: rgba(255,255,255,0.78); line-height: 1.7; }
 </style>
 </head>
 
@@ -408,15 +417,14 @@ permalink: /festivals/
     <div class="festival-grid">
       <img class="festival-img" src="../Seattle-Indie.jpeg" alt="Seattle Indie Cinema">
       <div>
-        <p class="festival-body" id="upcoming-desc-1">
+        <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>July 16, 2027<span class="fm-sub">Screening details to be announced July 6, 2027</span></span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>The LAB @ 1010, 1010 S Bailey St, Seattle, WA 98108</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Official Selection</span></li>
+          </ul>
+          <p class="festival-body" id="upcoming-desc-1">
           
-          <span class="datelocation">
           
-          July 16, 2027 | The LAB @ 1010   
- </span><br>
-          1010 S Bailey St, Seattle, WA 98108<br>
-          Screening details to be announced July 6, 2027
-          <br><br>
 Seattle Indie Cinema is a single-evening festival held at The LAB @ 1010, an intimate music and performance venue in South Seattle. Rather than chasing a red carpet or an industry mixer, the festival selects films on nerve and craft, presenting a program built to be watched start to finish.          <br><br>
         <div>
             <a class="festival-link" href="https://seattleindiecinema.com" target="_blank">Learn More →</a><br>
@@ -456,7 +464,11 @@ Seattle Indie Cinema is a single-evening festival held at The LAB @ 1010, an int
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">November 16, 2026 | London, England</h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>November 16, 2026</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>London, England</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Finalist</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-5">
           Being Adolph Gasser was selected as a Finalist for the International Film Gala / London Film Festival, placing it among the top 10% of all submissions. With 1,692 submissions received from 63 countries, the final selection was exceptionally competitive.
@@ -492,7 +504,11 @@ Seattle Indie Cinema is a single-evening festival held at The LAB @ 1010, an int
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">November 6, 2026 | Austin, Texas</h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>November 6, 2026</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Austin, Texas</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Quarter-Finalist</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-6">
           Being Adolph Gasser was selected as a Quarter-Finalist for The VSPChannel / AVAFEST Veteran Military Film Festival in Austin, TX. The festival is affiliated with the Veteran's Suicide Prevention Channel, founded in 2015 by a Vietnam combat veteran to reduce veteran suicide and promote mental health healing.
@@ -530,7 +546,11 @@ Seattle Indie Cinema is a single-evening festival held at The LAB @ 1010, an int
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">October 17, 2026 | Jackson, Tennessee</h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>October 17, 2026</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Jackson, Tennessee</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Finalist, American History Feature</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-4">
           Being Adolph Gasser was selected as a Finalist in the American History Feature category at the Jackson Doc Fest in Tennessee. So proud of the team and all their efforts to make this documentary as impactful as it is.
@@ -566,13 +586,17 @@ Seattle Indie Cinema is a single-evening festival held at The LAB @ 1010, an int
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">Thursday, September 17, 2026 at 12PM | TCL Chinese 6 Theatres </h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>Thursday, September 17, 2026 at 12PM</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>TCL Chinese 6 Theatres</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Winner, Best Editing, Feature Documentary</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-2">
              6801 Hollywood Blvd, Hollywood, CA 90028<br>
           Screening: Thursday, September 17, 2026 at 12PM | Theater 3, Block HHHH
             <br><br>
-          <strong>Winner: Best Editing, Feature Documentary Film.</strong> Editor Jackie Marten's commitment to the film's rhythm was essential to making this story what it became.
+          Editor Jackie Marten's commitment to the film's rhythm was essential to making this story what it became.
             <br><br>
 IndieWood Film Festival showcases independent films from around the world. Bringing filmmakers, audiences, and industry professionals together, it offers a platform to discover original stories, connect with emerging talent, and celebrate independent cinema.          <br><br>
 
@@ -616,7 +640,11 @@ IndieWood Film Festival showcases independent films from around the world. Bring
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">Sunday, May 3, 2026 | Regal Aliante Stadium 16  </h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>Sunday, May 3, 2026</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Regal Aliante Stadium 16</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Grand Prize, Best Documentary Feature</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-2">
             7300 Aliante Parkway (Aliante Casino & Hotel)<br>
@@ -669,7 +697,11 @@ IndieWood Film Festival showcases independent films from around the world. Bring
         <!-- RIGHT TEXT -->
         <div>
 
-          <h3 class="festival-title">February 26–28, 2026 | St. George, Utah</h3>
+          <ul class="fest-meta">
+            <li class="fm-date"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>February 26–28, 2026</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>St. George, Utah</span></li>
+            <li class="fm-award"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg><span>Trailblazer Award</span></li>
+          </ul>
 
           <p class="festival-body clamp" data-collapsed="true" id="past-desc-2">
             Screening: Thursday, February 26 | 12:15 PM (MST) | Theater 4
