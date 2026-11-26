@@ -312,7 +312,13 @@ permalink: /festivals/
 
 
     
-  </style>
+  
+    /* Laurel award captions on hover (matches home page) */
+    .laurels-row img { transition: opacity 0.3s ease; }
+    @media (hover: hover) { .laurels-row:hover img { opacity: 0.55; } .laurels-row:hover img:hover { opacity: 1; } }
+    .laurel-tip { position: fixed; z-index: 2000; max-width: 250px; color: rgba(255,255,255,0.85); font-family: "Montserrat", sans-serif; font-size: 10px; line-height: 1.45; letter-spacing: 0.06em; text-align: center; text-shadow: 0 1px 6px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.8); pointer-events: none; opacity: 0; transform: translate(-50%, 0) translateY(-4px); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .laurel-tip.show { opacity: 1; transform: translate(-50%, 0) translateY(0); }
+</style>
 </head>
 
 <body>
@@ -372,14 +378,14 @@ permalink: /festivals/
    <div class="laurels-row">
       <!-- Combined strip (Rainier, DOCUTAH, Indie Vegas) shows until all three single laurels below are uploaded -->
       <img id="laurel-strip-fallback" src="../May2026.png" alt="Rainier Film Festival, DOCUTAH and Indie Vegas Film Festival laurels">
-      <img class="laurel-pending" src="../RainierUpdate.png" alt="Rainier Film Festival Best Director laurel" onload="laurelReady(this)">
-      <img class="laurel-pending" src="../laurel-docutah.png" alt="DOCUTAH International Film Festival 2026 laurel" onload="laurelReady(this)">
-      <img class="laurel-pending" src="../laurel-indievegas.png" alt="Indie Vegas Film Festival 2026 laurel" onload="laurelReady(this)">
-      <img src="../laurel-indiewood.png" alt="Indiewood Film Festival Hollywood 2026 laurel">
-      <img src="../laurel-jackson.png" alt="Jackson Doc Fest laurel">
-      <img src="../laurel-avafest.png" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
-      <img src="../laurel-london.png" alt="International Film Gala London laurel">
-      <img src="../laurel-seattle.png" alt="Seattle Indie Cinema laurel">
+      <img data-award="Best Director, The Rainier Film Festival (Seattle)" class="laurel-pending" src="../RainierUpdate.png" alt="Rainier Film Festival Best Director laurel" onload="laurelReady(this)">
+      <img data-award="Trailblazer Award, DOCUTAH International Film Festival 2026" class="laurel-pending" src="../laurel-docutah.png" alt="DOCUTAH International Film Festival 2026 laurel" onload="laurelReady(this)">
+      <img data-award="Grand Prize, Best Documentary Feature, Indie Vegas Film Festival 2026" class="laurel-pending" src="../laurel-indievegas.png" alt="Indie Vegas Film Festival 2026 laurel" onload="laurelReady(this)">
+      <img data-award="Best Editing, Feature Documentary, Indiewood Film Festival Hollywood 2026" src="../laurel-indiewood.png" alt="Indiewood Film Festival Hollywood 2026 laurel">
+      <img data-award="Finalist, American History Feature, Jackson Doc Fest 2026" src="../laurel-jackson.png" alt="Jackson Doc Fest laurel">
+      <img data-award="Quarter-Finalist, VSPChannel / AVAFEST Veteran Military Film Festival 2026" src="../laurel-avafest.png" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
+      <img data-award="Finalist, International Film Gala London 2026" src="../laurel-london.png" alt="International Film Gala London laurel">
+      <img data-award="Official Selection, Seattle Indie Cinema 2027" src="../laurel-seattle.png" alt="Seattle Indie Cinema laurel">
   </div>
         
 </div>   
@@ -807,5 +813,21 @@ IndieWood Film Festival showcases independent films from around the world. Bring
     &copy; 2003 - 2026 John C. Aliano / Being Adolph Gasser. All Rights Reserved.
   </div>
 
+<script>
+(function(){
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  var tip=document.createElement('div'); tip.className='laurel-tip'; document.body.appendChild(tip);
+  document.querySelectorAll('.laurels-row img[data-award]').forEach(function(img){
+    img.addEventListener('mouseenter',function(){
+      tip.textContent=img.getAttribute('data-award');
+      var r=img.getBoundingClientRect(), w=tip.offsetWidth;
+      var x=Math.min(Math.max(r.left+r.width/2, w/2+8), window.innerWidth-w/2-8);
+      tip.style.left=x+'px'; tip.style.top=(r.bottom+12)+'px'; tip.classList.add('show');
+    });
+    img.addEventListener('mouseleave',function(){ tip.classList.remove('show'); });
+  });
+  window.addEventListener('scroll',function(){ tip.classList.remove('show'); },{passive:true});
+})();
+</script>
 </body>
 </html>
