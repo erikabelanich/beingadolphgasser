@@ -724,8 +724,21 @@ IndieWood Film Festival showcases independent films from around the world. Bring
           // caret symbol to match Updates vibe
           if (caret) caret.textContent = isOpen ? '▲' : '▼';
 
-          // animate open/close
-          wrap.style.maxHeight = isOpen ? (wrap.scrollHeight + 'px') : '0px';
+          // animate open/close; once open, drop the height cap so late-loading images
+          // or text reflow on phones can never cut the description off
+          if (isOpen) {
+            wrap.style.maxHeight = wrap.scrollHeight + 'px';
+            wrap.addEventListener('transitionend', function done(e) {
+              if (e.propertyName === 'max-height' && item.dataset.open === 'true') wrap.style.maxHeight = 'none';
+              wrap.removeEventListener('transitionend', done);
+            });
+          } else {
+            if (wrap.style.maxHeight === 'none') {
+              wrap.style.maxHeight = wrap.scrollHeight + 'px';
+              void wrap.offsetHeight; // lock current height so the close animates
+            }
+            wrap.style.maxHeight = '0px';
+          }
         }
 
         // init based on data-open
