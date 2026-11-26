@@ -239,6 +239,19 @@ color: darkgrey;
         
     </div>
 
+<script>
+      // Measure the menu bar so the hero video can fill exactly one screen
+      (function () {
+        function setNavHeight() {
+          var nav = document.querySelector('nav.navbar');
+          if (!nav || nav.querySelector('.navbar-collapse.in, .navbar-collapse.collapsing')) return; // skip while the phone menu is open
+          document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+        }
+        setNavHeight();
+        window.addEventListener('resize', setNavHeight);
+      })();
+    </script>
+
     <!-- FESTIVAL LAURELS, full-width row along the bottom of the video -->
     <div class="hero-laurels" aria-label="Festival laurels">
         <!-- these three show automatically once laurel-rainier.png, laurel-docutah.png and laurel-indievegas.png are uploaded -->
@@ -449,12 +462,20 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
   }
   .quote-dots button[aria-current="true"] { background: #fff; }
 
+  /* Hero video fills exactly one screen: screen height minus the menu bar (measured by the script below) */
+  .video-container {
+    height: calc(100vh - var(--nav-h, 82px));
+    height: calc(100svh - var(--nav-h, 82px)); /* phones: leaves room for the browser's address bar */
+  }
+  @media (max-width: 515px) {
+    .background-video-mobile { position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; }
+  }
+
   /* Festival laurels: full-width row along the bottom of the video hero */
   .hero-laurels {
     position: absolute;
     left: 50%;
-    /* the video area starts below the menu bar, so lift the row by the menu height to keep it on screen */
-    bottom: calc(8% + 82px);
+    bottom: 8%;
     transform: translateX(-50%);
     z-index: 3;
     width: 92%;
@@ -480,7 +501,7 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
       gap: 12px 8px;
     }
     .hero-laurels img { height: 50px; max-width: 100%; }
-    .hero-laurels { bottom: calc(6% + 60px); }
+    .hero-laurels { bottom: 6%; }
   }
   @media (prefers-reduced-motion: reduce) {
     .hero-laurels { animation: none; opacity: 1; }
