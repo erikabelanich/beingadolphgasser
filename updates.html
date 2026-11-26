@@ -100,11 +100,12 @@ color: white;
   transform: rotate(180deg);
 }
 
+/* Same width as the Festivals page: 1200px max with 20px side padding */
 .container-accordion {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        max-width: 80%;
+        padding: 100px 20px;
+        max-width: 1200px;
         margin: 0 auto;
+        box-sizing: border-box;
 }
 
         .accordion-title h3{
@@ -156,7 +157,9 @@ font-family: "Montserrat", sans-serif;
     max-width: none;
   }
     .container-accordion {
-        max-width: 90%;
+        max-width: none;
+        padding-left: 16px;
+        padding-right: 16px;
 }
 }
 
