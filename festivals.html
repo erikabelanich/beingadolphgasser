@@ -68,25 +68,36 @@ permalink: /festivals/
             }
         }
 
-    /* Laurel row: one image per festival, height-locked so nothing distorts */
+    /* Laurel row: full width, one image per festival, height-locked so nothing distorts */
     .laurels-row {
             flex: 1;
+            width: 100%;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: nowrap;
+            justify-content: space-between;
             align-items: center;
-            gap: 18px 28px;
-            padding: 25px;
+            gap: 0 12px;
+            padding: 25px 0;
         }
         .laurels-row img {
-            height: 70px;
+            height: clamp(44px, 5.2vw, 82px);
             width: auto;
             max-width: 100%;
         }
-@media (min-width: 768px) {
-   .laurels-row img {
-            height: 95px;
+        .laurels-row .laurel-pending { display: none; }
+@media (max-width: 768px) {
+   /* phones: two rows of four */
+   .laurels-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            gap: 12px 8px;
+            padding: 25px 16px;
             }
+   .laurels-row img { height: 50px; }
+   /* the combined fallback strip spans a full row on phones */
+   .laurels-row #laurel-strip-fallback { grid-column: 1 / -1; height: 50px; }
+        }
         }
 
 
@@ -351,15 +362,32 @@ permalink: /festivals/
   <!-- ======= CONTENT ======= -->
 
 
+ <script>
+    // Swap the combined strip for the three single laurels once all three files exist
+    var laurelsLoaded = 0;
+    function laurelReady(img) {
+      laurelsLoaded++;
+      if (laurelsLoaded === 3) {
+        document.querySelectorAll('.laurel-pending').forEach(function (el) { el.classList.remove('laurel-pending'); });
+        var strip = document.getElementById('laurel-strip-fallback');
+        if (strip) strip.remove();
+      }
+    }
+  </script>
  <div class="container-festivals">
    <div class="laurels-row">
-      <img src="../May2026.png" alt="Rainier Film Festival, DOCUTAH and Indie Vegas Film Festival laurels">
+      <!-- Combined strip (Rainier, DOCUTAH, Indie Vegas) shows until all three single laurels below are uploaded -->
+      <img id="laurel-strip-fallback" src="../May2026.png" alt="Rainier Film Festival, DOCUTAH and Indie Vegas Film Festival laurels">
+      <img class="laurel-pending" src="../laurel-rainier.png" alt="Rainier Film Festival laurel" onload="laurelReady(this)">
+      <img class="laurel-pending" src="../laurel-docutah.png" alt="DOCUTAH International Film Festival 2026 laurel" onload="laurelReady(this)">
+      <img class="laurel-pending" src="../laurel-indievegas.png" alt="Indie Vegas Film Festival 2026 laurel" onload="laurelReady(this)">
       <img src="../laurel-indiewood.png" alt="Indiewood Film Festival Hollywood 2026 laurel">
       <img src="../laurel-jackson.png" alt="Jackson Doc Fest laurel">
       <img src="../laurel-london.png" alt="International Film Gala London laurel">
       <img src="../laurel-avafest.png" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
       <img src="../laurel-seattle.png" alt="Seattle Indie Cinema laurel">
-  </div>        
+  </div>
+        
 </div>   
 
 
