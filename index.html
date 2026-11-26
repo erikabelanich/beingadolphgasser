@@ -88,9 +88,10 @@
         }
         
 
+/* Music controls sit just under the menu bar on the right, then slide up to the top corner as the menu scrolls away (script below) */
 #controls {
     position: fixed;
-    bottom: 20px;
+    top: var(--controls-top, 98px);
     right: 20px;
     display: flex;
     align-items: center;
@@ -249,6 +250,16 @@ color: darkgrey;
         }
         setNavHeight();
         window.addEventListener('resize', setNavHeight);
+
+        // Keep the music controls just under the menu bar, or 16px from the top once it scrolls away
+        function placeMusicControls() {
+          var nav = document.querySelector('nav.navbar');
+          var navBottom = nav ? nav.getBoundingClientRect().bottom : 0;
+          document.documentElement.style.setProperty('--controls-top', Math.max(16, navBottom + 16) + 'px');
+        }
+        placeMusicControls();
+        window.addEventListener('scroll', placeMusicControls, { passive: true });
+        window.addEventListener('resize', placeMusicControls);
       })();
     </script>
 
