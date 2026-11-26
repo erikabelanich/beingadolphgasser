@@ -453,7 +453,8 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
   .hero-laurels {
     position: absolute;
     left: 50%;
-    bottom: 8%;
+    /* the video area starts below the menu bar, so lift the row by the menu height to keep it on screen */
+    bottom: calc(8% + 82px);
     transform: translateX(-50%);
     z-index: 3;
     width: 92%;
@@ -479,6 +480,7 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
       gap: 12px 8px;
     }
     .hero-laurels img { height: 50px; max-width: 100%; }
+    .hero-laurels { bottom: calc(6% + 60px); }
   }
   @media (prefers-reduced-motion: reduce) {
     .hero-laurels { animation: none; opacity: 1; }
