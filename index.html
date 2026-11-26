@@ -266,14 +266,14 @@ color: darkgrey;
     <!-- FESTIVAL LAURELS, full-width row along the bottom of the video -->
     <div class="hero-laurels" aria-label="Festival laurels">
         <!-- these three show automatically once laurel-rainier.png, laurel-docutah.png and laurel-indievegas.png are uploaded -->
-        <img src="RainierUpdate.png" alt="Rainier Film Festival Best Director laurel">
-        <img src="laurel-docutah.png" alt="DOCUTAH International Film Festival 2026 laurel" onerror="this.style.display='none'">
-        <img src="laurel-indievegas.png" alt="Indie Vegas Film Festival 2026 laurel" onerror="this.style.display='none'">
-        <img src="laurel-indiewood.png" alt="Indiewood Film Festival Hollywood 2026 laurel">
-        <img src="laurel-jackson.png" alt="Jackson Doc Fest laurel">
-        <img src="laurel-avafest.png" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
-        <img src="laurel-london.png" alt="International Film Gala London laurel">
-        <img src="laurel-seattle.png" alt="Seattle Indie Cinema laurel">
+        <img src="RainierUpdate.png" data-award="Best Director, The Rainier Film Festival (Seattle)" alt="Rainier Film Festival Best Director laurel">
+        <img src="laurel-docutah.png" data-award="Trailblazer Award, DOCUTAH International Film Festival 2026" alt="DOCUTAH International Film Festival 2026 laurel" onerror="this.style.display='none'">
+        <img src="laurel-indievegas.png" data-award="Grand Prize, Best Documentary Feature, Indie Vegas Film Festival 2026" alt="Indie Vegas Film Festival 2026 laurel" onerror="this.style.display='none'">
+        <img src="laurel-indiewood.png" data-award="Best Editing, Feature Documentary, Indiewood Film Festival Hollywood 2026" alt="Indiewood Film Festival Hollywood 2026 laurel">
+        <img src="laurel-jackson.png" data-award="Finalist, American History Feature, Jackson Doc Fest 2026" alt="Jackson Doc Fest laurel">
+        <img src="laurel-avafest.png" data-award="Quarter-Finalist, VSPChannel / AVAFEST Veteran Military Film Festival 2026" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
+        <img src="laurel-london.png" data-award="Finalist, International Film Gala London 2026" alt="International Film Gala London laurel">
+        <img src="laurel-seattle.png" data-award="Official Selection, Seattle Indie Cinema 2027" alt="Seattle Indie Cinema laurel">
     </div>
 </div>
 
@@ -517,6 +517,37 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
   @media (prefers-reduced-motion: reduce) {
     .hero-laurels { animation: none; opacity: 1; }
   }
+
+  /* Gentle fade-in as sections scroll into view (the script below adds .reveal) */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.in-view { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Laurel hover: the hovered laurel stays bright, the others dim, and a small caption fades in underneath */
+  .hero-laurels img { transition: opacity 0.3s ease; }
+  @media (hover: hover) {
+    .hero-laurels:hover img { opacity: 0.55; }
+    .hero-laurels:hover img:hover { opacity: 1; }
+  }
+  .laurel-tip {
+    position: fixed;
+    z-index: 2000;
+    max-width: 250px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9), 0 0 2px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, 0) translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .laurel-tip.show { opacity: 1; transform: translate(-50%, 0) translateY(0); }
 
   /* Readable body text for Synopsis and Meet the Crew; slightly larger hero buttons */
   .container-home .text-column p { font-size: 16px; line-height: 1.65; }
@@ -867,6 +898,40 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
 
 </script>   
     
+    <script>
+      // Gentle fade-in for the main home page rows
+      (function () {
+        if (!('IntersectionObserver' in window)) return;
+        var rows = document.querySelectorAll('.container-home');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.15 });
+        rows.forEach(function (r) { r.classList.add('reveal'); io.observe(r); });
+      })();
+
+      // Award caption under each laurel on hover (desktop only; touch screens have no hover)
+      (function () {
+        if (!window.matchMedia('(hover: hover)').matches) return;
+        var tip = document.createElement('div');
+        tip.className = 'laurel-tip';
+        document.body.appendChild(tip);
+        document.querySelectorAll('img[data-award]').forEach(function (img) {
+          img.addEventListener('mouseenter', function () {
+            tip.textContent = img.getAttribute('data-award');
+            var r = img.getBoundingClientRect();
+            var w = tip.offsetWidth;
+            var cx = Math.min(Math.max(r.left + r.width / 2, w / 2 + 8), window.innerWidth - w / 2 - 8);
+            tip.style.left = cx + 'px';
+            tip.style.top = (r.bottom + 12) + 'px';
+            tip.classList.add('show');
+          });
+          img.addEventListener('mouseleave', function () { tip.classList.remove('show'); });
+        });
+        window.addEventListener('scroll', function () { tip.classList.remove('show'); }, { passive: true });
+      })();
+    </script>
 </body>
     
 </html>
