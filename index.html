@@ -238,6 +238,19 @@ color: darkgrey;
 
         
     </div>
+
+    <!-- FESTIVAL LAURELS, full-width row along the bottom of the video -->
+    <div class="hero-laurels" aria-label="Festival laurels">
+        <!-- these three show automatically once laurel-rainier.png, laurel-docutah.png and laurel-indievegas.png are uploaded -->
+        <img src="laurel-rainier.png" alt="Rainier Film Festival laurel" onerror="this.style.display='none'">
+        <img src="laurel-docutah.png" alt="DOCUTAH International Film Festival 2026 laurel" onerror="this.style.display='none'">
+        <img src="laurel-indievegas.png" alt="Indie Vegas Film Festival 2026 laurel" onerror="this.style.display='none'">
+        <img src="laurel-indiewood.png" alt="Indiewood Film Festival Hollywood 2026 laurel">
+        <img src="laurel-jackson.png" alt="Jackson Doc Fest laurel">
+        <img src="laurel-london.png" alt="International Film Gala London laurel">
+        <img src="laurel-avafest.png" alt="VSPChannel / AVAFEST Veteran Military Film Festival laurel">
+        <img src="laurel-seattle.png" alt="Seattle Indie Cinema laurel">
+    </div>
 </div>
 
     <!-- CAROUSEL: continuous film reel (frames are listed twice so the loop is seamless) -->
@@ -435,6 +448,41 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
     transition: background 300ms ease;
   }
   .quote-dots button[aria-current="true"] { background: #fff; }
+
+  /* Festival laurels: full-width row along the bottom of the video hero */
+  .hero-laurels {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 92%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 12px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out .6s forwards;
+  }
+  .hero-laurels img {
+    height: clamp(44px, 5.2vw, 82px);
+    width: auto;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,.6));
+  }
+  /* phones: two rows of four */
+  @media (max-width: 768px) {
+    .hero-laurels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      gap: 12px 8px;
+    }
+    .hero-laurels img { height: 50px; max-width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-laurels { animation: none; opacity: 1; }
+  }
 
   /* Poster + quotes side by side */
   .poster-quote-row { align-items: center; }
