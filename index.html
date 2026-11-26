@@ -22,9 +22,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <!-- Bootstrap and jQuery (for demonstration) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -243,61 +240,104 @@ color: darkgrey;
     </div>
 </div>
 
-    <!-- CAROUSEL -->  
-    <div class="owl-carousel owl-theme">
-
-        <div class="item">
+    <!-- CAROUSEL: continuous film reel (frames are listed twice so the loop is seamless) -->
+    <div class="film-reel" aria-label="Photos from the film">
+      <div class="film-track">
+      <div class="film-frame">
         <img src="Wedding.png" alt="Adolph and Marion's Wedding Day">
-                  <div class="overlay">1965 - Adolph and Marion's wedding ceremony at Ansel Adam's residence.<br></div>
-        </div>
-        <div class="item">
-            <img src="Gasser.png" alt="Early 1990s">
-              <div class="overlay">Early 1990s - Adolph in front of an Arriflex 35mm camera with employees at the Rental Store.</div>
-        </div>
-        <div class="item">
-            <img src="Aliano.png" alt="Start of filming">
-                <div class="overlay">2003  - John Aliano starts filming Adolph Gasser documentary.</div>
-        </div>
-   
-        <div class="item">
-            <img src="EnolaGay.png" alt="Adolph in front of Enola Gay">
-              <div class="overlay">1945 - Adolph with 509th photo squad buddy in front of Enola Gay.<br></div>
-        </div>
-          
-        <div class="item">
-            <img src="StoreFront.png" alt="Store front">
-            <div class="overlay">Store front of Adolph Gasser Inc.<br></div>
-        </div>
+        <div class="overlay">1965 - Adolph and Marion's wedding ceremony at Ansel Adam's residence.</div>
+      </div>
+      <div class="film-frame">
+        <img src="Gasser.png" alt="Early 1990s">
+        <div class="overlay">Early 1990s - Adolph in front of an Arriflex 35mm camera with employees at the Rental Store.</div>
+      </div>
+      <div class="film-frame">
+        <img src="Aliano.png" alt="Start of filming">
+        <div class="overlay">2003 - John Aliano starts filming Adolph Gasser documentary.</div>
+      </div>
+      <div class="film-frame">
+        <img src="EnolaGay.png" alt="Adolph in front of Enola Gay">
+        <div class="overlay">1945 - Adolph with 509th photo squad buddy in front of Enola Gay.</div>
+      </div>
+      <div class="film-frame">
+        <img src="StoreFront.png" alt="Store front">
+        <div class="overlay">Store front of Adolph Gasser Inc.</div>
+      </div>
+      <!-- duplicate set for the seamless loop -->
+      <div class="film-frame" aria-hidden="true">
+        <img src="Wedding.png" alt="">
+        <div class="overlay">1965 - Adolph and Marion's wedding ceremony at Ansel Adam's residence.</div>
+      </div>
+      <div class="film-frame" aria-hidden="true">
+        <img src="Gasser.png" alt="">
+        <div class="overlay">Early 1990s - Adolph in front of an Arriflex 35mm camera with employees at the Rental Store.</div>
+      </div>
+      <div class="film-frame" aria-hidden="true">
+        <img src="Aliano.png" alt="">
+        <div class="overlay">2003 - John Aliano starts filming Adolph Gasser documentary.</div>
+      </div>
+      <div class="film-frame" aria-hidden="true">
+        <img src="EnolaGay.png" alt="">
+        <div class="overlay">1945 - Adolph with 509th photo squad buddy in front of Enola Gay.</div>
+      </div>
+      <div class="film-frame" aria-hidden="true">
+        <img src="StoreFront.png" alt="">
+        <div class="overlay">Store front of Adolph Gasser Inc.</div>
+      </div>
+      </div>
     </div>
 
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                items: 3,
-                loop: true,
-                margin: 0,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                smartSpeed: 1000,
-                autoplaySpeed: 1000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                }
-            });
-        });
-    </script>
+    <style>
+      .film-reel {
+        overflow: hidden;
+        background: #000;
+        padding: 70px 0 80px;
+      }
+      .film-track {
+        display: flex;
+        width: max-content;
+        animation: film-reel-scroll 55s linear infinite;
+      }
+      .film-reel:hover .film-track { animation-play-state: paused; }
+      .film-frame {
+        flex: 0 0 auto;
+        width: 33.3333vw;
+        position: relative;
+        overflow: hidden;
+      }
+      .film-frame img { width: 100%; height: auto; display: block; }
+      .film-frame .overlay {
+        font-family: "Montserrat", sans-serif;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 12px;
+        padding: 20px;
+        text-align: center;
+      }
+      .film-frame:hover .overlay { opacity: 1; }
+      @keyframes film-reel-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+      @media (max-width: 768px) {
+        .film-reel { padding: 0; }
+        .film-frame { width: 85vw; }
+        .film-track { animation-duration: 90s; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .film-track { animation: none; }
+        .film-reel { overflow-x: auto; }
+      }
+    </style>
 
     <!-- BODY CONTENT -->      
 
@@ -333,10 +373,11 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
    <div class="text-column quote-column">
     <div class="film-quotes" aria-label="Viewer quotes">
       <h1 id="unique-title">What Viewers Are Saying</h1>
-      <figure class="film-quote">
-        <blockquote></blockquote>
-        <figcaption></figcaption>
-      </figure>
+      <div class="quote-stage" aria-live="polite">
+        <figure class="film-quote is-active"><blockquote></blockquote><figcaption></figcaption></figure>
+        <figure class="film-quote" aria-hidden="true"><blockquote></blockquote><figcaption></figcaption></figure>
+      </div>
+      <div class="quote-dots" role="group" aria-label="Choose a quote"></div>
     </div>
    </div>
 
@@ -351,26 +392,25 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
     text-align: center;
   }
 
-
-    
+  /* Both quotes sit in the same grid cell so they can crossfade */
+  .quote-stage { display: grid; }
   .film-quote {
+    grid-area: 1 / 1;
     margin: 0;
-  height: 260px;
-  /* Keep your other existing styles */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 700ms ease;
-  }
-
-  .film-quote.is-fading {
     opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 900ms ease, transform 900ms ease;
+    pointer-events: none;
   }
-    
+  .film-quote.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
 
   .film-quote blockquote {
     margin: 0;
+    padding: 0;
     border-left: none;
     font-family: inherit;
     font-size: clamp(20px, 2.2vw, 28px);
@@ -378,42 +418,40 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
     font-weight: 300;
     line-height: 1.6;
   }
-
   .film-quote figcaption {
-    margin-top: 18px;
+    margin-top: 16px;
     font-size: 13px;
     letter-spacing: 0.08em;
     color: #aaa;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .film-quote {
-      transition: none;
-    }
+  .quote-dots { display: flex; gap: 10px; margin-top: 26px; }
+  .quote-dots button {
+    width: 8px; height: 8px; padding: 0;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: background 300ms ease;
   }
-
-    @media (max-width: 600px) {
-  .film-quote {
-    height: 380px;
-  }
-}
+  .quote-dots button[aria-current="true"] { background: #fff; }
 
   /* Poster + quotes side by side */
   .poster-quote-row { align-items: center; }
   .poster-quote-row .quote-column { display: flex; align-items: center; }
   .poster-quote-row .film-quotes { max-width: none; margin: 0; padding: 0; text-align: left; width: 100%; }
   .poster-quote-row .film-quotes h1 { margin: 0 0 22px; }
-  .poster-quote-row .film-quote { height: auto; min-height: 230px; justify-content: flex-start; }
-  .poster-quote-row .film-quote blockquote { padding: 0; font-size: clamp(19px, 1.7vw, 25px); }
-  .poster-quote-row .film-quote figcaption { margin-top: 16px; }
+  .poster-quote-row .film-quote blockquote { font-size: clamp(19px, 1.7vw, 25px); }
   .poster-quote-row .poster-column img { max-width: 100%; height: auto; }
 
   @media (max-width: 768px) {
     .poster-quote-row .film-quotes { text-align: center; }
-    .poster-quote-row .film-quote { min-height: 300px; }
+    .quote-dots { justify-content: center; }
   }
 
-    
+  @media (prefers-reduced-motion: reduce) {
+    .film-quote { transition: opacity 200ms linear; transform: none; }
+  }
 </style>
 
     <script>
@@ -454,41 +492,78 @@ The day has come. Tickets can now be purchased for the exhibition screening of t
   ];
 
   const container = document.querySelector(".film-quotes");
-  const figure = container.querySelector(".film-quote");
-  const quoteText = figure.querySelector("blockquote");
-  const credit = figure.querySelector("figcaption");
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  );
+  const stage = container.querySelector(".quote-stage");
+  const layers = [...stage.querySelectorAll(".film-quote")];
+  const dotsWrap = container.querySelector(".quote-dots");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   let index = 0;
+  let front = 0;
+  let timer = null;
 
-  function showQuote() {
-    quoteText.textContent = `“${quotes[index].text}”`;
-    credit.textContent = quotes[index].name
-      ? `— ${quotes[index].name}`
-      : "";
+  function fill(layer, q) {
+    layer.querySelector("blockquote").textContent = `\u201C${q.text}\u201D`;
+    layer.querySelector("figcaption").textContent = q.name ? `\u2014 ${q.name}` : "";
   }
 
-  async function rotate() {
-    // Pause while someone is hovering over the quote.
-    if (!container.matches(":hover") && !document.hidden) {
-      figure.classList.add("is-fading");
-
-      await new Promise(resolve =>
-        setTimeout(resolve, reducedMotion.matches ? 0 : 700)
-      );
-
-      index = (index + 1) % quotes.length;
-      showQuote();
-      figure.classList.remove("is-fading");
-    }
-
-    setTimeout(rotate, 6000);
+  // Lock the stage to the tallest quote so nothing below it jumps
+  function lockHeight() {
+    stage.style.minHeight = "";
+    const probe = layers[0].cloneNode(true);
+    probe.classList.remove("is-active");
+    probe.style.cssText = "visibility:hidden;position:absolute;opacity:0;transform:none;width:" + stage.clientWidth + "px";
+    stage.appendChild(probe);
+    let tallest = 0;
+    quotes.forEach(q => { fill(probe, q); tallest = Math.max(tallest, probe.offsetHeight); });
+    probe.remove();
+    stage.style.minHeight = tallest + "px";
   }
 
-  showQuote();
-  if (quotes.length > 1) setTimeout(rotate, 6000);
+  // Short quotes stay up about 4s, long ones up to 9s
+  function dwell(q) {
+    return Math.min(9000, Math.max(4000, 2500 + q.text.length * 35));
+  }
+
+  const dots = quotes.map((q, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Quote ${i + 1} of ${quotes.length}`);
+    b.addEventListener("click", () => show(i, true));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function show(i, userPicked) {
+    if (i === index && !userPicked) return;
+    index = i;
+    const next = 1 - front;
+    fill(layers[next], quotes[index]);
+    layers[next].classList.add("is-active");
+    layers[next].removeAttribute("aria-hidden");
+    layers[front].classList.remove("is-active");
+    layers[front].setAttribute("aria-hidden", "true");
+    front = next;
+    dots.forEach((d, n) => d.setAttribute("aria-current", n === index ? "true" : "false"));
+    schedule();
+  }
+
+  function schedule() {
+    clearTimeout(timer);
+    timer = setTimeout(tick, dwell(quotes[index]));
+  }
+
+  function tick() {
+    // Pause while someone is hovering or the tab is hidden
+    if (container.matches(":hover") || document.hidden) { schedule(); return; }
+    show((index + 1) % quotes.length);
+  }
+
+  fill(layers[0], quotes[0]);
+  dots[0].setAttribute("aria-current", "true");
+  lockHeight();
+  window.addEventListener("resize", lockHeight);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockHeight);
+  if (quotes.length > 1) schedule();
 })();
 </script>
 
